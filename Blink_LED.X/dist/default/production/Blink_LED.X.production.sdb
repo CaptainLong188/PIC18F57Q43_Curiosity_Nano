@@ -1,0 +1,248 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"57 D:\Curso Curiosity Nano\Blink_LED.X\config.c
+[v _Clock_Init Clock_Init `(v  1 e 1 0 ]
+"3 D:\Curso Curiosity Nano\Blink_LED.X\gpio.c
+[v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
+"6 D:\Curso Curiosity Nano\Blink_LED.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"5210 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+[s S231 . 1 `uc 1 ANSELD0 1 0 :1:0 
+`uc 1 ANSELD1 1 0 :1:1 
+`uc 1 ANSELD2 1 0 :1:2 
+`uc 1 ANSELD3 1 0 :1:3 
+`uc 1 ANSELD4 1 0 :1:4 
+`uc 1 ANSELD5 1 0 :1:5 
+`uc 1 ANSELD6 1 0 :1:6 
+`uc 1 ANSELD7 1 0 :1:7 
+]
+"41520
+[u S240 . 1 `S231 1 . 1 0 ]
+"41520
+"41520
+[v _ANSELDbits ANSELDbits `VES240  1 e 1 @1048 ]
+[s S315 . 1 `uc 1 WPUD0 1 0 :1:0 
+`uc 1 WPUD1 1 0 :1:1 
+`uc 1 WPUD2 1 0 :1:2 
+`uc 1 WPUD3 1 0 :1:3 
+`uc 1 WPUD4 1 0 :1:4 
+`uc 1 WPUD5 1 0 :1:5 
+`uc 1 WPUD6 1 0 :1:6 
+`uc 1 WPUD7 1 0 :1:7 
+]
+"41582
+[u S324 . 1 `S315 1 . 1 0 ]
+"41582
+"41582
+[v _WPUDbits WPUDbits `VES324  1 e 1 @1049 ]
+[s S294 . 1 `uc 1 ODCD0 1 0 :1:0 
+`uc 1 ODCD1 1 0 :1:1 
+`uc 1 ODCD2 1 0 :1:2 
+`uc 1 ODCD3 1 0 :1:3 
+`uc 1 ODCD4 1 0 :1:4 
+`uc 1 ODCD5 1 0 :1:5 
+`uc 1 ODCD6 1 0 :1:6 
+`uc 1 ODCD7 1 0 :1:7 
+]
+"41644
+[u S303 . 1 `S294 1 . 1 0 ]
+"41644
+"41644
+[v _ODCONDbits ODCONDbits `VES303  1 e 1 @1050 ]
+[s S252 . 1 `uc 1 SLRD0 1 0 :1:0 
+`uc 1 SLRD1 1 0 :1:1 
+`uc 1 SLRD2 1 0 :1:2 
+`uc 1 SLRD3 1 0 :1:3 
+`uc 1 SLRD4 1 0 :1:4 
+`uc 1 SLRD5 1 0 :1:5 
+`uc 1 SLRD6 1 0 :1:6 
+`uc 1 SLRD7 1 0 :1:7 
+]
+"41706
+[u S261 . 1 `S252 1 . 1 0 ]
+"41706
+"41706
+[v _SLRCONDbits SLRCONDbits `VES261  1 e 1 @1051 ]
+[s S273 . 1 `uc 1 INLVLD0 1 0 :1:0 
+`uc 1 INLVLD1 1 0 :1:1 
+`uc 1 INLVLD2 1 0 :1:2 
+`uc 1 INLVLD3 1 0 :1:3 
+`uc 1 INLVLD4 1 0 :1:4 
+`uc 1 INLVLD5 1 0 :1:5 
+`uc 1 INLVLD6 1 0 :1:6 
+`uc 1 INLVLD7 1 0 :1:7 
+]
+"41768
+[u S282 . 1 `S273 1 . 1 0 ]
+"41768
+"41768
+[v _INLVLDbits INLVLDbits `VES282  1 e 1 @1052 ]
+[s S105 . 1 `uc 1 ANSELF0 1 0 :1:0 
+`uc 1 ANSELF1 1 0 :1:1 
+`uc 1 ANSELF2 1 0 :1:2 
+`uc 1 ANSELF3 1 0 :1:3 
+`uc 1 ANSELF4 1 0 :1:4 
+`uc 1 ANSELF5 1 0 :1:5 
+`uc 1 ANSELF6 1 0 :1:6 
+`uc 1 ANSELF7 1 0 :1:7 
+]
+"42065
+[u S114 . 1 `S105 1 . 1 0 ]
+"42065
+"42065
+[v _ANSELFbits ANSELFbits `VES114  1 e 1 @1064 ]
+[s S189 . 1 `uc 1 WPUF0 1 0 :1:0 
+`uc 1 WPUF1 1 0 :1:1 
+`uc 1 WPUF2 1 0 :1:2 
+`uc 1 WPUF3 1 0 :1:3 
+`uc 1 WPUF4 1 0 :1:4 
+`uc 1 WPUF5 1 0 :1:5 
+`uc 1 WPUF6 1 0 :1:6 
+`uc 1 WPUF7 1 0 :1:7 
+]
+"42127
+[u S198 . 1 `S189 1 . 1 0 ]
+"42127
+"42127
+[v _WPUFbits WPUFbits `VES198  1 e 1 @1065 ]
+[s S168 . 1 `uc 1 ODCF0 1 0 :1:0 
+`uc 1 ODCF1 1 0 :1:1 
+`uc 1 ODCF2 1 0 :1:2 
+`uc 1 ODCF3 1 0 :1:3 
+`uc 1 ODCF4 1 0 :1:4 
+`uc 1 ODCF5 1 0 :1:5 
+`uc 1 ODCF6 1 0 :1:6 
+`uc 1 ODCF7 1 0 :1:7 
+]
+"42189
+[u S177 . 1 `S168 1 . 1 0 ]
+"42189
+"42189
+[v _ODCONFbits ODCONFbits `VES177  1 e 1 @1066 ]
+[s S126 . 1 `uc 1 SLRF0 1 0 :1:0 
+`uc 1 SLRF1 1 0 :1:1 
+`uc 1 SLRF2 1 0 :1:2 
+`uc 1 SLRF3 1 0 :1:3 
+`uc 1 SLRF4 1 0 :1:4 
+`uc 1 SLRF5 1 0 :1:5 
+`uc 1 SLRF6 1 0 :1:6 
+`uc 1 SLRF7 1 0 :1:7 
+]
+"42251
+[u S135 . 1 `S126 1 . 1 0 ]
+"42251
+"42251
+[v _SLRCONFbits SLRCONFbits `VES135  1 e 1 @1067 ]
+[s S147 . 1 `uc 1 INLVLF0 1 0 :1:0 
+`uc 1 INLVLF1 1 0 :1:1 
+`uc 1 INLVLF2 1 0 :1:2 
+`uc 1 INLVLF3 1 0 :1:3 
+`uc 1 INLVLF4 1 0 :1:4 
+`uc 1 INLVLF5 1 0 :1:5 
+`uc 1 INLVLF6 1 0 :1:6 
+`uc 1 INLVLF7 1 0 :1:7 
+]
+"42313
+[u S156 . 1 `S147 1 . 1 0 ]
+"42313
+"42313
+[v _INLVLFbits INLVLFbits `VES156  1 e 1 @1068 ]
+[s S53 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"49064
+[u S62 . 1 `S53 1 . 1 0 ]
+"49064
+"49064
+[v _LATDbits LATDbits `VES62  1 e 1 @1217 ]
+[s S32 . 1 `uc 1 LATF0 1 0 :1:0 
+`uc 1 LATF1 1 0 :1:1 
+`uc 1 LATF2 1 0 :1:2 
+`uc 1 LATF3 1 0 :1:3 
+`uc 1 LATF4 1 0 :1:4 
+`uc 1 LATF5 1 0 :1:5 
+`uc 1 LATF6 1 0 :1:6 
+`uc 1 LATF7 1 0 :1:7 
+]
+"49158
+[u S41 . 1 `S32 1 . 1 0 ]
+"49158
+"49158
+[v _LATFbits LATFbits `VES41  1 e 1 @1219 ]
+[s S336 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"49406
+[u S345 . 1 `S336 1 . 1 0 ]
+"49406
+"49406
+[v _TRISDbits TRISDbits `VES345  1 e 1 @1225 ]
+[s S210 . 1 `uc 1 TRISF0 1 0 :1:0 
+`uc 1 TRISF1 1 0 :1:1 
+`uc 1 TRISF2 1 0 :1:2 
+`uc 1 TRISF3 1 0 :1:3 
+`uc 1 TRISF4 1 0 :1:4 
+`uc 1 TRISF5 1 0 :1:5 
+`uc 1 TRISF6 1 0 :1:6 
+`uc 1 TRISF7 1 0 :1:7 
+]
+"49500
+[u S219 . 1 `S210 1 . 1 0 ]
+"49500
+"49500
+[v _TRISFbits TRISFbits `VES219  1 e 1 @1227 ]
+"6 D:\Curso Curiosity Nano\Blink_LED.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"24
+} 0
+"3 D:\Curso Curiosity Nano\Blink_LED.X\gpio.c
+[v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
+{
+"31
+} 0
+"57 D:\Curso Curiosity Nano\Blink_LED.X\config.c
+[v _Clock_Init Clock_Init `(v  1 e 1 0 ]
+{
+"60
+} 0
