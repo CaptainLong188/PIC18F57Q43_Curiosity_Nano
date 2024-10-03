@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed Oct 02 16:58:22 2024
+                                                                                               Wed Oct 02 23:25:07 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	18F57Q43
@@ -615,8 +615,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    558                           ;gpio.c: 36:     INLVLBbits.INLVLB4 = 0;
    559   00264E  990C               	bcf	12,4,b	;volatile
    560                           
-   561                           ;gpio.c: 37:     ODCONBbits.ODCB4 = 1;
-   562   002650  890A               	bsf	10,4,b	;volatile
+   561                           ;gpio.c: 37:     ODCONBbits.ODCB4 = 0;
+   562   002650  990A               	bcf	10,4,b	;volatile
    563                           
    564                           ;gpio.c: 38:     WPUBbits.WPUB4 = 1;
    565   002652  8909               	bsf	9,4,b	;volatile
@@ -633,8 +633,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    576                           ;gpio.c: 45:     INLVLCbits.INLVLC4 = 0;
    577   00265A  9914               	bcf	20,4,b	;volatile
    578                           
-   579                           ;gpio.c: 46:     ODCONCbits.ODCC4 = 1;
-   580   00265C  8912               	bsf	18,4,b	;volatile
+   579                           ;gpio.c: 46:     ODCONCbits.ODCC4 = 0;
+   580   00265C  9912               	bcf	18,4,b	;volatile
    581                           
    582                           ;gpio.c: 47:     WPUCbits.WPUC4 = 1;
    583   00265E  8911               	bsf	17,4,b	;volatile
@@ -651,8 +651,8 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    594                           ;gpio.c: 54:     INLVLCbits.INLVLC5 = 0;
    595   002666  9B14               	bcf	20,5,b	;volatile
    596                           
-   597                           ;gpio.c: 55:     ODCONCbits.ODCC5 = 1;
-   598   002668  8B12               	bsf	18,5,b	;volatile
+   597                           ;gpio.c: 55:     ODCONCbits.ODCC5 = 0;
+   598   002668  9B12               	bcf	18,5,b	;volatile
    599                           
    600                           ;gpio.c: 56:     WPUCbits.WPUC5 = 1;
    601   00266A  8B11               	bsf	17,5,b	;volatile
@@ -1191,7 +1191,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed Oct 02 16:58:22 2024
+Symbol Table                                                                                   Wed Oct 02 23:25:07 2024
 
                       l5 2698                       l60 266E                       l64 25A8  
                      l65 2622                       l66 25BE                       l67 25D4  

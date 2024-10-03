@@ -3,13 +3,13 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"60 D:\Curso Curiosity Nano\Button.X\gpio.c
+"60 D:\PIC_18F57Q43\Button.X\gpio.c
 [e E17436 . `uc
 BUTTON_INTERNAL 0
 BUTTON_EXTERNAL_1 1
 BUTTON_EXTERNAL_2 2
 ]
-"15 D:\Curso Curiosity Nano\Button.X\main.c
+"15 D:\PIC_18F57Q43\Button.X\main.c
 [e E17437 . `uc
 BUTTON_INTERNAL 0
 BUTTON_EXTERNAL_1 1
@@ -39,13 +39,13 @@ BUTTON_EXTERNAL_2 2
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"57 D:\Curso Curiosity Nano\Button.X\config.c
+"57 D:\PIC_18F57Q43\Button.X\config.c
 [v _Clock_Init Clock_Init `(v  1 e 1 0 ]
-"3 D:\Curso Curiosity Nano\Button.X\gpio.c
+"3 D:\PIC_18F57Q43\Button.X\gpio.c
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 "60
 [v _read_Button read_Button `(a  1 e 1 0 ]
-"8 D:\Curso Curiosity Nano\Button.X\main.c
+"8 D:\PIC_18F57Q43\Button.X\main.c
 [v _main main `(i  1 e 2 0 ]
 "23
 [v _btn_led btn_led `(v  1 e 1 0 ]
@@ -443,7 +443,7 @@ BUTTON_EXTERNAL_2 2
 "49686
 "49686
 [v _PORTCbits PORTCbits `VES564  1 e 1 @1232 ]
-"8 D:\Curso Curiosity Nano\Button.X\main.c
+"8 D:\PIC_18F57Q43\Button.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "21
@@ -456,7 +456,7 @@ BUTTON_EXTERNAL_2 2
 [v btn_led@btn btn `E17437  1 a 1 5 ]
 "51
 } 0
-"60 D:\Curso Curiosity Nano\Button.X\gpio.c
+"60 D:\PIC_18F57Q43\Button.X\gpio.c
 [v _read_Button read_Button `(a  1 e 1 0 ]
 {
 [v read_Button@btn btn `E17436  1 a 1 wreg ]
@@ -469,7 +469,7 @@ BUTTON_EXTERNAL_2 2
 {
 "58
 } 0
-"57 D:\Curso Curiosity Nano\Button.X\config.c
+"57 D:\PIC_18F57Q43\Button.X\config.c
 [v _Clock_Init Clock_Init `(v  1 e 1 0 ]
 {
 "60

@@ -29467,7 +29467,7 @@ void GPIO_Init(void)
     ANSELBbits.ANSELB4 = 0;
     SLRCONBbits.SLRB4 = 1;
     INLVLBbits.INLVLB4 = 0;
-    ODCONBbits.ODCB4 = 1;
+    ODCONBbits.ODCB4 = 0;
     WPUBbits.WPUB4 = 1;
     TRISBbits.TRISB4 = 1;
 
@@ -29476,7 +29476,7 @@ void GPIO_Init(void)
     ANSELCbits.ANSELC4 = 0;
     SLRCONCbits.SLRC4 = 1;
     INLVLCbits.INLVLC4 = 0;
-    ODCONCbits.ODCC4 = 1;
+    ODCONCbits.ODCC4 = 0;
     WPUCbits.WPUC4 = 1;
     TRISCbits.TRISC4 = 1;
 
@@ -29485,7 +29485,7 @@ void GPIO_Init(void)
     ANSELCbits.ANSELC5 = 0;
     SLRCONCbits.SLRC5 = 1;
     INLVLCbits.INLVLC5 = 0;
-    ODCONCbits.ODCC5 = 1;
+    ODCONCbits.ODCC5 = 0;
     WPUCbits.WPUC5 = 1;
     TRISCbits.TRISC5 = 1;
 }

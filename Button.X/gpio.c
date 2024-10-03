@@ -34,7 +34,7 @@ void GPIO_Init(void)
     ANSELBbits.ANSELB4 = 0; // Pin digital
     SLRCONBbits.SLRB4 = 1;  // Slew rate limitado
     INLVLBbits.INLVLB4 = 0; // TTL
-    ODCONBbits.ODCB4 = 1;   // Open - Drain
+    ODCONBbits.ODCB4 = 0;   // Push-Pull
     WPUBbits.WPUB4 = 1;     // Pull-Up habilitado
     TRISBbits.TRISB4 = 1;   // Entrada
     
@@ -43,7 +43,7 @@ void GPIO_Init(void)
     ANSELCbits.ANSELC4 = 0; // Pin digital
     SLRCONCbits.SLRC4 = 1;  // Slew rate limitado
     INLVLCbits.INLVLC4 = 0; // TTL
-    ODCONCbits.ODCC4 = 1;   // Open - Drain
+    ODCONCbits.ODCC4 = 0;   // Push-Pull
     WPUCbits.WPUC4 = 1;     // Pull-Up habilitado
     TRISCbits.TRISC4 = 1;   // Entrada
 
@@ -52,7 +52,7 @@ void GPIO_Init(void)
     ANSELCbits.ANSELC5 = 0; // Pin digital
     SLRCONCbits.SLRC5 = 1;  // Slew rate limitado
     INLVLCbits.INLVLC5 = 0; // TTL
-    ODCONCbits.ODCC5 = 1;   // Open - Drain
+    ODCONCbits.ODCC5 = 0;   // Push-Pull
     WPUCbits.WPUC5 = 1;     // Pull-Up habilitado
     TRISCbits.TRISC5 = 1;   // Entrada
 }

@@ -2932,8 +2932,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;gpio.c: 36:     INLVLBbits.INLVLB4 = 0;
 [e = . . _INLVLBbits 0 4 -> -> 0 `i `uc ]
 "37
-[; ;gpio.c: 37:     ODCONBbits.ODCB4 = 1;
-[e = . . _ODCONBbits 0 4 -> -> 1 `i `uc ]
+[; ;gpio.c: 37:     ODCONBbits.ODCB4 = 0;
+[e = . . _ODCONBbits 0 4 -> -> 0 `i `uc ]
 "38
 [; ;gpio.c: 38:     WPUBbits.WPUB4 = 1;
 [e = . . _WPUBbits 0 4 -> -> 1 `i `uc ]
@@ -2950,8 +2950,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;gpio.c: 45:     INLVLCbits.INLVLC4 = 0;
 [e = . . _INLVLCbits 0 4 -> -> 0 `i `uc ]
 "46
-[; ;gpio.c: 46:     ODCONCbits.ODCC4 = 1;
-[e = . . _ODCONCbits 0 4 -> -> 1 `i `uc ]
+[; ;gpio.c: 46:     ODCONCbits.ODCC4 = 0;
+[e = . . _ODCONCbits 0 4 -> -> 0 `i `uc ]
 "47
 [; ;gpio.c: 47:     WPUCbits.WPUC4 = 1;
 [e = . . _WPUCbits 0 4 -> -> 1 `i `uc ]
@@ -2968,8 +2968,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;gpio.c: 54:     INLVLCbits.INLVLC5 = 0;
 [e = . . _INLVLCbits 0 5 -> -> 0 `i `uc ]
 "55
-[; ;gpio.c: 55:     ODCONCbits.ODCC5 = 1;
-[e = . . _ODCONCbits 0 5 -> -> 1 `i `uc ]
+[; ;gpio.c: 55:     ODCONCbits.ODCC5 = 0;
+[e = . . _ODCONCbits 0 5 -> -> 0 `i `uc ]
 "56
 [; ;gpio.c: 56:     WPUCbits.WPUC5 = 1;
 [e = . . _WPUCbits 0 5 -> -> 1 `i `uc ]
