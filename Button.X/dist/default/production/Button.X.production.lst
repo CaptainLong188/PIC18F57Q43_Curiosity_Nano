@@ -1,0 +1,1237 @@
+
+
+Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
+                                                                                               Wed Oct 02 16:58:22 2024
+
+Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
+     1                           	processor	18F57Q43
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     7                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    12                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+    13                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    14                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    15                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    16   000000                     
+    17                           ; Generated 18/12/2023 GMT
+    18                           ; 
+    19                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    20                           ; All rights reserved.
+    21                           ; 
+    22                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    23                           ; 
+    24                           ; Redistribution and use in source and binary forms, with or without modification, are
+    25                           ; permitted provided that the following conditions are met:
+    26                           ; 
+    27                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    28                           ;        conditions and the following disclaimer.
+    29                           ; 
+    30                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    31                           ;        of conditions and the following disclaimer in the documentation and/or other
+    32                           ;        materials provided with the distribution. Publication is not required when
+    33                           ;        this file is used in an embedded application.
+    34                           ; 
+    35                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    36                           ;        software without specific prior written permission.
+    37                           ; 
+    38                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    39                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    40                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    41                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    42                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    43                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    44                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    45                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    46                           ; 
+    47                           ; 
+    48                           ; Code-generator required, PIC18F57Q43 Definitions
+    49                           ; 
+    50                           ; SFR Addresses
+    51   000000                     _TRISCbits	set	1224
+    52   000000                     _WPUCbits	set	1041
+    53   000000                     _ODCONCbits	set	1042
+    54   000000                     _SLRCONCbits	set	1043
+    55   000000                     _WPUBbits	set	1033
+    56   000000                     _ODCONBbits	set	1034
+    57   000000                     _SLRCONBbits	set	1035
+    58   000000                     _WPUDbits	set	1049
+    59   000000                     _ODCONDbits	set	1050
+    60   000000                     _SLRCONDbits	set	1051
+    61   000000                     _WPUFbits	set	1065
+    62   000000                     _ODCONFbits	set	1066
+    63   000000                     _SLRCONFbits	set	1067
+    64   000000                     _OSCCON1	set	173
+    65   000000                     _ANSELBbits	set	1032
+    66   000000                     _ANSELDbits	set	1048
+    67   000000                     _ANSELFbits	set	1064
+    68   000000                     _LATDbits	set	1217
+    69   000000                     _LATFbits	set	1219
+    70   000000                     _TRISBbits	set	1223
+    71   000000                     _TRISDbits	set	1225
+    72   000000                     _TRISFbits	set	1227
+    73   000000                     _INLVLFbits	set	1068
+    74   000000                     _PORTBbits	set	1231
+    75   000000                     _INLVLDbits	set	1052
+    76   000000                     _ANSELCbits	set	1040
+    77   000000                     _INLVLBbits	set	1036
+    78   000000                     _INLVLCbits	set	1044
+    79   000000                     _PORTCbits	set	1232
+    80                           
+    81                           ; #config settings
+    82                           
+    83                           	psect	cinit
+    84   00269A                     __pcinit:
+    85                           	callstack 0
+    86   00269A                     start_initialization:
+    87                           	callstack 0
+    88   00269A                     __initialization:
+    89                           	callstack 0
+    90   00269A                     end_of_initialization:
+    91                           	callstack 0
+    92   00269A                     __end_of__initialization:
+    93                           	callstack 0
+    94   00269A  0100               	movlb	0
+    95   00269C  EF38  F013         	goto	_main	;jump to C main() function
+    96                           
+    97                           	psect	cstackCOMRAM
+    98   000501                     __pcstackCOMRAM:
+    99                           	callstack 0
+   100   000501                     ??_read_Button:
+   101                           
+   102                           ; 1 bytes @ 0x0
+   103   000501                     	ds	2
+   104   000503                     read_Button@btn:
+   105                           	callstack 0
+   106                           
+   107                           ; 1 bytes @ 0x2
+   108   000503                     	ds	1
+   109   000504                     ??_btn_led:
+   110                           
+   111                           ; 1 bytes @ 0x3
+   112   000504                     	ds	2
+   113   000506                     btn_led@btn:
+   114                           	callstack 0
+   115                           
+   116                           ; 1 bytes @ 0x5
+   117   000506                     	ds	1
+   118   000507                     
+   119                           ; 2 bytes @ 0x6
+   120   000507                     	ds	2
+   121   000509                     
+   122                           ; 3 bytes @ 0x8
+   123   000509                     	ds	3
+   124   00050C                     
+   125                           ; 1 bytes @ 0xB
+   126 ;;
+   127 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   128 ;;
+   129 ;; *************** function _main *****************
+   130 ;; Defined at:
+   131 ;;		line 8 in file "main.c"
+   132 ;; Parameters:    Size  Location     Type
+   133 ;;  argc            2    6[COMRAM] int 
+   134 ;;  argv            3    8[COMRAM] PTR PTR unsigned char 
+   135 ;; Auto vars:     Size  Location     Type
+   136 ;;		None
+   137 ;; Return value:  Size  Location     Type
+   138 ;;                  2    6[COMRAM] int 
+   139 ;; Registers used:
+   140 ;;		wreg, status,2, status,0, cstack
+   141 ;; Tracked objects:
+   142 ;;		On entry : 0/0
+   143 ;;		On exit  : 0/0
+   144 ;;		Unchanged: 0/0
+   145 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   146 ;;      Params:         5       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   147 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   148 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   149 ;;      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   150 ;;Total ram usage:        5 bytes
+   151 ;; Hardware stack levels required when called: 2
+   152 ;; This function calls:
+   153 ;;		_Clock_Init
+   154 ;;		_GPIO_Init
+   155 ;;		_btn_led
+   156 ;; This function is called by:
+   157 ;;		Startup code after reset
+   158 ;; This function uses a non-reentrant model
+   159 ;;
+   160                           
+   161                           	psect	text0
+   162   002670                     __ptext0:
+   163                           	callstack 0
+   164   002670                     _main:
+   165                           	callstack 125
+   166   002670                     
+   167                           ;main.c: 10:     Clock_Init();
+   168   002670  EC49  F013         	call	_Clock_Init	;wreg free
+   169   002674                     
+   170                           ;main.c: 11:     GPIO_Init();
+   171   002674  EC12  F013         	call	_GPIO_Init	;wreg free
+   172   002678                     l873:
+   173                           
+   174                           ;main.c: 14:     {;main.c: 15:         btn_led(BUTTON_INTERNAL);
+   175   002678  0E00               	movlw	0
+   176   00267A  EC81  F012         	call	_btn_led
+   177   00267E                     
+   178                           ;main.c: 16:         btn_led(BUTTON_EXTERNAL_1);
+   179   00267E  0E01               	movlw	1
+   180   002680  EC81  F012         	call	_btn_led
+   181   002684                     
+   182                           ;main.c: 17:         btn_led(BUTTON_EXTERNAL_2);
+   183   002684  0E02               	movlw	2
+   184   002686  EC81  F012         	call	_btn_led
+   185   00268A  EF3C  F013         	goto	l873
+   186   00268E  EFFE  F0FF         	goto	start
+   187   002692                     __end_of_main:
+   188                           	callstack 0
+   189                           
+   190 ;; *************** function _btn_led *****************
+   191 ;; Defined at:
+   192 ;;		line 23 in file "main.c"
+   193 ;; Parameters:    Size  Location     Type
+   194 ;;  btn             1    wreg     enum E17437
+   195 ;; Auto vars:     Size  Location     Type
+   196 ;;  btn             1    5[COMRAM] enum E17437
+   197 ;; Return value:  Size  Location     Type
+   198 ;;                  1    wreg      void 
+   199 ;; Registers used:
+   200 ;;		wreg, status,2, status,0, cstack
+   201 ;; Tracked objects:
+   202 ;;		On entry : 0/0
+   203 ;;		On exit  : 0/0
+   204 ;;		Unchanged: 0/0
+   205 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   206 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   207 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   208 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   209 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   210 ;;Total ram usage:        3 bytes
+   211 ;; Hardware stack levels used: 1
+   212 ;; Hardware stack levels required when called: 1
+   213 ;; This function calls:
+   214 ;;		_read_Button
+   215 ;; This function is called by:
+   216 ;;		_main
+   217 ;; This function uses a non-reentrant model
+   218 ;;
+   219                           
+   220                           	psect	text1
+   221   002502                     __ptext1:
+   222                           	callstack 0
+   223   002502                     _btn_led:
+   224                           	callstack 125
+   225                           
+   226                           ;incstack = 0
+   227                           ;btn_led@btn stored from wreg
+   228   002502  6E06               	movwf	btn_led@btn^(0+1280),c
+   229   002504                     
+   230                           ;main.c: 23: void btn_led(button_t btn);main.c: 24: {;main.c: 25:     switch(btn)
+   231   002504  EFB7  F012         	goto	l813
+   232   002508                     l799:
+   233                           
+   234                           ;main.c: 29:             if (read_Button(btn))
+   235   002508  5006               	movf	btn_led@btn^(0+1280),w,c
+   236   00250A  ECD1  F012         	call	_read_Button
+   237   00250E  0900               	iorlw	0
+   238   002510  B4D8               	btfsc	status,2,c
+   239   002512  EF8D  F012         	goto	u71
+   240   002516  EF8F  F012         	goto	u70
+   241   00251A                     u71:
+   242   00251A  EF92  F012         	goto	l94
+   243   00251E                     u70:
+   244   00251E                     
+   245                           ;main.c: 30:                 (LATFbits.LATF3 = 0);
+   246   00251E  96C3               	bcf	195,3,c	;volatile
+   247   002520  EFD0  F012         	goto	l103
+   248   002524                     l94:
+   249                           
+   250                           ;main.c: 32:                 (LATFbits.LATF3 = 1);
+   251   002524  86C3               	bsf	195,3,c	;volatile
+   252   002526  EFD0  F012         	goto	l103
+   253   00252A                     l803:
+   254                           
+   255                           ;main.c: 37:             if (read_Button(btn))
+   256   00252A  5006               	movf	btn_led@btn^(0+1280),w,c
+   257   00252C  ECD1  F012         	call	_read_Button
+   258   002530  0900               	iorlw	0
+   259   002532  B4D8               	btfsc	status,2,c
+   260   002534  EF9E  F012         	goto	u81
+   261   002538  EFA0  F012         	goto	u80
+   262   00253C                     u81:
+   263   00253C  EFA3  F012         	goto	l98
+   264   002540                     u80:
+   265   002540                     
+   266                           ;main.c: 38:                 (LATDbits.LATD0 = 1);
+   267   002540  80C1               	bsf	193,0,c	;volatile
+   268   002542  EFD0  F012         	goto	l103
+   269   002546                     l98:
+   270                           
+   271                           ;main.c: 40:                 (LATDbits.LATD0 = 0);
+   272   002546  90C1               	bcf	193,0,c	;volatile
+   273   002548  EFD0  F012         	goto	l103
+   274   00254C                     l807:
+   275                           
+   276                           ;main.c: 45:             if (read_Button(btn))
+   277   00254C  5006               	movf	btn_led@btn^(0+1280),w,c
+   278   00254E  ECD1  F012         	call	_read_Button
+   279   002552  0900               	iorlw	0
+   280   002554  B4D8               	btfsc	status,2,c
+   281   002556  EFAF  F012         	goto	u91
+   282   00255A  EFB1  F012         	goto	u90
+   283   00255E                     u91:
+   284   00255E  EFB4  F012         	goto	l101
+   285   002562                     u90:
+   286   002562                     
+   287                           ;main.c: 46:                 (LATDbits.LATD1 = 1);
+   288   002562  82C1               	bsf	193,1,c	;volatile
+   289   002564  EFD0  F012         	goto	l103
+   290   002568                     l101:
+   291                           
+   292                           ;main.c: 48:                 (LATDbits.LATD1 = 0);
+   293   002568  92C1               	bcf	193,1,c	;volatile
+   294   00256A  EFD0  F012         	goto	l103
+   295   00256E                     l813:
+   296   00256E  5006               	movf	btn_led@btn^(0+1280),w,c
+   297   002570  6E04               	movwf	??_btn_led^(0+1280),c
+   298   002572  6A05               	clrf	(??_btn_led+1)^(0+1280),c
+   299                           
+   300                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   301                           ; Switch size 1, requested type "simple"
+   302                           ; Number of cases is 1, Range of values is 0 to 0
+   303                           ; switch strategies available:
+   304                           ; Name         Instructions Cycles
+   305                           ; simple_byte            4     3 (average)
+   306                           ;	Chosen strategy is simple_byte
+   307   002574  5005               	movf	(??_btn_led+1)^(0+1280),w,c
+   308   002576  0A00               	xorlw	0	; case 0
+   309   002578  B4D8               	btfsc	status,2,c
+   310   00257A  EFC1  F012         	goto	l919
+   311   00257E  EFD0  F012         	goto	l103
+   312   002582                     l919:
+   313                           
+   314                           ; Switch size 1, requested type "simple"
+   315                           ; Number of cases is 3, Range of values is 0 to 2
+   316                           ; switch strategies available:
+   317                           ; Name         Instructions Cycles
+   318                           ; simple_byte           10     6 (average)
+   319                           ;	Chosen strategy is simple_byte
+   320   002582  5004               	movf	??_btn_led^(0+1280),w,c
+   321   002584  0A00               	xorlw	0	; case 0
+   322   002586  B4D8               	btfsc	status,2,c
+   323   002588  EF84  F012         	goto	l799
+   324   00258C  0A01               	xorlw	1	; case 1
+   325   00258E  B4D8               	btfsc	status,2,c
+   326   002590  EF95  F012         	goto	l803
+   327   002594  0A03               	xorlw	3	; case 2
+   328   002596  B4D8               	btfsc	status,2,c
+   329   002598  EFA6  F012         	goto	l807
+   330   00259C  EFD0  F012         	goto	l103
+   331   0025A0                     l103:
+   332   0025A0  0012               	return		;funcret
+   333   0025A2                     __end_of_btn_led:
+   334                           	callstack 0
+   335                           
+   336 ;; *************** function _read_Button *****************
+   337 ;; Defined at:
+   338 ;;		line 60 in file "gpio.c"
+   339 ;; Parameters:    Size  Location     Type
+   340 ;;  btn             1    wreg     enum E17436
+   341 ;; Auto vars:     Size  Location     Type
+   342 ;;  btn             1    2[COMRAM] enum E17436
+   343 ;; Return value:  Size  Location     Type
+   344 ;;                  1    wreg      _Bool 
+   345 ;; Registers used:
+   346 ;;		wreg, status,2, status,0
+   347 ;; Tracked objects:
+   348 ;;		On entry : 0/0
+   349 ;;		On exit  : 0/0
+   350 ;;		Unchanged: 0/0
+   351 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   352 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   353 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   354 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   355 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   356 ;;Total ram usage:        3 bytes
+   357 ;; Hardware stack levels used: 1
+   358 ;; This function calls:
+   359 ;;		Nothing
+   360 ;; This function is called by:
+   361 ;;		_btn_led
+   362 ;; This function uses a non-reentrant model
+   363 ;;
+   364                           
+   365                           	psect	text2
+   366   0025A2                     __ptext2:
+   367                           	callstack 0
+   368   0025A2                     _read_Button:
+   369                           	callstack 125
+   370                           
+   371                           ;incstack = 0
+   372                           ;read_Button@btn stored from wreg
+   373   0025A2  6E03               	movwf	read_Button@btn^(0+1280),c
+   374   0025A4                     
+   375                           ;gpio.c: 60: _Bool read_Button(button_t btn);gpio.c: 61: {;gpio.c: 62:     switch (btn) 
+      +                          {
+   376   0025A4  EFF8  F012         	goto	l787
+   377   0025A8                     l64:
+   378                           
+   379                           ;gpio.c: 64:             return (PORTBbits.RB4 == 0);
+   380   0025A8  A8CF               	btfss	207,4,c	;volatile
+   381   0025AA  EFD9  F012         	goto	u11
+   382   0025AE  EFDC  F012         	goto	u10
+   383   0025B2                     u11:
+   384   0025B2  0E01               	movlw	1
+   385   0025B4  EFDD  F012         	goto	u20
+   386   0025B8                     u10:
+   387   0025B8  0E00               	movlw	0
+   388   0025BA                     u20:
+   389   0025BA  EF11  F013         	goto	l65
+   390   0025BE                     l66:
+   391                           
+   392                           ;gpio.c: 66:             return (PORTCbits.RC4 == 0);
+   393   0025BE  A8D0               	btfss	208,4,c	;volatile
+   394   0025C0  EFE4  F012         	goto	u31
+   395   0025C4  EFE7  F012         	goto	u30
+   396   0025C8                     u31:
+   397   0025C8  0E01               	movlw	1
+   398   0025CA  EFE8  F012         	goto	u40
+   399   0025CE                     u30:
+   400   0025CE  0E00               	movlw	0
+   401   0025D0                     u40:
+   402   0025D0  EF11  F013         	goto	l65
+   403   0025D4                     l67:
+   404                           
+   405                           ;gpio.c: 68:             return (PORTCbits.RC5 == 0);
+   406   0025D4  AAD0               	btfss	208,5,c	;volatile
+   407   0025D6  EFEF  F012         	goto	u51
+   408   0025DA  EFF2  F012         	goto	u50
+   409   0025DE                     u51:
+   410   0025DE  0E01               	movlw	1
+   411   0025E0  EFF3  F012         	goto	u60
+   412   0025E4                     u50:
+   413   0025E4  0E00               	movlw	0
+   414   0025E6                     u60:
+   415   0025E6  EF11  F013         	goto	l65
+   416   0025EA                     l781:
+   417                           
+   418                           ;gpio.c: 70:             return 0;
+   419   0025EA  0E00               	movlw	0
+   420   0025EC  EF11  F013         	goto	l65
+   421   0025F0                     l787:
+   422   0025F0  5003               	movf	read_Button@btn^(0+1280),w,c
+   423   0025F2  6E01               	movwf	??_read_Button^(0+1280),c
+   424   0025F4  6A02               	clrf	(??_read_Button+1)^(0+1280),c
+   425                           
+   426                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   427                           ; Switch size 1, requested type "simple"
+   428                           ; Number of cases is 1, Range of values is 0 to 0
+   429                           ; switch strategies available:
+   430                           ; Name         Instructions Cycles
+   431                           ; simple_byte            4     3 (average)
+   432                           ;	Chosen strategy is simple_byte
+   433   0025F6  5002               	movf	(??_read_Button+1)^(0+1280),w,c
+   434   0025F8  0A00               	xorlw	0	; case 0
+   435   0025FA  B4D8               	btfsc	status,2,c
+   436   0025FC  EF02  F013         	goto	l921
+   437   002600  EFF5  F012         	goto	l781
+   438   002604                     l921:
+   439                           
+   440                           ; Switch size 1, requested type "simple"
+   441                           ; Number of cases is 3, Range of values is 0 to 2
+   442                           ; switch strategies available:
+   443                           ; Name         Instructions Cycles
+   444                           ; simple_byte           10     6 (average)
+   445                           ;	Chosen strategy is simple_byte
+   446   002604  5001               	movf	??_read_Button^(0+1280),w,c
+   447   002606  0A00               	xorlw	0	; case 0
+   448   002608  B4D8               	btfsc	status,2,c
+   449   00260A  EFD4  F012         	goto	l64
+   450   00260E  0A01               	xorlw	1	; case 1
+   451   002610  B4D8               	btfsc	status,2,c
+   452   002612  EFDF  F012         	goto	l66
+   453   002616  0A03               	xorlw	3	; case 2
+   454   002618  B4D8               	btfsc	status,2,c
+   455   00261A  EFEA  F012         	goto	l67
+   456   00261E  EFF5  F012         	goto	l781
+   457   002622                     l65:
+   458   002622  0012               	return		;funcret
+   459   002624                     __end_of_read_Button:
+   460                           	callstack 0
+   461                           
+   462 ;; *************** function _GPIO_Init *****************
+   463 ;; Defined at:
+   464 ;;		line 3 in file "gpio.c"
+   465 ;; Parameters:    Size  Location     Type
+   466 ;;		None
+   467 ;; Auto vars:     Size  Location     Type
+   468 ;;		None
+   469 ;; Return value:  Size  Location     Type
+   470 ;;                  1    wreg      void 
+   471 ;; Registers used:
+   472 ;;		None
+   473 ;; Tracked objects:
+   474 ;;		On entry : 0/0
+   475 ;;		On exit  : 0/0
+   476 ;;		Unchanged: 0/0
+   477 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   478 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   479 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   480 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   481 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   482 ;;Total ram usage:        0 bytes
+   483 ;; Hardware stack levels used: 1
+   484 ;; This function calls:
+   485 ;;		Nothing
+   486 ;; This function is called by:
+   487 ;;		_main
+   488 ;; This function uses a non-reentrant model
+   489 ;;
+   490                           
+   491                           	psect	text3
+   492   002624                     __ptext3:
+   493                           	callstack 0
+   494   002624                     _GPIO_Init:
+   495                           	callstack 126
+   496   002624                     
+   497                           ;gpio.c: 7:     ANSELFbits.ANSELF3 = 0;
+   498   002624  0104               	movlb	4	; () banked
+   499   002626  9728               	bcf	40,3,b	;volatile
+   500                           
+   501                           ;gpio.c: 8:     SLRCONFbits.SLRF3 = 1;
+   502   002628  872B               	bsf	43,3,b	;volatile
+   503                           
+   504                           ;gpio.c: 9:     INLVLFbits.INLVLF3 = 0;
+   505   00262A  972C               	bcf	44,3,b	;volatile
+   506                           
+   507                           ;gpio.c: 10:     ODCONFbits.ODCF3 = 0;
+   508   00262C  972A               	bcf	42,3,b	;volatile
+   509                           
+   510                           ;gpio.c: 11:     WPUFbits.WPUF3 = 0;
+   511   00262E  9729               	bcf	41,3,b	;volatile
+   512                           
+   513                           ;gpio.c: 12:     TRISFbits.TRISF3 = 0;
+   514   002630  96CB               	bcf	203,3,c	;volatile
+   515                           
+   516                           ;gpio.c: 16:     ANSELDbits.ANSELD0 = 0;
+   517   002632  9118               	bcf	24,0,b	;volatile
+   518                           
+   519                           ;gpio.c: 17:     SLRCONDbits.SLRD0 = 1;
+   520   002634  811B               	bsf	27,0,b	;volatile
+   521                           
+   522                           ;gpio.c: 18:     INLVLDbits.INLVLD0 = 0;
+   523   002636  911C               	bcf	28,0,b	;volatile
+   524                           
+   525                           ;gpio.c: 19:     ODCONDbits.ODCD0 = 0;
+   526   002638  911A               	bcf	26,0,b	;volatile
+   527                           
+   528                           ;gpio.c: 20:     WPUDbits.WPUD0 = 0;
+   529   00263A  9119               	bcf	25,0,b	;volatile
+   530                           
+   531                           ;gpio.c: 21:     TRISDbits.TRISD0 = 0;
+   532   00263C  90C9               	bcf	201,0,c	;volatile
+   533                           
+   534                           ;gpio.c: 25:     ANSELDbits.ANSELD1 = 0;
+   535   00263E  9318               	bcf	24,1,b	;volatile
+   536                           
+   537                           ;gpio.c: 26:     SLRCONDbits.SLRD1 = 1;
+   538   002640  831B               	bsf	27,1,b	;volatile
+   539                           
+   540                           ;gpio.c: 27:     INLVLDbits.INLVLD1 = 0;
+   541   002642  931C               	bcf	28,1,b	;volatile
+   542                           
+   543                           ;gpio.c: 28:     ODCONDbits.ODCD1 = 1;
+   544   002644  831A               	bsf	26,1,b	;volatile
+   545                           
+   546                           ;gpio.c: 29:     WPUDbits.WPUD1 = 0;
+   547   002646  9319               	bcf	25,1,b	;volatile
+   548                           
+   549                           ;gpio.c: 30:     TRISDbits.TRISD1 = 0;
+   550   002648  92C9               	bcf	201,1,c	;volatile
+   551                           
+   552                           ;gpio.c: 34:     ANSELBbits.ANSELB4 = 0;
+   553   00264A  9908               	bcf	8,4,b	;volatile
+   554                           
+   555                           ;gpio.c: 35:     SLRCONBbits.SLRB4 = 1;
+   556   00264C  890B               	bsf	11,4,b	;volatile
+   557                           
+   558                           ;gpio.c: 36:     INLVLBbits.INLVLB4 = 0;
+   559   00264E  990C               	bcf	12,4,b	;volatile
+   560                           
+   561                           ;gpio.c: 37:     ODCONBbits.ODCB4 = 1;
+   562   002650  890A               	bsf	10,4,b	;volatile
+   563                           
+   564                           ;gpio.c: 38:     WPUBbits.WPUB4 = 1;
+   565   002652  8909               	bsf	9,4,b	;volatile
+   566                           
+   567                           ;gpio.c: 39:     TRISBbits.TRISB4 = 1;
+   568   002654  88C7               	bsf	199,4,c	;volatile
+   569                           
+   570                           ;gpio.c: 43:     ANSELCbits.ANSELC4 = 0;
+   571   002656  9910               	bcf	16,4,b	;volatile
+   572                           
+   573                           ;gpio.c: 44:     SLRCONCbits.SLRC4 = 1;
+   574   002658  8913               	bsf	19,4,b	;volatile
+   575                           
+   576                           ;gpio.c: 45:     INLVLCbits.INLVLC4 = 0;
+   577   00265A  9914               	bcf	20,4,b	;volatile
+   578                           
+   579                           ;gpio.c: 46:     ODCONCbits.ODCC4 = 1;
+   580   00265C  8912               	bsf	18,4,b	;volatile
+   581                           
+   582                           ;gpio.c: 47:     WPUCbits.WPUC4 = 1;
+   583   00265E  8911               	bsf	17,4,b	;volatile
+   584                           
+   585                           ;gpio.c: 48:     TRISCbits.TRISC4 = 1;
+   586   002660  88C8               	bsf	200,4,c	;volatile
+   587                           
+   588                           ;gpio.c: 52:     ANSELCbits.ANSELC5 = 0;
+   589   002662  9B10               	bcf	16,5,b	;volatile
+   590                           
+   591                           ;gpio.c: 53:     SLRCONCbits.SLRC5 = 1;
+   592   002664  8B13               	bsf	19,5,b	;volatile
+   593                           
+   594                           ;gpio.c: 54:     INLVLCbits.INLVLC5 = 0;
+   595   002666  9B14               	bcf	20,5,b	;volatile
+   596                           
+   597                           ;gpio.c: 55:     ODCONCbits.ODCC5 = 1;
+   598   002668  8B12               	bsf	18,5,b	;volatile
+   599                           
+   600                           ;gpio.c: 56:     WPUCbits.WPUC5 = 1;
+   601   00266A  8B11               	bsf	17,5,b	;volatile
+   602                           
+   603                           ;gpio.c: 57:     TRISCbits.TRISC5 = 1;
+   604   00266C  8AC8               	bsf	200,5,c	;volatile
+   605   00266E                     
+   606                           ; BSR set to: 4
+   607   00266E  0012               	return		;funcret
+   608   002670                     __end_of_GPIO_Init:
+   609                           	callstack 0
+   610                           
+   611 ;; *************** function _Clock_Init *****************
+   612 ;; Defined at:
+   613 ;;		line 57 in file "config.c"
+   614 ;; Parameters:    Size  Location     Type
+   615 ;;		None
+   616 ;; Auto vars:     Size  Location     Type
+   617 ;;		None
+   618 ;; Return value:  Size  Location     Type
+   619 ;;                  1    wreg      void 
+   620 ;; Registers used:
+   621 ;;		wreg, status,2
+   622 ;; Tracked objects:
+   623 ;;		On entry : 0/0
+   624 ;;		On exit  : 0/0
+   625 ;;		Unchanged: 0/0
+   626 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   627 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   628 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   629 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   630 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   631 ;;Total ram usage:        0 bytes
+   632 ;; Hardware stack levels used: 1
+   633 ;; This function calls:
+   634 ;;		Nothing
+   635 ;; This function is called by:
+   636 ;;		_main
+   637 ;; This function uses a non-reentrant model
+   638 ;;
+   639                           
+   640                           	psect	text4
+   641   002692                     __ptext4:
+   642                           	callstack 0
+   643   002692                     _Clock_Init:
+   644                           	callstack 126
+   645   002692                     
+   646                           ;config.c: 59:     OSCCON1 = 0b0110000;
+   647   002692  0E30               	movlw	48
+   648   002694  0100               	movlb	0	; () banked
+   649   002696  6FAD               	movwf	173,b	;volatile
+   650   002698                     
+   651                           ; BSR set to: 0
+   652   002698  0012               	return		;funcret
+   653   00269A                     __end_of_Clock_Init:
+   654                           	callstack 0
+   655                           
+   656                           	psect	smallconst
+   657   002500                     __psmallconst:
+   658                           	callstack 0
+   659   002500  00                 	db	0
+   660   002501  00                 	db	0	; dummy byte at the end
+   661   000000                     
+   662                           	psect	rparam
+   663   000000                     
+   664                           	psect	config
+   665                           
+   666                           ;Config register CONFIG1 @ 0x300000
+   667                           ;	External Oscillator Selection
+   668                           ;	FEXTOSC = OFF, Oscillator not enabled
+   669                           ;	Reset Oscillator Selection
+   670                           ;	RSTOSC = HFINTOSC_64MHZ, HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1
+   671   300000                     	org	3145728
+   672   300000  8C                 	db	140
+   673                           
+   674                           ;Config register CONFIG2 @ 0x300001
+   675                           ;	Clock out Enable bit
+   676                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+   677                           ;	PRLOCKED One-Way Set Enable bit
+   678                           ;	PR1WAY = OFF, PRLOCKED bit can be set and cleared repeatedly
+   679                           ;	Clock Switch Enable bit
+   680                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+   681                           ;	Fail-Safe Clock Monitor Enable bit
+   682                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+   683   300001                     	org	3145729
+   684   300001  FD                 	db	253
+   685                           
+   686                           ;Config register CONFIG3 @ 0x300002
+   687                           ;	MCLR Enable bit
+   688                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+   689                           ;	Power-up timer selection bits
+   690                           ;	PWRTS = PWRT_OFF, PWRT is disabled
+   691                           ;	Multi-vector enable bit
+   692                           ;	MVECEN = ON, Multi-vector enabled, Vector table used for interrupts
+   693                           ;	IVTLOCK bit One-way set enable bit
+   694                           ;	IVT1WAY = ON, IVTLOCKED bit can be cleared and set only once
+   695                           ;	Low Power BOR Enable bit
+   696                           ;	LPBOREN = OFF, Low-Power BOR disabled
+   697                           ;	Brown-out Reset Enable bits
+   698                           ;	BOREN = OFF, Brown-out Reset disabled
+   699   300002                     	org	3145730
+   700   300002  3F                 	db	63
+   701                           
+   702                           ;Config register CONFIG4 @ 0x300003
+   703                           ;	Brown-out Reset Voltage Selection bits
+   704                           ;	BORV = VBOR_1P9, Brown-out Reset Voltage (VBOR) set to 1.9V
+   705                           ;	ZCD Disable bit
+   706                           ;	ZCD = OFF, ZCD module is disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCD
+      +                          CON
+   707                           ;	PPSLOCK bit One-Way Set Enable bit
+   708                           ;	PPS1WAY = ON, PPSLOCKED bit can be cleared and set only once; PPS registers remain loc
+      +                          ked after one clear/set cycle
+   709                           ;	Stack Full/Underflow Reset Enable bit
+   710                           ;	STVREN = ON, Stack full/underflow will cause Reset
+   711                           ;	Low Voltage Programming Enable bit
+   712                           ;	LVP = ON, Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE config
+      +                          uration bit is ignored
+   713                           ;	Extended Instruction Set Enable bit
+   714                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+   715   300003                     	org	3145731
+   716   300003  FF                 	db	255
+   717                           
+   718                           ;Config register CONFIG5 @ 0x300004
+   719                           ;	WDT Period selection bits
+   720                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+   721                           ;	WDT operating mode
+   722                           ;	WDTE = OFF, WDT Disabled; SWDTEN is ignored
+   723   300004                     	org	3145732
+   724   300004  9F                 	db	159
+   725                           
+   726                           ;Config register CONFIG6 @ 0x300005
+   727                           ;	WDT Window Select bits
+   728                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+   729                           ;	WDT input clock selector
+   730                           ;	WDTCCS = SC, Software Control
+   731   300005                     	org	3145733
+   732   300005  FF                 	db	255
+   733                           
+   734                           ;Config register CONFIG7 @ 0x300006
+   735                           ;	Boot Block Size selection bits
+   736                           ;	BBSIZE = BBSIZE_512, Boot Block size is 512 words
+   737                           ;	Boot Block enable bit
+   738                           ;	BBEN = OFF, Boot block disabled
+   739                           ;	Storage Area Flash enable bit
+   740                           ;	SAFEN = OFF, SAF disabled
+   741                           ;	Background Debugger
+   742                           ;	DEBUG = ON, Background Debugger enabled
+   743   300006                     	org	3145734
+   744   300006  DF                 	db	223
+   745                           
+   746                           ;Config register CONFIG8 @ 0x300007
+   747                           ;	Boot Block Write Protection bit
+   748                           ;	WRTB = OFF, Boot Block not Write protected
+   749                           ;	Configuration Register Write Protection bit
+   750                           ;	WRTC = OFF, Configuration registers not Write protected
+   751                           ;	Data EEPROM Write Protection bit
+   752                           ;	WRTD = OFF, Data EEPROM not Write protected
+   753                           ;	SAF Write protection bit
+   754                           ;	WRTSAF = OFF, SAF not Write Protected
+   755                           ;	Application Block write protection bit
+   756                           ;	WRTAPP = OFF, Application Block not write protected
+   757   300007                     	org	3145735
+   758   300007  FF                 	db	255
+   759                           
+   760                           ;Config register CONFIG10 @ 0x300009
+   761                           ;	PFM and Data EEPROM Code Protection bit
+   762                           ;	CP = OFF, PFM and Data EEPROM code protection disabled
+   763   300009                     	org	3145737
+   764   300009  FF                 	db	255
+   765                           tosu	equ	0x4FF
+   766                           tosh	equ	0x4FE
+   767                           tosl	equ	0x4FD
+   768                           stkptr	equ	0x4FC
+   769                           pclatu	equ	0x4FB
+   770                           pclath	equ	0x4FA
+   771                           pcl	equ	0x4F9
+   772                           tblptru	equ	0x4F8
+   773                           tblptrh	equ	0x4F7
+   774                           tblptrl	equ	0x4F6
+   775                           tablat	equ	0x4F5
+   776                           prodh	equ	0x4F4
+   777                           prodl	equ	0x4F3
+   778                           indf0	equ	0x4EF
+   779                           postinc0	equ	0x4EE
+   780                           postdec0	equ	0x4ED
+   781                           preinc0	equ	0x4EC
+   782                           plusw0	equ	0x4EB
+   783                           fsr0h	equ	0x4EA
+   784                           fsr0l	equ	0x4E9
+   785                           wreg	equ	0x4E8
+   786                           indf1	equ	0x4E7
+   787                           postinc1	equ	0x4E6
+   788                           postdec1	equ	0x4E5
+   789                           preinc1	equ	0x4E4
+   790                           plusw1	equ	0x4E3
+   791                           fsr1h	equ	0x4E2
+   792                           fsr1l	equ	0x4E1
+   793                           bsr	equ	0x4E0
+   794                           indf2	equ	0x4DF
+   795                           postinc2	equ	0x4DE
+   796                           postdec2	equ	0x4DD
+   797                           preinc2	equ	0x4DC
+   798                           plusw2	equ	0x4DB
+   799                           fsr2h	equ	0x4DA
+   800                           fsr2l	equ	0x4D9
+   801                           status	equ	0x4D8
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     11      11
+    BANK5           160      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15          256      0       0
+    BANK16          256      0       0
+    BANK17          256      0       0
+    BANK18          256      0       0
+    BANK19          256      0       0
+    BANK20          256      0       0
+    BANK21          256      0       0
+    BANK22          256      0       0
+    BANK23          256      0       0
+    BANK24          256      0       0
+    BANK25          256      0       0
+    BANK26          256      0       0
+    BANK27          256      0       0
+    BANK28          256      0       0
+    BANK29          256      0       0
+    BANK30          256      0       0
+    BANK31          256      0       0
+    BANK32          256      0       0
+    BANK33          256      0       0
+    BANK34          256      0       0
+    BANK35          256      0       0
+    BANK36          256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_btn_led
+    _btn_led->_read_Button
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _main in BANK16
+
+    None.
+
+Critical Paths under _main in BANK17
+
+    None.
+
+Critical Paths under _main in BANK18
+
+    None.
+
+Critical Paths under _main in BANK19
+
+    None.
+
+Critical Paths under _main in BANK20
+
+    None.
+
+Critical Paths under _main in BANK21
+
+    None.
+
+Critical Paths under _main in BANK22
+
+    None.
+
+Critical Paths under _main in BANK23
+
+    None.
+
+Critical Paths under _main in BANK24
+
+    None.
+
+Critical Paths under _main in BANK25
+
+    None.
+
+Critical Paths under _main in BANK26
+
+    None.
+
+Critical Paths under _main in BANK27
+
+    None.
+
+Critical Paths under _main in BANK28
+
+    None.
+
+Critical Paths under _main in BANK29
+
+    None.
+
+Critical Paths under _main in BANK30
+
+    None.
+
+Critical Paths under _main in BANK31
+
+    None.
+
+Critical Paths under _main in BANK32
+
+    None.
+
+Critical Paths under _main in BANK33
+
+    None.
+
+Critical Paths under _main in BANK34
+
+    None.
+
+Critical Paths under _main in BANK35
+
+    None.
+
+Critical Paths under _main in BANK36
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 5     0      5      75
+                                              6 COMRAM     5     0      5
+                         _Clock_Init
+                          _GPIO_Init
+                            _btn_led
+ ---------------------------------------------------------------------------------
+ (1) _btn_led                                              3     3      0      75
+                                              3 COMRAM     3     3      0
+                        _read_Button
+ ---------------------------------------------------------------------------------
+ (2) _read_Button                                          3     3      0      15
+                                              0 COMRAM     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _GPIO_Init                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _Clock_Init                                           0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Clock_Init
+   _GPIO_Init
+   _btn_led
+     _read_Button
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             400      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      B       B       1       11.6%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK5            A0      0       0       4        0.0%
+BANK5               A0      0       0       5        0.0%
+BITBANK6           100      0       0       6        0.0%
+BANK6              100      0       0       7        0.0%
+BITBANK7           100      0       0       8        0.0%
+BANK7              100      0       0       9        0.0%
+BITBANK8           100      0       0      10        0.0%
+BANK8              100      0       0      11        0.0%
+BITBANK9           100      0       0      12        0.0%
+BANK9              100      0       0      13        0.0%
+BITBANK10          100      0       0      14        0.0%
+BANK10             100      0       0      15        0.0%
+BITBANK11          100      0       0      16        0.0%
+BANK11             100      0       0      17        0.0%
+BITBANK12          100      0       0      18        0.0%
+BANK12             100      0       0      19        0.0%
+BITBANK13          100      0       0      20        0.0%
+BANK13             100      0       0      21        0.0%
+BITBANK14          100      0       0      22        0.0%
+BANK14             100      0       0      23        0.0%
+BITBANK15          100      0       0      24        0.0%
+BANK15             100      0       0      25        0.0%
+BITBANK16          100      0       0      26        0.0%
+BANK16             100      0       0      27        0.0%
+BITBANK17          100      0       0      28        0.0%
+BANK17             100      0       0      29        0.0%
+BITBANK18          100      0       0      30        0.0%
+BANK18             100      0       0      31        0.0%
+BITBANK19          100      0       0      32        0.0%
+BANK19             100      0       0      33        0.0%
+BITBANK20          100      0       0      34        0.0%
+BANK20             100      0       0      35        0.0%
+BITBANK21          100      0       0      36        0.0%
+BANK21             100      0       0      37        0.0%
+BITBANK22          100      0       0      38        0.0%
+BANK22             100      0       0      39        0.0%
+BITBANK23          100      0       0      40        0.0%
+BANK23             100      0       0      41        0.0%
+BITBANK24          100      0       0      42        0.0%
+BANK24             100      0       0      43        0.0%
+BITBANK25          100      0       0      44        0.0%
+BANK25             100      0       0      45        0.0%
+BITBANK26          100      0       0      46        0.0%
+BANK26             100      0       0      47        0.0%
+BITBANK27          100      0       0      48        0.0%
+BANK27             100      0       0      49        0.0%
+BITBANK28          100      0       0      50        0.0%
+BANK28             100      0       0      51        0.0%
+BITBANK29          100      0       0      52        0.0%
+BANK29             100      0       0      53        0.0%
+BITBANK30          100      0       0      54        0.0%
+BANK30             100      0       0      55        0.0%
+BITBANK31          100      0       0      56        0.0%
+BANK31             100      0       0      57        0.0%
+ABS                  0      0       0      58        0.0%
+BITBANK32          100      0       0      59        0.0%
+BANK32             100      0       0      60        0.0%
+BITBANK33          100      0       0      61        0.0%
+BANK33             100      0       0      62        0.0%
+BITBANK34          100      0       0      63        0.0%
+BANK34             100      0       0      64        0.0%
+BITBANK35          100      0       0      65        0.0%
+BANK35             100      0       0      66        0.0%
+BITBANK36          100      0       0      67        0.0%
+BANK36             100      0       0      68        0.0%
+BITBIGSFR_1        100      0       0      69        0.0%
+BIGRAM            1FFF      0       0      70        0.0%
+BITBIGSFRhhhhh      2F      0       0      71        0.0%
+BITBIGSFRhhhhl       3      0       0      72        0.0%
+BITBIGSFRhhhlh       1      0       0      73        0.0%
+BITBIGSFRhhhlll      3      0       0      74        0.0%
+BITBIGSFRhhhlll      1      0       0      75        0.0%
+BITBIGSFRhhhlll     94      0       0      76        0.0%
+BITBIGSFRhlhh        B      0       0      77        0.0%
+BITBIGSFRhllhhh      3      0       0      78        0.0%
+BITBIGSFRhllhhl      3      0       0      79        0.0%
+BITBIGSFRhlll      35A      0       0      80        0.0%
+BITBIGSFRl          AD      0       0      81        0.0%
+BIGSFR_1             0      0       0     200        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_6             0      0       0     200        0.0%
+SFR_6                0      0       0     200        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
+Symbol Table                                                                                   Wed Oct 02 16:58:22 2024
+
+                      l5 2698                       l60 266E                       l64 25A8  
+                     l65 2622                       l66 25BE                       l67 25D4  
+                     l94 2524                       l98 2546                       u10 25B8  
+                     u11 25B2                       u20 25BA                       u30 25CE  
+                     u31 25C8                       u40 25D0                       u50 25E4  
+                     u51 25DE                       u60 25E6                       u70 251E  
+                     u71 251A                       u80 2540                       u81 253C  
+                     u90 2562                       u91 255E                      l101 2568  
+                    l103 25A0                      l801 251E                      l803 252A  
+                    l805 2540                      l813 256E                      l807 254C  
+                    l921 2604                      l809 2562                      l781 25EA  
+                    l919 2582                      l871 2674                      l793 2692  
+                    l873 2678                      l795 2624                      l787 25F0  
+                    l779 25A4                      l875 267E                      l797 2504  
+                    l877 2684                      l869 2670                      l799 2508  
+                   _main 2670                     start FFFC             ___param_bank 0000  
+             _Clock_Init 2692             ?_read_Button 0501                    ?_main 0507  
+        __end_of_btn_led 25A2                    status 04D8          __initialization 269A  
+           __end_of_main 2692                   ??_main 050C            __activetblptr 0003  
+      __end_of_GPIO_Init 2670              ?_Clock_Init 0501                   isa$std 0001  
+              ??_btn_led 0504             __mediumconst 0000               __accesstop 0560  
+__end_of__initialization 269A            ___rparam_used 0001           __pcstackCOMRAM 0501  
+                _OSCCON1 00AD                  __Hparam 0000                  __Lparam 0000  
+           __psmallconst 2500                  __pcinit 269A                  __ramtop 2500  
+                __ptext0 2670                  __ptext1 2502                  __ptext2 25A2  
+                __ptext3 2624                  __ptext4 2692                  _btn_led 2502  
+              _GPIO_Init 2624     end_of_initialization 269A             ??_Clock_Init 0501  
+              _PORTBbits 04CF                _PORTCbits 04D0                _TRISBbits 04C7  
+              _TRISCbits 04C8                _TRISDbits 04C9                _TRISFbits 04CB  
+             ?_GPIO_Init 0501       __end_of_Clock_Init 269A               btn_led@btn 0506  
+    start_initialization 269A            ??_read_Button 0501              ??_GPIO_Init 0501  
+         read_Button@btn 0503                 ?_btn_led 0501              __smallconst 2500  
+    __end_of_read_Button 2624                 _LATDbits 04C1                 _LATFbits 04C3  
+               _WPUBbits 0409                 _WPUCbits 0411                 _WPUDbits 0419  
+               _WPUFbits 0429                 __Hrparam 0000                 __Lrparam 0000  
+            _read_Button 25A2               _ANSELBbits 0408               _ANSELCbits 0410  
+             _ANSELDbits 0418               _ANSELFbits 0428                 isa$xinst 0000  
+             _ODCONBbits 040A               _ODCONCbits 0412               _ODCONDbits 041A  
+             _ODCONFbits 042A                 main@argc 0507                 main@argv 0509  
+             _INLVLBbits 040C               _INLVLCbits 0414               _INLVLDbits 041C  
+             _INLVLFbits 042C              _SLRCONBbits 040B              _SLRCONCbits 0413  
+            _SLRCONDbits 041B              _SLRCONFbits 042B  
