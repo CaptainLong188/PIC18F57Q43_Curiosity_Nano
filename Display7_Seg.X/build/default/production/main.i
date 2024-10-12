@@ -29420,7 +29420,7 @@ void Clock_Init(void);
 # 6 "main.c" 2
 
 # 1 "./gpio.h" 1
-# 25 "./gpio.h"
+# 43 "./gpio.h"
 typedef enum
 {
     BUTTON_INTERNAL,
@@ -29428,44 +29428,85 @@ typedef enum
             BUTTON_EXTERNAL_2
 } button_t;
 
-void GPIO_Init(void);
-_Bool read_Button(button_t button);
-# 7 "main.c" 2
 
-# 1 "./display7.h" 1
-# 10 "./display7.h"
-const uint8_t display7seg_c[] = {0x3F, 0X06 ,0X5B ,0x4f,0X66 ,0X6D, 0X7D, 0X07 ,0X7F, 0X67};
 
 typedef struct
 {
-    uint8_t a;
-    uint8_t b;
-    uint8_t c;
-    uint8_t d;
-    uint8_t e;
-    uint8_t f;
-    uint8_t g;
+    char port;
+    uint8_t pin;
+}pin_t;
+
+typedef enum {
+    PORT_A = 'A',
+    PORT_B,
+    PORT_C,
+    PORT_D,
+    PORT_E,
+    PORT_F
+}PortName_t;
+
+void set_pin_input(PortName_t port_name, uint8_t pin_number);
+void set_pin_output(PortName_t port_name, uint8_t pin_number);
+void set_pin_digital_mode(PortName_t port_name, uint8_t pin_number);
+void set_pin_analog_mode(PortName_t port_name, uint8_t pin_number);
+void set_pin_pullup(PortName_t port_name, uint8_t pin_number);
+void reset_pin_pullup(PortName_t port_name, uint8_t pin_number);
+void set_pin_st(PortName_t port_name, uint8_t pin_number);
+void set_pin_ttl(PortName_t port_name, uint8_t pin_number);
+void set_pin_sr_limited(PortName_t port_name, uint8_t pin_number);
+void set_pin_sr_maximum(PortName_t port_name, uint8_t pin_number);
+void set_pin_push_pull(PortName_t port_name, uint8_t pin_number);
+void set_pin_open_drain(PortName_t port_name, uint8_t pin_number);
+void configure_pin(PortName_t port_name, uint8_t pin_number, _Bool is_input,
+                   _Bool is_digital, _Bool enable_pullup, _Bool use_ttl, _Bool slew_rate_limited,
+                   _Bool use_push_pull);
+void set_pin_high(PortName_t port_name, uint8_t pin_number);
+void set_pin_low(PortName_t port_name, uint8_t pin_number);
+void toggle_pin(PortName_t port_name, uint8_t pin_number);
+_Bool get_pin_value(PortName_t port_name, uint8_t pin_number);
+# 7 "main.c" 2
+
+# 1 "./display7.h" 1
+# 12 "./display7.h"
+const uint8_t display7Seg_c[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67};
+const uint8_t display7Seg_a[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x90};
+
+typedef struct
+{
+    pin_t display_pins[7];
     uint8_t mode;
 } display7seg_t;
 
+void Display7Seg_Init(display7seg_t* d7s);
 void Write_Display7seg(display7seg_t* d7s, uint8_t val);
-void Reset_Display7Seg(void);
+void Reset_Display7Seg(display7seg_t* d7s);
 # 8 "main.c" 2
 
 
-display7seg_t display1 = {3,4,2,7,0,1,2, 0};
+
+
+display7seg_t display2 = {
+    {{'C', 7},
+     {'D', 1},
+     {'D', 2},
+     {'A', 4},
+     {'A', 3},
+     {'D', 0},
+     {'E', 2}},
+    1
+};
+
 
 int main(int argc, char** argv) {
 
     Clock_Init();
-    GPIO_Init();
-    Reset_Display7Seg();
+    Display7Seg_Init(&display2);
 
     while(1)
     {
         for(uint8_t i = 0; i < 10; ++i)
         {
-            Write_Display7seg(&display1, i);
+            Write_Display7seg(&display2, i);
             _delay((unsigned long)((1000)*(64000000UL/4000.0)));
         }
     }

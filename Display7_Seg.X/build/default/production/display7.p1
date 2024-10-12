@@ -1,67 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"13 ./display7.h
-[; ;./display7.h: 13: {
-[s S2413 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S2413 . a b c d e f g mode ]
-"25
-[; ;./display7.h: 25: void Reset_Display7Seg(void);
-[v _Reset_Display7Seg `(v ~T0 @X0 0 ef ]
-"48861 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48861: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
-[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
-"49109
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49109: extern volatile unsigned char LATE __attribute__((address(0x4C2)));
-[v _LATE `Vuc ~T0 @X0 0 e@1218 ]
-"48985
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48985: extern volatile unsigned char LATC __attribute__((address(0x4C0)));
-[v _LATC `Vuc ~T0 @X0 0 e@1216 ]
-"49047
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49047: extern volatile unsigned char LATD __attribute__((address(0x4C1)));
-[v _LATD `Vuc ~T0 @X0 0 e@1217 ]
-"48867
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48867:     struct {
-[s S2282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2282 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"48866
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48866: typedef union {
-[u S2281 `S2282 1 ]
-[n S2281 . . ]
-"48878
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48878: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
-[v _LATAbits `VS2281 ~T0 @X0 0 e@1214 ]
-"49115
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49115:     struct {
-[s S2290 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2290 . LATE0 LATE1 LATE2 ]
-"49114
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49114: typedef union {
-[u S2289 `S2290 1 ]
-[n S2289 . . ]
-"49121
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49121: extern volatile LATEbits_t LATEbits __attribute__((address(0x4C2)));
-[v _LATEbits `VS2289 ~T0 @X0 0 e@1218 ]
-"48991
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48991:     struct {
-[s S2286 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2286 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"48990
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 48990: typedef union {
-[u S2285 `S2286 1 ]
-[n S2285 . . ]
-"49002
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49002: extern volatile LATCbits_t LATCbits __attribute__((address(0x4C0)));
-[v _LATCbits `VS2285 ~T0 @X0 0 e@1216 ]
-"49053
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49053:     struct {
-[s S2288 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2288 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"49052
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49052: typedef union {
-[u S2287 `S2288 1 ]
-[n S2287 . . ]
-"49064
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 49064: extern volatile LATDbits_t LATDbits __attribute__((address(0x4C1)));
-[v _LATDbits `VS2287 ~T0 @X0 0 e@1217 ]
+"53 ./gpio.h
+[; ;./gpio.h: 53: {
+[s S2415 `uc 1 `uc 1 ]
+[n S2415 . port pin ]
+"16 ./display7.h
+[; ;./display7.h: 16: {
+[s S2416 `S2415 -> 7 `i `uc 1 ]
+[n S2416 . display_pins mode ]
+"9 display7.c
+[; ;display7.c: 9:         configure_pin((d7s -> display_pins[i]).port, (d7s -> display_pins[i]).pin, 0, 1, 0, 1, 1, 1);
+[c E17445 65 66 67 68 69 70 .. ]
+[n E17445 . PORT_A PORT_B PORT_C PORT_D PORT_E PORT_F  ]
+"79 ./gpio.h
+[; ;./gpio.h: 79: void configure_pin(PortName_t port_name, uint8_t pin_number, _Bool is_input,
+[v _configure_pin `(v ~T0 @X0 0 ef8`E17445`uc`a`a`a`a`a`a ]
+"23 ./display7.h
+[; ;./display7.h: 23: void Reset_Display7Seg(display7seg_t* d7s);
+[v _Reset_Display7Seg `(v ~T0 @X0 0 ef1`*S2416 ]
+"82 ./gpio.h
+[; ;./gpio.h: 82: void set_pin_high(PortName_t port_name, uint8_t pin_number);
+[v _set_pin_high `(v ~T0 @X0 0 ef2`E17445`uc ]
+"83
+[; ;./gpio.h: 83: void set_pin_low(PortName_t port_name, uint8_t pin_number);
+[v _set_pin_low `(v ~T0 @X0 0 ef2`E17445`uc ]
 "328 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2633,10 +2594,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51171
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"10 ./display7.h
-[; ;./display7.h: 10: const uint8_t display7seg_c[] = {0x3F, 0X06 ,0X5B ,0x4f,0X66 ,0X6D, 0X7D, 0X07 ,0X7F, 0X67};
-[v _display7seg_c `Cuc ~T0 @X0 -> 10 `i e ]
-[i _display7seg_c
+"12 ./display7.h
+[; ;./display7.h: 12: const uint8_t display7Seg_c[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67};
+[v _display7Seg_c `Cuc ~T0 @X0 -> 10 `i e ]
+[i _display7Seg_c
 :U ..
 -> -> 63 `i `uc
 -> -> 6 `i `uc
@@ -2650,122 +2611,200 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 103 `i `uc
 ..
 ]
+"13
+[; ;./display7.h: 13: const uint8_t display7Seg_a[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x90};
+[v _display7Seg_a `Cuc ~T0 @X0 -> 10 `i e ]
+[i _display7Seg_a
+:U ..
+-> -> 64 `i `uc
+-> -> 121 `i `uc
+-> -> 36 `i `uc
+-> -> 48 `i `uc
+-> -> 25 `i `uc
+-> -> 18 `i `uc
+-> -> 2 `i `uc
+-> -> 120 `i `uc
+-> -> 0 `i `uc
+-> -> 144 `i `uc
+..
+]
 "3 display7.c
-[; ;display7.c: 3: void Write_Display7seg(display7seg_t* d7s, uint8_t val)
-[v _Write_Display7seg `(v ~T0 @X0 1 ef2`*S2413`uc ]
+[; ;display7.c: 3: void Display7Seg_Init(display7seg_t* d7s)
+[v _Display7Seg_Init `(v ~T0 @X0 1 ef1`*S2416 ]
 "4
 [; ;display7.c: 4: {
 {
-[e :U _Write_Display7seg ]
+[e :U _Display7Seg_Init ]
 "3
-[; ;display7.c: 3: void Write_Display7seg(display7seg_t* d7s, uint8_t val)
-[v _d7s `*S2413 ~T0 @X0 1 r1 ]
-[v _val `uc ~T0 @X0 1 r2 ]
+[; ;display7.c: 3: void Display7Seg_Init(display7seg_t* d7s)
+[v _d7s `*S2416 ~T0 @X0 1 r1 ]
 "4
 [; ;display7.c: 4: {
 [f ]
-"5
-[; ;display7.c: 5:     uint8_t data;
-[v _data `uc ~T0 @X0 1 a ]
 "7
-[; ;display7.c: 7:     if((d7s -> mode) == 0)
-[e $ ! == -> . *U _d7s 7 `i -> 0 `i 2415  ]
+[; ;display7.c: 7:     for(uint8_t i = 0; i < 7; ++i)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 7 `i 2418  ]
+[e $U 2419  ]
+[e :U 2418 ]
 "8
 [; ;display7.c: 8:     {
 {
 "9
-[; ;display7.c: 9:         data = display7seg_c[val];
-[e = _data *U + &U _display7seg_c * -> _val `ux -> -> # *U &U _display7seg_c `ui `ux ]
+[; ;display7.c: 9:         configure_pin((d7s -> display_pins[i]).port, (d7s -> display_pins[i]).pin, 0, 1, 0, 1, 1, 1);
+[e ( _configure_pin (4 , , , , , , , -> . *U + &U . *U _d7s 0 * -> _i `ux -> -> # *U &U . *U _d7s 0 `ui `ux 0 `E17445 . *U + &U . *U _d7s 0 * -> _i `ux -> -> # *U &U . *U _d7s 0 `ui `ux 1 -> -> 0 `i `a -> -> 1 `i `a -> -> 0 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
 "10
 [; ;display7.c: 10:     }
 }
-[e :U 2415 ]
-"12
-[; ;display7.c: 12:     Reset_Display7Seg();
-[e ( _Reset_Display7Seg ..  ]
-"14
-[; ;display7.c: 14:     if(data & 1 << 0) {LATA |= 1 << (d7s -> a);}
-[e $ ! != & -> _data `i << -> 1 `i -> 0 `i -> 0 `i 2416  ]
-{
-[e =| _LATA -> << -> 1 `i -> . *U _d7s 0 `i `Vuc ]
-}
-[e :U 2416 ]
-"15
-[; ;display7.c: 15:     if(data & 1 << 1) {LATA |= 1 << (d7s -> b);}
-[e $ ! != & -> _data `i << -> 1 `i -> 1 `i -> 0 `i 2417  ]
-{
-[e =| _LATA -> << -> 1 `i -> . *U _d7s 1 `i `Vuc ]
-}
-[e :U 2417 ]
-"16
-[; ;display7.c: 16:     if(data & 1 << 2) {LATE |= 1 << (d7s -> c);}
-[e $ ! != & -> _data `i << -> 1 `i -> 2 `i -> 0 `i 2418  ]
-{
-[e =| _LATE -> << -> 1 `i -> . *U _d7s 2 `i `Vuc ]
-}
-[e :U 2418 ]
-"17
-[; ;display7.c: 17:     if(data & 1 << 3) {LATC |= 1 << (d7s -> d);}
-[e $ ! != & -> _data `i << -> 1 `i -> 3 `i -> 0 `i 2419  ]
-{
-[e =| _LATC -> << -> 1 `i -> . *U _d7s 3 `i `Vuc ]
-}
+[e =+ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 7 `i 2418  ]
 [e :U 2419 ]
+}
+"12
+[; ;display7.c: 12:     Reset_Display7Seg(d7s);
+[e ( _Reset_Display7Seg (1 _d7s ]
+"13
+[; ;display7.c: 13: }
+[e :UE 2417 ]
+}
+"15
+[; ;display7.c: 15: void Write_Display7seg(display7seg_t* d7s, uint8_t val)
+[v _Write_Display7seg `(v ~T0 @X0 1 ef2`*S2416`uc ]
+"16
+[; ;display7.c: 16: {
+{
+[e :U _Write_Display7seg ]
+"15
+[; ;display7.c: 15: void Write_Display7seg(display7seg_t* d7s, uint8_t val)
+[v _d7s `*S2416 ~T0 @X0 1 r1 ]
+[v _val `uc ~T0 @X0 1 r2 ]
+"16
+[; ;display7.c: 16: {
+[f ]
 "18
-[; ;display7.c: 18:     if(data & 1 << 4) {LATD |= 1 << (d7s -> e);}
-[e $ ! != & -> _data `i << -> 1 `i -> 4 `i -> 0 `i 2420  ]
-{
-[e =| _LATD -> << -> 1 `i -> . *U _d7s 4 `i `Vuc ]
-}
-[e :U 2420 ]
-"19
-[; ;display7.c: 19:     if(data & 1 << 5) {LATD |= 1 << (d7s -> f);}
-[e $ ! != & -> _data `i << -> 1 `i -> 5 `i -> 0 `i 2421  ]
-{
-[e =| _LATD -> << -> 1 `i -> . *U _d7s 5 `i `Vuc ]
-}
-[e :U 2421 ]
-"20
-[; ;display7.c: 20:     if(data & 1 << 6) {LATD |= 1 << (d7s -> g);}
-[e $ ! != & -> _data `i << -> 1 `i -> 6 `i -> 0 `i 2422  ]
-{
-[e =| _LATD -> << -> 1 `i -> . *U _d7s 6 `i `Vuc ]
-}
+[; ;display7.c: 18:     if(val > 9) return;
+[e $ ! > -> _val `i -> 9 `i 2422  ]
+[e $UE 2421  ]
 [e :U 2422 ]
+"20
+[; ;display7.c: 20:     uint8_t data;
+[v _data `uc ~T0 @X0 1 a ]
 "22
-[; ;display7.c: 22: }
-[e :UE 2414 ]
-}
+[; ;display7.c: 22:     if((d7s -> mode) == 0)
+[e $ ! == -> . *U _d7s 1 `i -> 0 `i 2423  ]
+"23
+[; ;display7.c: 23:     {
+{
 "24
-[; ;display7.c: 24: void Reset_Display7Seg(void)
-[v _Reset_Display7Seg `(v ~T0 @X0 1 ef ]
+[; ;display7.c: 24:         data = display7Seg_c[val];
+[e = _data *U + &U _display7Seg_c * -> _val `ux -> -> # *U &U _display7Seg_c `ui `ux ]
 "25
-[; ;display7.c: 25: {
+[; ;display7.c: 25:     }
+}
+[e $U 2424  ]
+"26
+[; ;display7.c: 26:     else if((d7s -> mode) == 1)
+[e :U 2423 ]
+[e $ ! == -> . *U _d7s 1 `i -> 1 `i 2425  ]
+"27
+[; ;display7.c: 27:     {
+{
+"28
+[; ;display7.c: 28:         data = display7Seg_a[val];
+[e = _data *U + &U _display7Seg_a * -> _val `ux -> -> # *U &U _display7Seg_a `ui `ux ]
+"29
+[; ;display7.c: 29:     }
+}
+[e $U 2426  ]
+"30
+[; ;display7.c: 30:     else
+[e :U 2425 ]
+"31
+[; ;display7.c: 31:     {
+{
+"32
+[; ;display7.c: 32:         return;
+[e $UE 2421  ]
+"33
+[; ;display7.c: 33:     }
+}
+[e :U 2426 ]
+[e :U 2424 ]
+"35
+[; ;display7.c: 35:     Reset_Display7Seg(d7s);
+[e ( _Reset_Display7Seg (1 _d7s ]
+"37
+[; ;display7.c: 37:     for(uint8_t i = 0; i < 7; ++i)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 7 `i 2427  ]
+[e $U 2428  ]
+[e :U 2427 ]
+"38
+[; ;display7.c: 38:     {
+{
+"39
+[; ;display7.c: 39:         if(data & (1 << i))
+[e $ ! != & -> _data `i << -> 1 `i -> _i `i -> 0 `i 2430  ]
+"40
+[; ;display7.c: 40:         {
+{
+"41
+[; ;display7.c: 41:             set_pin_high((d7s -> display_pins[i]).port, (d7s -> display_pins[i]).pin);
+[e ( _set_pin_high (2 , -> . *U + &U . *U _d7s 0 * -> _i `ux -> -> # *U &U . *U _d7s 0 `ui `ux 0 `E17445 . *U + &U . *U _d7s 0 * -> _i `ux -> -> # *U &U . *U _d7s 0 `ui `ux 1 ]
+"42
+[; ;display7.c: 42:         }
+}
+[e :U 2430 ]
+"43
+[; ;display7.c: 43:     }
+}
+[e =+ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 7 `i 2427  ]
+[e :U 2428 ]
+}
+"45
+[; ;display7.c: 45: }
+[e :UE 2421 ]
+}
+"47
+[; ;display7.c: 47: void Reset_Display7Seg(display7seg_t* d7s)
+[v _Reset_Display7Seg `(v ~T0 @X0 1 ef1`*S2416 ]
+"48
+[; ;display7.c: 48: {
 {
 [e :U _Reset_Display7Seg ]
+"47
+[; ;display7.c: 47: void Reset_Display7Seg(display7seg_t* d7s)
+[v _d7s `*S2416 ~T0 @X0 1 r1 ]
+"48
+[; ;display7.c: 48: {
 [f ]
-"26
-[; ;display7.c: 26:     LATAbits.LATA3 = 0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"27
-[; ;display7.c: 27:     LATAbits.LATA4 = 0;
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-"28
-[; ;display7.c: 28:     LATEbits.LATE2 = 0;
-[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-"29
-[; ;display7.c: 29:     LATCbits.LATC7 = 0;
-[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-"30
-[; ;display7.c: 30:     LATDbits.LATD0 = 0;
-[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
-"31
-[; ;display7.c: 31:     LATDbits.LATD1 = 0;
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-"32
-[; ;display7.c: 32:     LATDbits.LATD2 = 0;
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-"33
-[; ;display7.c: 33: }
-[e :UE 2423 ]
+"49
+[; ;display7.c: 49:     for(uint8_t i = 0; i < 7; ++i)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 7 `i 2432  ]
+[e $U 2433  ]
+[e :U 2432 ]
+"50
+[; ;display7.c: 50:     {
+{
+"51
+[; ;display7.c: 51:         set_pin_low((d7s -> display_pins[i]).port, (d7s -> display_pins[i]).pin);
+[e ( _set_pin_low (2 , -> . *U + &U . *U _d7s 0 * -> _i `ux -> -> # *U &U . *U _d7s 0 `ui `ux 0 `E17445 . *U + &U . *U _d7s 0 * -> _i `ux -> -> # *U &U . *U _d7s 0 `ui `ux 1 ]
+"52
+[; ;display7.c: 52:     }
+}
+[e =+ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 7 `i 2432  ]
+[e :U 2433 ]
+}
+"54
+[; ;display7.c: 54: }
+[e :UE 2431 ]
 }

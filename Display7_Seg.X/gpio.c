@@ -1,81 +1,461 @@
 #include "gpio.h"
 
-void GPIO_Init(void)
+void set_pin_input(PortName_t port_name, uint8_t pin_number)
 {
-    /*Configuración del pin asociado al led a*/
-    
-    ANSELAbits.ANSELA3 = 0; // Pin digital
-    SLRCONAbits.SLRA3 = 1;  // Slew rate limitado
-    INLVLAbits.INLVLA3 = 0; // TTL
-    ODCONAbits.ODCA3 = 0;   // Push - Pull
-    WPUAbits.WPUA3 = 0;     // Pull-Up deshabilitado
-    TRISAbits.TRISA3 = 0;   // Salida
-    
-    /*Configuración del pin asociado al led b*/
-    
-    ANSELAbits.ANSELA4 = 0; // Pin digital
-    SLRCONAbits.SLRA4 = 1;  // Slew rate limitado
-    INLVLAbits.INLVLA4 = 0; // TTL
-    ODCONAbits.ODCA4 = 0;   // Push - Pull
-    WPUAbits.WPUA4 = 0;     // Pull-Up deshabilitado
-    TRISAbits.TRISA4 = 0;   // Salida
-    
-    /*Configuración del pin asociado al led c*/
-    
-    ANSELEbits.ANSELE2 = 0; // Pin digital
-    SLRCONEbits.SLRE2 = 1;  // Slew rate limitado
-    INLVLEbits.INLVLE2 = 0; // TTL
-    ODCONEbits.ODCE2 = 0;   // Push - Pull
-    WPUEbits.WPUE2 = 0;     // Pull-Up deshabilitado
-    TRISEbits.TRISE2 = 0;   // Salida    
-    
-    /*Configuración del pin asociado al led d*/
-    
-    ANSELCbits.ANSELC7 = 0; // Pin digital
-    SLRCONCbits.SLRC7 = 1;  // Slew rate limitado
-    INLVLCbits.INLVLC7 = 0; // TTL
-    ODCONCbits.ODCC7 = 0;   // Push - Pull
-    WPUCbits.WPUC7 = 0;     // Pull-Up deshabilitado
-    TRISCbits.TRISC7 = 0;   // Salida   
-    
-    /*Configuración del pin asociado al led e*/
-    
-    ANSELDbits.ANSELD0 = 0; // Pin digital
-    SLRCONDbits.SLRD0 = 1;  // Slew rate limitado
-    INLVLDbits.INLVLD0 = 0; // TTL
-    ODCONDbits.ODCD0 = 0;   // Push - Pull
-    WPUDbits.WPUD0 = 0;     // Pull-Up deshabilitado
-    TRISDbits.TRISD0 = 0;   // Salida
-    
-    /*Configuración del pin asociado al led f*/
-    
-    ANSELDbits.ANSELD1 = 0; // Pin digital
-    SLRCONDbits.SLRD1 = 1;  // Slew rate limitado
-    INLVLDbits.INLVLD1 = 0; // TTL
-    ODCONDbits.ODCD1 = 0;   // Push - Pull
-    WPUDbits.WPUD1 = 0;     // Pull-Up deshabilitado
-    TRISDbits.TRISD1 = 0;   // Salida
-    
-    /*Configuración del pin asociado al led g*/
-    
-    ANSELDbits.ANSELD2 = 0; // Pin digital
-    SLRCONDbits.SLRD2 = 1;  // Slew rate limitado
-    INLVLDbits.INLVLD2 = 0; // TTL
-    ODCONDbits.ODCD2 = 0;   // Push - Pull
-    WPUDbits.WPUD2 = 0;     // Pull-Up deshabilitado
-    TRISDbits.TRISD2 = 0;   // Salida
+    switch(port_name)
+    {
+        case PORT_A:
+            TRISA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            TRISB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            TRISC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            TRISD |= (1 << pin_number);
+            break;
+        case PORT_E:
+            TRISE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            TRISF |= (1 << pin_number);
+            break;
+        default:
+            break;
+    }
+        
 }
 
-bool read_Button(button_t btn)
-{  
-    switch (btn) {
-        case BUTTON_INTERNAL:
-            return READ_BUTTON_INTERNAL();
-        case BUTTON_EXTERNAL_1:
-            return READ_BUTTON_EXTERNAL_1();
-        case BUTTON_EXTERNAL_2:
-            return READ_BUTTON_EXTERNAL_2();
+void set_pin_output(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            TRISA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            TRISB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            TRISC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            TRISD &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            TRISE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            TRISF &= ~(1 << pin_number);
+            break;
         default:
-            return false;
+            break;
+    }   
+}
+void set_pin_digital_mode(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            ANSELA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            ANSELB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            ANSELC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            ANSELD &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            ANSELE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            ANSELF &= ~(1 << pin_number);
+            break;
+        default:
+            break;
+    }       
+}
+void set_pin_analog_mode(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            ANSELA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            ANSELB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            ANSELC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            ANSELD |= (1 << pin_number);
+            break;
+        case PORT_E:
+            ANSELE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            ANSELF |= (1 << pin_number);
+            break;
+        default:
+            break;
+    }    
+}
+
+void set_pin_pullup(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            WPUA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            WPUB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            WPUC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            WPUD |= (1 << pin_number);
+            break;
+        case PORT_E:
+            WPUE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            WPUF |= (1 << pin_number);
+            break;
+        default:
+            break;
+    }    
+}
+
+void reset_pin_pullup(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            WPUA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            WPUB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            WPUC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            WPUD &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            WPUE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            WPUF &= ~(1 << pin_number);
+            break;
+        default:
+            break;
+    }   
+}
+
+void set_pin_st(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            INLVLA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            INLVLB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            INLVLC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            INLVLD |= (1 << pin_number);
+            break;
+        case PORT_E:
+            INLVLE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            INLVLF |= (1 << pin_number);
+            break;
+        default:
+            break;
+    }           
+}
+
+void set_pin_ttl(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            INLVLA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            INLVLB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            INLVLC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            INLVLD &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            INLVLE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            INLVLF &= ~(1 << pin_number);
+            break;
+        default:
+            break;
+    }  
+}
+void set_pin_sr_limited(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            SLRCONA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            SLRCONB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            SLRCONC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            SLRCOND |= (1 << pin_number);
+            break;
+        case PORT_E:
+            SLRCONE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            SLRCONF |= (1 << pin_number);
+            break;
+        default:
+            break;
+    }   
+}
+
+void set_pin_sr_maximum(PortName_t port_name, uint8_t pin_number)
+{
+   switch(port_name)
+    {
+        case PORT_A:
+            SLRCONA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            SLRCONB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            SLRCONC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            SLRCOND &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            SLRCONE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            SLRCONF &= ~(1 << pin_number);
+            break;
+        default:
+            break;
+    }    
+}
+
+void set_pin_push_pull(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            ODCONA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            ODCONB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            ODCONC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            ODCOND &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            ODCONE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            ODCONF &= ~(1 << pin_number);
+            break;
+        default:
+            break;
+    }    
+}
+
+void set_pin_open_drain(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            ODCONA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            ODCONB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            ODCONC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            ODCOND |= (1 << pin_number);
+            break;
+        case PORT_E:
+            ODCONE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            ODCONF |= (1 << pin_number);
+            break;
+        default:
+            break;
+    }   
+}
+
+void configure_pin(PortName_t port_name, uint8_t pin_number, bool is_input, 
+                   bool is_digital, bool enable_pullup, bool use_ttl, bool slew_rate_limited,
+                   bool use_push_pull)
+{
+    if(is_input)
+        set_pin_input(port_name, pin_number);
+    else
+        set_pin_output(port_name, pin_number);
+    
+    if(is_digital)
+        set_pin_digital_mode(port_name, pin_number);
+    else
+        set_pin_analog_mode(port_name, pin_number);
+    
+    if(enable_pullup)
+        set_pin_pullup(port_name, pin_number);
+    else
+        reset_pin_pullup(port_name, pin_number);
+    
+    if(use_ttl)
+        set_pin_ttl(port_name, pin_number);
+    else
+        set_pin_st(port_name, pin_number);
+    
+    if(slew_rate_limited)
+        set_pin_sr_limited(port_name, pin_number);
+    else
+        set_pin_sr_maximum(port_name, pin_number);
+    
+    if(use_push_pull)
+        set_pin_push_pull(port_name, pin_number);
+    else
+        set_pin_open_drain(port_name, pin_number);
+    
+}
+
+void set_pin_high(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            LATA |= (1 << pin_number);
+            break;
+        case PORT_B:
+            LATB |= (1 << pin_number);
+            break;
+        case PORT_C:
+            LATC |= (1 << pin_number);
+            break;
+        case PORT_D:
+            LATD |= (1 << pin_number);
+            break;
+        case PORT_E:
+            LATE |= (1 << pin_number);
+            break;
+        case PORT_F:
+            LATF |= (1 << pin_number);
+            break;
+        default:
+            break;
     }
+}
+
+void set_pin_low(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            LATA &= ~(1 << pin_number);
+            break;
+        case PORT_B:
+            LATB &= ~(1 << pin_number);
+            break;
+        case PORT_C:
+            LATC &= ~(1 << pin_number);
+            break;
+        case PORT_D:
+            LATD &= ~(1 << pin_number);
+            break;
+        case PORT_E:
+            LATE &= ~(1 << pin_number);
+            break;
+        case PORT_F:
+            LATF &= ~(1 << pin_number);
+            break;
+        default:
+            break;
+    }
+}
+
+void toggle_pin(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            LATA ^= (1 << pin_number);
+            break;
+        case PORT_B:
+            LATB ^= (1 << pin_number);
+            break;
+        case PORT_C:
+            LATC ^= (1 << pin_number);
+            break;
+        case PORT_D:
+            LATD ^= (1 << pin_number);
+            break;
+        case PORT_E:
+            LATE ^= (1 << pin_number);
+            break;
+        case PORT_F:
+            LATF ^= (1 << pin_number);
+            break;
+        default:
+            break;
+    }    
+}
+
+bool get_pin_value(PortName_t port_name, uint8_t pin_number)
+{
+    switch(port_name)
+    {
+        case PORT_A:
+            return PORTA & (1 << pin_number);
+        case PORT_B:
+            return PORTB & (1 << pin_number);
+        case PORT_C:
+            return PORTC & (1 << pin_number);
+        case PORT_D:
+            return PORTD & (1 << pin_number);
+        case PORT_E:
+            return PORTE & (1 << pin_number);
+        case PORT_F:
+            return PORTF & (1 << pin_number);
+        default:
+            break;
+    }   
 }

@@ -1,21 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"13 ./display7.h
-[; ;./display7.h: 13: {
-[s S2415 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S2415 . a b c d e f g mode ]
+"53 ./gpio.h
+[; ;./gpio.h: 53: {
+[s S2415 `uc 1 `uc 1 ]
+[n S2415 . port pin ]
+"16 ./display7.h
+[; ;./display7.h: 16: {
+[s S2416 `S2415 -> 7 `i `uc 1 ]
+[n S2416 . display_pins mode ]
 [p mainexit ]
 "7 ./config.h
 [; ;./config.h: 7: void Clock_Init(void);
 [v _Clock_Init `(v ~T0 @X0 0 ef ]
-"32 ./gpio.h
-[; ;./gpio.h: 32: void GPIO_Init(void);
-[v _GPIO_Init `(v ~T0 @X0 0 ef ]
-"25 ./display7.h
-[; ;./display7.h: 25: void Reset_Display7Seg(void);
-[v _Reset_Display7Seg `(v ~T0 @X0 0 ef ]
-"24
-[; ;./display7.h: 24: void Write_Display7seg(display7seg_t* d7s, uint8_t val);
-[v _Write_Display7seg `(v ~T0 @X0 0 ef2`*S2415`uc ]
+"21 ./display7.h
+[; ;./display7.h: 21: void Display7Seg_Init(display7seg_t* d7s);
+[v _Display7Seg_Init `(v ~T0 @X0 0 ef1`*S2416 ]
+"22
+[; ;./display7.h: 22: void Write_Display7seg(display7seg_t* d7s, uint8_t val);
+[v _Write_Display7seg `(v ~T0 @X0 0 ef2`*S2416`uc ]
 [v F526 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF526 ~T0 @X0 0 e ]
@@ -2591,10 +2592,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51171
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"10 ./display7.h
-[; ;./display7.h: 10: const uint8_t display7seg_c[] = {0x3F, 0X06 ,0X5B ,0x4f,0X66 ,0X6D, 0X7D, 0X07 ,0X7F, 0X67};
-[v _display7seg_c `Cuc ~T0 @X0 -> 10 `i e ]
-[i _display7seg_c
+"12 ./display7.h
+[; ;./display7.h: 12: const uint8_t display7Seg_c[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67};
+[v _display7Seg_c `Cuc ~T0 @X0 -> 10 `i e ]
+[i _display7Seg_c
 :U ..
 -> -> 63 `i `uc
 -> -> 6 `i `uc
@@ -2608,82 +2609,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 103 `i `uc
 ..
 ]
-"10 main.c
-[; ;main.c: 10: display7seg_t display1 = {3,4,2,7,0,1,2, 0};
-[v _display1 `S2415 ~T0 @X0 1 e ]
-[i _display1
+"13
+[; ;./display7.h: 13: const uint8_t display7Seg_a[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x90};
+[v _display7Seg_a `Cuc ~T0 @X0 -> 10 `i e ]
+[i _display7Seg_a
 :U ..
-:U ..
--> -> 3 `i `uc
--> -> 4 `i `uc
+-> -> 64 `i `uc
+-> -> 121 `i `uc
+-> -> 36 `i `uc
+-> -> 48 `i `uc
+-> -> 25 `i `uc
+-> -> 18 `i `uc
 -> -> 2 `i `uc
+-> -> 120 `i `uc
+-> -> 0 `i `uc
+-> -> 144 `i `uc
+..
+]
+"12 main.c
+[; ;main.c: 12: display7seg_t display2 = {
+[v _display2 `S2416 ~T0 @X0 1 e ]
+[i _display2
+:U ..
+:U ..
+:U ..
+:U ..
+-> -> 67 `ui `uc
 -> -> 7 `i `uc
--> -> 0 `i `uc
+..
+:U ..
+-> -> 68 `ui `uc
 -> -> 1 `i `uc
+..
+:U ..
+-> -> 68 `ui `uc
 -> -> 2 `i `uc
+..
+:U ..
+-> -> 65 `ui `uc
+-> -> 4 `i `uc
+..
+:U ..
+-> -> 65 `ui `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 68 `ui `uc
 -> -> 0 `i `uc
+..
+:U ..
+-> -> 69 `ui `uc
+-> -> 2 `i `uc
+..
+..
+-> -> 1 `i `uc
 ..
 ..
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"12
-[; ;main.c: 12: int main(int argc, char** argv) {
+"24
+[; ;main.c: 24: int main(int argc, char** argv) {
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
 {
 [e :U _main ]
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
 [f ]
-"14
-[; ;main.c: 14:     Clock_Init();
+"26
+[; ;main.c: 26:     Clock_Init();
 [e ( _Clock_Init ..  ]
-"15
-[; ;main.c: 15:     GPIO_Init();
-[e ( _GPIO_Init ..  ]
-"16
-[; ;main.c: 16:     Reset_Display7Seg();
-[e ( _Reset_Display7Seg ..  ]
-"18
-[; ;main.c: 18:     while(1)
-[e :U 2418 ]
-"19
-[; ;main.c: 19:     {
+"27
+[; ;main.c: 27:     Display7Seg_Init(&display2);
+[e ( _Display7Seg_Init (1 &U _display2 ]
+"29
+[; ;main.c: 29:     while(1)
+[e :U 2419 ]
+"30
+[; ;main.c: 30:     {
 {
-"20
-[; ;main.c: 20:         for(uint8_t i = 0; i < 10; ++i)
+"31
+[; ;main.c: 31:         for(uint8_t i = 0; i < 10; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 10 `i 2420  ]
-[e $U 2421  ]
-[e :U 2420 ]
-"21
-[; ;main.c: 21:         {
+[e $ < -> _i `i -> 10 `i 2421  ]
+[e $U 2422  ]
+[e :U 2421 ]
+"32
+[; ;main.c: 32:         {
 {
-"22
-[; ;main.c: 22:             Write_Display7seg(&display1, i);
-[e ( _Write_Display7seg (2 , &U _display1 _i ]
-"23
-[; ;main.c: 23:             _delay((unsigned long)((1000)*(64000000UL/4000.0)));
+"33
+[; ;main.c: 33:             Write_Display7seg(&display2, i);
+[e ( _Write_Display7seg (2 , &U _display2 _i ]
+"34
+[; ;main.c: 34:             _delay((unsigned long)((1000)*(64000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `ul `d .4000.0 `ul ]
-"24
-[; ;main.c: 24:         }
+"35
+[; ;main.c: 35:         }
 }
 [e =+ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 10 `i 2420  ]
-[e :U 2421 ]
+[e $ < -> _i `i -> 10 `i 2421  ]
+[e :U 2422 ]
 }
-"25
-[; ;main.c: 25:     }
+"36
+[; ;main.c: 36:     }
 }
-[e :U 2417 ]
-[e $U 2418  ]
-[e :U 2419 ]
-"27
-[; ;main.c: 27:     return (0);
+[e :U 2418 ]
+[e $U 2419  ]
+[e :U 2420 ]
+"38
+[; ;main.c: 38:     return (0);
 [e ) -> 0 `i ]
-[e $UE 2416  ]
-"28
-[; ;main.c: 28: }
-[e :UE 2416 ]
+[e $UE 2417  ]
+"39
+[; ;main.c: 39: }
+[e :UE 2417 ]
 }
