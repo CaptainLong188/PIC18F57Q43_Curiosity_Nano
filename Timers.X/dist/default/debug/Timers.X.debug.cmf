@@ -1,0 +1,916 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+init CODE 0 3102 3102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+$dist/default/debug\Timers.X.debug.o
+cinit CODE 0 401A 401A 14 1 2
+text0 CODE 0 4002 4002 18 1 2
+text1 CODE 0 3F92 3F92 2A 1 2
+text2 CODE 0 3FE0 3FE0 22 1 2
+text3 CODE 0 3FBC 3FBC 24 1 2
+text4 CODE 0 3E9E 3E9E F4 1 2
+text5 CODE 0 3106 3106 12A 1 2
+text6 CODE 0 36D8 36D8 11E 1 2
+text7 CODE 0 3230 3230 12A 1 2
+text8 CODE 0 37F6 37F6 11E 1 2
+text9 CODE 0 335A 335A 12A 1 2
+text10 CODE 0 3914 3914 11E 1 2
+text11 CODE 0 3A32 3A32 11E 1 2
+text12 CODE 0 3B50 3B50 11E 1 2
+text13 CODE 0 3D8C 3D8C 112 1 2
+text14 CODE 0 3484 3484 12A 1 2
+text15 CODE 0 3C6E 3C6E 11E 1 2
+text16 CODE 0 35AE 35AE 12A 1 2
+text17 CODE 0 4040 4040 8 1 2
+text18 CODE 0 4030 4030 10 1 4
+cstackCOMRAM COMRAM 1 501 501 11 1 1
+smallconst SMALLCONST 0 2500 2500 2 1 2
+config CONFIG 4 300000 300000 A 1 1
+ivt0x3008 CODE 0 3008 3008 FA 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-24FF 1
+CONST 2502-3007 1
+CONST 402E-402F 1
+CONST 4048-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 2502-3007 1
+SMALLCONST 402E-402F 1
+SMALLCONST 4048-1FFFF 1
+CODE 4-24FF 1
+CODE 2502-3007 1
+CODE 402E-402F 1
+CODE 4048-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 512-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 512-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2502-3007 1
+MEDIUMCONST 402E-402F 1
+MEDIUMCONST 4048-FFFF 1
+MEDIUMCONST 12500-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\Timers.X.debug.o
+4030 text18 CODE >60:D:\PIC_18F57Q43\Timers.X\config.c
+4030 text18 CODE >26:D:\PIC_18F57Q43\Timers.X\interrupt.c
+4030 text18 CODE >28:D:\PIC_18F57Q43\Timers.X\interrupt.c
+4032 text18 CODE >29:D:\PIC_18F57Q43\Timers.X\interrupt.c
+4038 text18 CODE >30:D:\PIC_18F57Q43\Timers.X\interrupt.c
+403C text18 CODE >31:D:\PIC_18F57Q43\Timers.X\interrupt.c
+403E text18 CODE >32:D:\PIC_18F57Q43\Timers.X\interrupt.c
+4040 text17 CODE >57:D:\PIC_18F57Q43\Timers.X\config.c
+4040 text17 CODE >59:D:\PIC_18F57Q43\Timers.X\config.c
+4046 text17 CODE >60:D:\PIC_18F57Q43\Timers.X\config.c
+35AE text16 CODE >137:D:\PIC_18F57Q43\Timers.X\gpio.c
+35B0 text16 CODE >139:D:\PIC_18F57Q43\Timers.X\gpio.c
+35B4 text16 CODE >142:D:\PIC_18F57Q43\Timers.X\gpio.c
+35D4 text16 CODE >143:D:\PIC_18F57Q43\Timers.X\gpio.c
+35D8 text16 CODE >145:D:\PIC_18F57Q43\Timers.X\gpio.c
+35F8 text16 CODE >146:D:\PIC_18F57Q43\Timers.X\gpio.c
+35FC text16 CODE >148:D:\PIC_18F57Q43\Timers.X\gpio.c
+361C text16 CODE >149:D:\PIC_18F57Q43\Timers.X\gpio.c
+3620 text16 CODE >151:D:\PIC_18F57Q43\Timers.X\gpio.c
+3640 text16 CODE >152:D:\PIC_18F57Q43\Timers.X\gpio.c
+3644 text16 CODE >154:D:\PIC_18F57Q43\Timers.X\gpio.c
+3664 text16 CODE >155:D:\PIC_18F57Q43\Timers.X\gpio.c
+3668 text16 CODE >157:D:\PIC_18F57Q43\Timers.X\gpio.c
+3688 text16 CODE >158:D:\PIC_18F57Q43\Timers.X\gpio.c
+368C text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+3696 text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36A4 text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36AC text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36B4 text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36BC text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36C4 text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36CC text16 CODE >161:D:\PIC_18F57Q43\Timers.X\gpio.c
+36D6 text16 CODE >162:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C6E text15 CODE >83:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C70 text15 CODE >85:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C74 text15 CODE >88:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C92 text15 CODE >89:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C96 text15 CODE >91:D:\PIC_18F57Q43\Timers.X\gpio.c
+3CB4 text15 CODE >92:D:\PIC_18F57Q43\Timers.X\gpio.c
+3CB8 text15 CODE >94:D:\PIC_18F57Q43\Timers.X\gpio.c
+3CD6 text15 CODE >95:D:\PIC_18F57Q43\Timers.X\gpio.c
+3CDA text15 CODE >97:D:\PIC_18F57Q43\Timers.X\gpio.c
+3CF8 text15 CODE >98:D:\PIC_18F57Q43\Timers.X\gpio.c
+3CFC text15 CODE >100:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D1A text15 CODE >101:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D1E text15 CODE >103:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D3C text15 CODE >104:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D40 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D4A text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D58 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D60 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D68 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D70 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D78 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D80 text15 CODE >107:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D8A text15 CODE >108:D:\PIC_18F57Q43\Timers.X\gpio.c
+3484 text14 CODE >57:D:\PIC_18F57Q43\Timers.X\gpio.c
+3486 text14 CODE >59:D:\PIC_18F57Q43\Timers.X\gpio.c
+348A text14 CODE >62:D:\PIC_18F57Q43\Timers.X\gpio.c
+34AA text14 CODE >63:D:\PIC_18F57Q43\Timers.X\gpio.c
+34AE text14 CODE >65:D:\PIC_18F57Q43\Timers.X\gpio.c
+34CE text14 CODE >66:D:\PIC_18F57Q43\Timers.X\gpio.c
+34D2 text14 CODE >68:D:\PIC_18F57Q43\Timers.X\gpio.c
+34F2 text14 CODE >69:D:\PIC_18F57Q43\Timers.X\gpio.c
+34F6 text14 CODE >71:D:\PIC_18F57Q43\Timers.X\gpio.c
+3516 text14 CODE >72:D:\PIC_18F57Q43\Timers.X\gpio.c
+351A text14 CODE >74:D:\PIC_18F57Q43\Timers.X\gpio.c
+353A text14 CODE >75:D:\PIC_18F57Q43\Timers.X\gpio.c
+353E text14 CODE >77:D:\PIC_18F57Q43\Timers.X\gpio.c
+355E text14 CODE >78:D:\PIC_18F57Q43\Timers.X\gpio.c
+3562 text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+356C text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+357A text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+3582 text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+358A text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+3592 text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+359A text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+35A2 text14 CODE >81:D:\PIC_18F57Q43\Timers.X\gpio.c
+35AC text14 CODE >82:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D8C text13 CODE >3:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D8E text13 CODE >5:D:\PIC_18F57Q43\Timers.X\gpio.c
+3D92 text13 CODE >8:D:\PIC_18F57Q43\Timers.X\gpio.c
+3DAE text13 CODE >9:D:\PIC_18F57Q43\Timers.X\gpio.c
+3DB2 text13 CODE >11:D:\PIC_18F57Q43\Timers.X\gpio.c
+3DCE text13 CODE >12:D:\PIC_18F57Q43\Timers.X\gpio.c
+3DD2 text13 CODE >14:D:\PIC_18F57Q43\Timers.X\gpio.c
+3DEE text13 CODE >15:D:\PIC_18F57Q43\Timers.X\gpio.c
+3DF2 text13 CODE >17:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E0E text13 CODE >18:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E12 text13 CODE >20:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E2E text13 CODE >21:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E32 text13 CODE >23:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E4E text13 CODE >24:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E52 text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E5C text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E6A text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E72 text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E7A text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E82 text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E8A text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E92 text13 CODE >27:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E9C text13 CODE >29:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B50 text12 CODE >298:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B52 text12 CODE >300:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B56 text12 CODE >303:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B74 text12 CODE >304:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B78 text12 CODE >306:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B96 text12 CODE >307:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B9A text12 CODE >309:D:\PIC_18F57Q43\Timers.X\gpio.c
+3BB8 text12 CODE >310:D:\PIC_18F57Q43\Timers.X\gpio.c
+3BBC text12 CODE >312:D:\PIC_18F57Q43\Timers.X\gpio.c
+3BDA text12 CODE >313:D:\PIC_18F57Q43\Timers.X\gpio.c
+3BDE text12 CODE >315:D:\PIC_18F57Q43\Timers.X\gpio.c
+3BFC text12 CODE >316:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C00 text12 CODE >318:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C1E text12 CODE >319:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C22 text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C2C text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C3A text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C42 text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C4A text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C52 text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C5A text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C62 text12 CODE >322:D:\PIC_18F57Q43\Timers.X\gpio.c
+3C6C text12 CODE >323:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A32 text11 CODE >31:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A34 text11 CODE >33:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A38 text11 CODE >36:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A56 text11 CODE >37:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A5A text11 CODE >39:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A78 text11 CODE >40:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A7C text11 CODE >42:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A9A text11 CODE >43:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A9E text11 CODE >45:D:\PIC_18F57Q43\Timers.X\gpio.c
+3ABC text11 CODE >46:D:\PIC_18F57Q43\Timers.X\gpio.c
+3AC0 text11 CODE >48:D:\PIC_18F57Q43\Timers.X\gpio.c
+3ADE text11 CODE >49:D:\PIC_18F57Q43\Timers.X\gpio.c
+3AE2 text11 CODE >51:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B00 text11 CODE >52:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B04 text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B0E text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B1C text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B24 text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B2C text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B34 text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B3C text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B44 text11 CODE >55:D:\PIC_18F57Q43\Timers.X\gpio.c
+3B4E text11 CODE >56:D:\PIC_18F57Q43\Timers.X\gpio.c
+3914 text10 CODE >110:D:\PIC_18F57Q43\Timers.X\gpio.c
+3916 text10 CODE >112:D:\PIC_18F57Q43\Timers.X\gpio.c
+391A text10 CODE >115:D:\PIC_18F57Q43\Timers.X\gpio.c
+3938 text10 CODE >116:D:\PIC_18F57Q43\Timers.X\gpio.c
+393C text10 CODE >118:D:\PIC_18F57Q43\Timers.X\gpio.c
+395A text10 CODE >119:D:\PIC_18F57Q43\Timers.X\gpio.c
+395E text10 CODE >121:D:\PIC_18F57Q43\Timers.X\gpio.c
+397C text10 CODE >122:D:\PIC_18F57Q43\Timers.X\gpio.c
+3980 text10 CODE >124:D:\PIC_18F57Q43\Timers.X\gpio.c
+399E text10 CODE >125:D:\PIC_18F57Q43\Timers.X\gpio.c
+39A2 text10 CODE >127:D:\PIC_18F57Q43\Timers.X\gpio.c
+39C0 text10 CODE >128:D:\PIC_18F57Q43\Timers.X\gpio.c
+39C4 text10 CODE >130:D:\PIC_18F57Q43\Timers.X\gpio.c
+39E2 text10 CODE >131:D:\PIC_18F57Q43\Timers.X\gpio.c
+39E6 text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+39F0 text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+39FE text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A06 text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A0E text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A16 text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A1E text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A26 text10 CODE >134:D:\PIC_18F57Q43\Timers.X\gpio.c
+3A30 text10 CODE >135:D:\PIC_18F57Q43\Timers.X\gpio.c
+335A text9 CODE >271:D:\PIC_18F57Q43\Timers.X\gpio.c
+335C text9 CODE >273:D:\PIC_18F57Q43\Timers.X\gpio.c
+3360 text9 CODE >276:D:\PIC_18F57Q43\Timers.X\gpio.c
+3380 text9 CODE >277:D:\PIC_18F57Q43\Timers.X\gpio.c
+3384 text9 CODE >279:D:\PIC_18F57Q43\Timers.X\gpio.c
+33A4 text9 CODE >280:D:\PIC_18F57Q43\Timers.X\gpio.c
+33A8 text9 CODE >282:D:\PIC_18F57Q43\Timers.X\gpio.c
+33C8 text9 CODE >283:D:\PIC_18F57Q43\Timers.X\gpio.c
+33CC text9 CODE >285:D:\PIC_18F57Q43\Timers.X\gpio.c
+33EC text9 CODE >286:D:\PIC_18F57Q43\Timers.X\gpio.c
+33F0 text9 CODE >288:D:\PIC_18F57Q43\Timers.X\gpio.c
+3410 text9 CODE >289:D:\PIC_18F57Q43\Timers.X\gpio.c
+3414 text9 CODE >291:D:\PIC_18F57Q43\Timers.X\gpio.c
+3434 text9 CODE >292:D:\PIC_18F57Q43\Timers.X\gpio.c
+3438 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3442 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3450 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3458 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3460 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3468 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3470 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3478 text9 CODE >295:D:\PIC_18F57Q43\Timers.X\gpio.c
+3482 text9 CODE >296:D:\PIC_18F57Q43\Timers.X\gpio.c
+37F6 text8 CODE >217:D:\PIC_18F57Q43\Timers.X\gpio.c
+37F8 text8 CODE >219:D:\PIC_18F57Q43\Timers.X\gpio.c
+37FC text8 CODE >222:D:\PIC_18F57Q43\Timers.X\gpio.c
+381A text8 CODE >223:D:\PIC_18F57Q43\Timers.X\gpio.c
+381E text8 CODE >225:D:\PIC_18F57Q43\Timers.X\gpio.c
+383C text8 CODE >226:D:\PIC_18F57Q43\Timers.X\gpio.c
+3840 text8 CODE >228:D:\PIC_18F57Q43\Timers.X\gpio.c
+385E text8 CODE >229:D:\PIC_18F57Q43\Timers.X\gpio.c
+3862 text8 CODE >231:D:\PIC_18F57Q43\Timers.X\gpio.c
+3880 text8 CODE >232:D:\PIC_18F57Q43\Timers.X\gpio.c
+3884 text8 CODE >234:D:\PIC_18F57Q43\Timers.X\gpio.c
+38A2 text8 CODE >235:D:\PIC_18F57Q43\Timers.X\gpio.c
+38A6 text8 CODE >237:D:\PIC_18F57Q43\Timers.X\gpio.c
+38C4 text8 CODE >238:D:\PIC_18F57Q43\Timers.X\gpio.c
+38C8 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+38D2 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+38E0 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+38E8 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+38F0 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+38F8 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+3900 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+3908 text8 CODE >241:D:\PIC_18F57Q43\Timers.X\gpio.c
+3912 text8 CODE >242:D:\PIC_18F57Q43\Timers.X\gpio.c
+3230 text7 CODE >244:D:\PIC_18F57Q43\Timers.X\gpio.c
+3232 text7 CODE >246:D:\PIC_18F57Q43\Timers.X\gpio.c
+3236 text7 CODE >249:D:\PIC_18F57Q43\Timers.X\gpio.c
+3256 text7 CODE >250:D:\PIC_18F57Q43\Timers.X\gpio.c
+325A text7 CODE >252:D:\PIC_18F57Q43\Timers.X\gpio.c
+327A text7 CODE >253:D:\PIC_18F57Q43\Timers.X\gpio.c
+327E text7 CODE >255:D:\PIC_18F57Q43\Timers.X\gpio.c
+329E text7 CODE >256:D:\PIC_18F57Q43\Timers.X\gpio.c
+32A2 text7 CODE >258:D:\PIC_18F57Q43\Timers.X\gpio.c
+32C2 text7 CODE >259:D:\PIC_18F57Q43\Timers.X\gpio.c
+32C6 text7 CODE >261:D:\PIC_18F57Q43\Timers.X\gpio.c
+32E6 text7 CODE >262:D:\PIC_18F57Q43\Timers.X\gpio.c
+32EA text7 CODE >264:D:\PIC_18F57Q43\Timers.X\gpio.c
+330A text7 CODE >265:D:\PIC_18F57Q43\Timers.X\gpio.c
+330E text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+3318 text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+3326 text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+332E text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+3336 text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+333E text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+3346 text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+334E text7 CODE >268:D:\PIC_18F57Q43\Timers.X\gpio.c
+3358 text7 CODE >269:D:\PIC_18F57Q43\Timers.X\gpio.c
+36D8 text6 CODE >164:D:\PIC_18F57Q43\Timers.X\gpio.c
+36DA text6 CODE >166:D:\PIC_18F57Q43\Timers.X\gpio.c
+36DE text6 CODE >169:D:\PIC_18F57Q43\Timers.X\gpio.c
+36FC text6 CODE >170:D:\PIC_18F57Q43\Timers.X\gpio.c
+3700 text6 CODE >172:D:\PIC_18F57Q43\Timers.X\gpio.c
+371E text6 CODE >173:D:\PIC_18F57Q43\Timers.X\gpio.c
+3722 text6 CODE >175:D:\PIC_18F57Q43\Timers.X\gpio.c
+3740 text6 CODE >176:D:\PIC_18F57Q43\Timers.X\gpio.c
+3744 text6 CODE >178:D:\PIC_18F57Q43\Timers.X\gpio.c
+3762 text6 CODE >179:D:\PIC_18F57Q43\Timers.X\gpio.c
+3766 text6 CODE >181:D:\PIC_18F57Q43\Timers.X\gpio.c
+3784 text6 CODE >182:D:\PIC_18F57Q43\Timers.X\gpio.c
+3788 text6 CODE >184:D:\PIC_18F57Q43\Timers.X\gpio.c
+37A6 text6 CODE >185:D:\PIC_18F57Q43\Timers.X\gpio.c
+37AA text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37B4 text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37C2 text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37CA text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37D2 text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37DA text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37E2 text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37EA text6 CODE >188:D:\PIC_18F57Q43\Timers.X\gpio.c
+37F4 text6 CODE >189:D:\PIC_18F57Q43\Timers.X\gpio.c
+3106 text5 CODE >191:D:\PIC_18F57Q43\Timers.X\gpio.c
+3108 text5 CODE >193:D:\PIC_18F57Q43\Timers.X\gpio.c
+310C text5 CODE >196:D:\PIC_18F57Q43\Timers.X\gpio.c
+312C text5 CODE >197:D:\PIC_18F57Q43\Timers.X\gpio.c
+3130 text5 CODE >199:D:\PIC_18F57Q43\Timers.X\gpio.c
+3150 text5 CODE >200:D:\PIC_18F57Q43\Timers.X\gpio.c
+3154 text5 CODE >202:D:\PIC_18F57Q43\Timers.X\gpio.c
+3174 text5 CODE >203:D:\PIC_18F57Q43\Timers.X\gpio.c
+3178 text5 CODE >205:D:\PIC_18F57Q43\Timers.X\gpio.c
+3198 text5 CODE >206:D:\PIC_18F57Q43\Timers.X\gpio.c
+319C text5 CODE >208:D:\PIC_18F57Q43\Timers.X\gpio.c
+31BC text5 CODE >209:D:\PIC_18F57Q43\Timers.X\gpio.c
+31C0 text5 CODE >211:D:\PIC_18F57Q43\Timers.X\gpio.c
+31E0 text5 CODE >212:D:\PIC_18F57Q43\Timers.X\gpio.c
+31E4 text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+31EE text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+31FC text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+3204 text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+320C text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+3214 text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+321C text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+3224 text5 CODE >215:D:\PIC_18F57Q43\Timers.X\gpio.c
+322E text5 CODE >216:D:\PIC_18F57Q43\Timers.X\gpio.c
+3E9E text4 CODE >325:D:\PIC_18F57Q43\Timers.X\gpio.c
+3EA0 text4 CODE >329:D:\PIC_18F57Q43\Timers.X\gpio.c
+3EB0 text4 CODE >330:D:\PIC_18F57Q43\Timers.X\gpio.c
+3EBE text4 CODE >332:D:\PIC_18F57Q43\Timers.X\gpio.c
+3EC8 text4 CODE >334:D:\PIC_18F57Q43\Timers.X\gpio.c
+3ED8 text4 CODE >335:D:\PIC_18F57Q43\Timers.X\gpio.c
+3EE6 text4 CODE >337:D:\PIC_18F57Q43\Timers.X\gpio.c
+3EF0 text4 CODE >339:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F00 text4 CODE >340:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F0E text4 CODE >342:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F18 text4 CODE >344:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F28 text4 CODE >345:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F36 text4 CODE >347:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F40 text4 CODE >349:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F50 text4 CODE >350:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F5E text4 CODE >352:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F68 text4 CODE >354:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F78 text4 CODE >355:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F86 text4 CODE >357:D:\PIC_18F57Q43\Timers.X\gpio.c
+3F90 text4 CODE >359:D:\PIC_18F57Q43\Timers.X\gpio.c
+3FBC text3 CODE >27:D:\PIC_18F57Q43\Timers.X\main.c
+3FBC text3 CODE >30:D:\PIC_18F57Q43\Timers.X\main.c
+3FDE text3 CODE >31:D:\PIC_18F57Q43\Timers.X\main.c
+3FE0 text2 CODE >4:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FE0 text2 CODE >7:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FE2 text2 CODE >8:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FE4 text2 CODE >9:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FE6 text2 CODE >13:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FE8 text2 CODE >14:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FEA text2 CODE >15:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FEE text2 CODE >19:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FF0 text2 CODE >20:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FF6 text2 CODE >21:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FFA text2 CODE >22:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3FFE text2 CODE >23:D:\PIC_18F57Q43\Timers.X\interrupt.c
+4000 text2 CODE >24:D:\PIC_18F57Q43\Timers.X\interrupt.c
+3F92 text1 CODE >3:D:\PIC_18F57Q43\Timers.X\timers.c
+3F92 text1 CODE >10:D:\PIC_18F57Q43\Timers.X\timers.c
+3F9C text1 CODE >11:D:\PIC_18F57Q43\Timers.X\timers.c
+3F9E text1 CODE >12:D:\PIC_18F57Q43\Timers.X\timers.c
+3FA6 text1 CODE >13:D:\PIC_18F57Q43\Timers.X\timers.c
+3FA8 text1 CODE >14:D:\PIC_18F57Q43\Timers.X\timers.c
+3FB0 text1 CODE >15:D:\PIC_18F57Q43\Timers.X\timers.c
+3FB4 text1 CODE >16:D:\PIC_18F57Q43\Timers.X\timers.c
+3FB8 text1 CODE >17:D:\PIC_18F57Q43\Timers.X\timers.c
+3FBA text1 CODE >18:D:\PIC_18F57Q43\Timers.X\timers.c
+4002 text0 CODE >12:D:\PIC_18F57Q43\Timers.X\main.c
+4002 text0 CODE >14:D:\PIC_18F57Q43\Timers.X\main.c
+4006 text0 CODE >15:D:\PIC_18F57Q43\Timers.X\main.c
+400A text0 CODE >16:D:\PIC_18F57Q43\Timers.X\main.c
+400E text0 CODE >17:D:\PIC_18F57Q43\Timers.X\main.c
+4012 text0 CODE >19:D:\PIC_18F57Q43\Timers.X\main.c
+4012 text0 CODE >22:D:\PIC_18F57Q43\Timers.X\main.c
+401A cinit CODE >8864:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+401A cinit CODE >8866:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+401A cinit CODE >8869:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+401A cinit CODE >8877:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+401C cinit CODE >8878:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+401E cinit CODE >8879:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+4020 cinit CODE >8880:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+4022 cinit CODE >8881:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+4024 cinit CODE >8882:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+4026 cinit CODE >8883:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+4028 cinit CODE >8889:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+4028 cinit CODE >8891:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+402A cinit CODE >8892:C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Timers.X.debug.o
+__Hspace_0 4048 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Hspace_1 512 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Hspace_2 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\Timers.X.debug.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Timers.X.debug.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_input 3E9E 0 CODE 0 text13 dist/default/debug\Timers.X.debug.o
+set_pin_output@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__Lsmallconst 2500 0 SMALLCONST 0 smallconst dist/default/debug\Timers.X.debug.o
+set_pin_st@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_LATA 4BE 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_LATB 4BF 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_LATC 4C0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_LATD 4C1 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_LATE 4C2 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_LATF 4C3 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_WPUA 401 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_WPUB 409 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_WPUC 411 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_WPUD 419 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_WPUE 421 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_WPUF 429 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+_main 4002 0 CODE 0 text0 dist/default/debug\Timers.X.debug.o
+set_pin_analog_mode@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+___stack_hi 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+start 3102 0 CODE 0 init C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+_reset_pin_pullup 35AE 0 CODE 0 text16 dist/default/debug\Timers.X.debug.o
+configure_pin@use_ttl 509 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/debug\Timers.X.debug.o
+__accesstop 560 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+_set_pin_ttl 3106 0 CODE 0 text5 dist/default/debug\Timers.X.debug.o
+configure_pin@use_push_pull 50B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+set_pin_output@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Timers.X.debug.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\Timers.X.debug.o
+__Hivt0x3008 3102 0 CODE 0 ivt0x3008 dist/default/debug\Timers.X.debug.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\Timers.X.debug.o
+_INTERRUPT_Init 3FE0 0 CODE 0 text2 dist/default/debug\Timers.X.debug.o
+_IVTBASEH 45E 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_IVTBASEL 45D 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_IVTBASEU 45F 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+configure_pin@is_input 506 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_ANSELA 400 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ANSELB 408 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ANSELC 410 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ANSELD 418 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ANSELE 420 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ANSELF 428 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+__end_of_configure_pin 3F92 0 CODE 0 text4 dist/default/debug\Timers.X.debug.o
+__Livt0x3008 3008 0 CODE 0 ivt0x3008 dist/default/debug\Timers.X.debug.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Timers.X.debug.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\Timers.X.debug.o
+set_pin_input@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+set_pin_push_pull@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_TIMER0_Init 3F92 0 CODE 0 text1 dist/default/debug\Timers.X.debug.o
+_INLVLA 404 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_INLVLB 40C 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_INLVLC 414 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_INLVLD 41C 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_INLVLE 424 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_INLVLF 42C 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__end_of_reset_pin_pullup 36D8 0 CODE 0 text16 dist/default/debug\Timers.X.debug.o
+_set_pin_analog_mode 3C6E 0 CODE 0 text15 dist/default/debug\Timers.X.debug.o
+__end_of_INTERRUPT_Init 4002 0 CODE 0 text2 dist/default/debug\Timers.X.debug.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+start_initialization 401A 0 CODE 0 cinit dist/default/debug\Timers.X.debug.o
+_ODCONA 402 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ODCONB 40A 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ODCONC 412 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ODCOND 41A 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ODCONE 422 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_ODCONF 42A 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Timers.X.debug.o
+___rparam_used 1 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+set_pin_sr_maximum@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_IPR3bits 365 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+set_pin_digital_mode@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+configure_pin@slew_rate_limited 50A 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+isa$xinst 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+__end_of_set_pin_push_pull 3484 0 CODE 0 text9 dist/default/debug\Timers.X.debug.o
+set_pin_ttl@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\Timers.X.debug.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\Timers.X.debug.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\Timers.X.debug.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/debug\Timers.X.debug.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/debug\Timers.X.debug.o
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\Timers.X.debug.o
+__Hconst 0 0 CONST 0 const dist/default/debug\Timers.X.debug.o
+__Hidata 0 0 CODE 0 idata dist/default/debug\Timers.X.debug.o
+__Hidloc 0 0 ABS 0 idloc dist/default/debug\Timers.X.debug.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\Timers.X.debug.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug\Timers.X.debug.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\Timers.X.debug.o
+__Hstack 0 0 STACK 2 stack dist/default/debug\Timers.X.debug.o
+__Htext0 0 0 ABS 0 text0 dist/default/debug\Timers.X.debug.o
+__Htext1 0 0 ABS 0 text1 dist/default/debug\Timers.X.debug.o
+__Htext2 0 0 ABS 0 text2 dist/default/debug\Timers.X.debug.o
+__Htext3 0 0 ABS 0 text3 dist/default/debug\Timers.X.debug.o
+__Htext4 0 0 ABS 0 text4 dist/default/debug\Timers.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug\Timers.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug\Timers.X.debug.o
+__Htext7 0 0 ABS 0 text7 dist/default/debug\Timers.X.debug.o
+__Htext8 0 0 ABS 0 text8 dist/default/debug\Timers.X.debug.o
+__Htext9 0 0 ABS 0 text9 dist/default/debug\Timers.X.debug.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/debug\Timers.X.debug.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/debug\Timers.X.debug.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/debug\Timers.X.debug.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/debug\Timers.X.debug.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/debug\Timers.X.debug.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/debug\Timers.X.debug.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/debug\Timers.X.debug.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/debug\Timers.X.debug.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/debug\Timers.X.debug.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/debug\Timers.X.debug.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/debug\Timers.X.debug.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/debug\Timers.X.debug.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/debug\Timers.X.debug.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/debug\Timers.X.debug.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/debug\Timers.X.debug.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/debug\Timers.X.debug.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/debug\Timers.X.debug.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/debug\Timers.X.debug.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/debug\Timers.X.debug.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/debug\Timers.X.debug.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/debug\Timers.X.debug.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/debug\Timers.X.debug.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/debug\Timers.X.debug.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/debug\Timers.X.debug.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/debug\Timers.X.debug.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/debug\Timers.X.debug.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/debug\Timers.X.debug.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Timers.X.debug.o
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\Timers.X.debug.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\Timers.X.debug.o
+__smallconst 2500 0 SMALLCONST 0 smallconst C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+set_pin_sr_limited@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__Hcomram 0 0 ABS 0 comram dist/default/debug\Timers.X.debug.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/debug\Timers.X.debug.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\Timers.X.debug.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\Timers.X.debug.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\Timers.X.debug.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/debug\Timers.X.debug.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/debug\Timers.X.debug.o
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\Timers.X.debug.o
+__Lconst 0 0 CONST 0 const dist/default/debug\Timers.X.debug.o
+__Lidata 0 0 CODE 0 idata dist/default/debug\Timers.X.debug.o
+__Lidloc 0 0 ABS 0 idloc dist/default/debug\Timers.X.debug.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\Timers.X.debug.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug\Timers.X.debug.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\Timers.X.debug.o
+__Lstack 0 0 STACK 2 stack dist/default/debug\Timers.X.debug.o
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\Timers.X.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\Timers.X.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\Timers.X.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\Timers.X.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\Timers.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\Timers.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\Timers.X.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\Timers.X.debug.o
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\Timers.X.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\Timers.X.debug.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\Timers.X.debug.o
+_set_pin_output 3A32 0 CODE 0 text11 dist/default/debug\Timers.X.debug.o
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\Timers.X.debug.o
+__Hdata 0 0 ABS 0 data dist/default/debug\Timers.X.debug.o
+__Hheap 0 0 HEAP 7 heap dist/default/debug\Timers.X.debug.o
+__Hinit 3106 0 CODE 0 init dist/default/debug\Timers.X.debug.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\Timers.X.debug.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\Timers.X.debug.o
+__Htemp 0 0 COMRAM 1 temp dist/default/debug\Timers.X.debug.o
+__Htext 0 0 ABS 0 text dist/default/debug\Timers.X.debug.o
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\Timers.X.debug.o
+__Ldata 0 0 ABS 0 data dist/default/debug\Timers.X.debug.o
+__Lheap 0 0 HEAP 7 heap dist/default/debug\Timers.X.debug.o
+__Linit 3102 0 CODE 0 init dist/default/debug\Timers.X.debug.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\Timers.X.debug.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\Timers.X.debug.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug\Timers.X.debug.o
+__Ltext 0 0 ABS 0 text dist/default/debug\Timers.X.debug.o
+_set_pin_pullup 3914 0 CODE 0 text10 dist/default/debug\Timers.X.debug.o
+__end_of_INT_ISR 4040 0 CODE 0 text18 dist/default/debug\Timers.X.debug.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_analog_mode 3D8C 0 CODE 0 text15 dist/default/debug\Timers.X.debug.o
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\Timers.X.debug.o
+__S0 4048 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__S1 512 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__S4 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__S5 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__end_of_GPIO_Init 3FE0 0 CODE 0 text3 dist/default/debug\Timers.X.debug.o
+ivt0x3008_base 3008 0 CODE 0 ivt0x3008 dist/default/debug\Timers.X.debug.o
+IVTBASEH 45E 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+IVTBASEL 45D 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+IVTBASEU 45F 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Timers.X.debug.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Timers.X.debug.o
+set_pin_input@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_ttl 3230 0 CODE 0 text5 dist/default/debug\Timers.X.debug.o
+_GPIO_Init 3FBC 0 CODE 0 text3 dist/default/debug\Timers.X.debug.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/debug\Timers.X.debug.o
+set_pin_analog_mode@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_digital_mode 35AE 0 CODE 0 text14 dist/default/debug\Timers.X.debug.o
+set_pin_sr_maximum@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+set_pin_digital_mode@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__activetblptr 3 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\Timers.X.debug.o
+_set_pin_push_pull 335A 0 CODE 0 text9 dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_output 3B50 0 CODE 0 text11 dist/default/debug\Timers.X.debug.o
+__Htext10 0 0 ABS 0 text10 dist/default/debug\Timers.X.debug.o
+__Htext11 0 0 ABS 0 text11 dist/default/debug\Timers.X.debug.o
+__Htext12 0 0 ABS 0 text12 dist/default/debug\Timers.X.debug.o
+__Htext13 0 0 ABS 0 text13 dist/default/debug\Timers.X.debug.o
+__Htext14 0 0 ABS 0 text14 dist/default/debug\Timers.X.debug.o
+__Htext15 0 0 ABS 0 text15 dist/default/debug\Timers.X.debug.o
+__Htext16 0 0 ABS 0 text16 dist/default/debug\Timers.X.debug.o
+__Htext17 0 0 ABS 0 text17 dist/default/debug\Timers.X.debug.o
+__Htext18 0 0 ABS 0 text18 dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_sr_limited 3914 0 CODE 0 text8 dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_pullup 3A32 0 CODE 0 text10 dist/default/debug\Timers.X.debug.o
+_PIE3bits 4A1 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__ptext10 3914 0 CODE 0 text10 dist/default/debug\Timers.X.debug.o
+__ptext11 3A32 0 CODE 0 text11 dist/default/debug\Timers.X.debug.o
+__ptext12 3B50 0 CODE 0 text12 dist/default/debug\Timers.X.debug.o
+__ptext13 3D8C 0 CODE 0 text13 dist/default/debug\Timers.X.debug.o
+__ptext14 3484 0 CODE 0 text14 dist/default/debug\Timers.X.debug.o
+__ptext15 3C6E 0 CODE 0 text15 dist/default/debug\Timers.X.debug.o
+__ptext16 35AE 0 CODE 0 text16 dist/default/debug\Timers.X.debug.o
+__ptext17 4040 0 CODE 0 text17 dist/default/debug\Timers.X.debug.o
+__ptext18 4030 0 CODE 0 text18 dist/default/debug\Timers.X.debug.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/debug\Timers.X.debug.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/debug\Timers.X.debug.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/debug\Timers.X.debug.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/debug\Timers.X.debug.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/debug\Timers.X.debug.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/debug\Timers.X.debug.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/debug\Timers.X.debug.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/debug\Timers.X.debug.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/debug\Timers.X.debug.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/debug\Timers.X.debug.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/debug\Timers.X.debug.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/debug\Timers.X.debug.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/debug\Timers.X.debug.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/debug\Timers.X.debug.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/debug\Timers.X.debug.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/debug\Timers.X.debug.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/debug\Timers.X.debug.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/debug\Timers.X.debug.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/debug\Timers.X.debug.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/debug\Timers.X.debug.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/debug\Timers.X.debug.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/debug\Timers.X.debug.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/debug\Timers.X.debug.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/debug\Timers.X.debug.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/debug\Timers.X.debug.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/debug\Timers.X.debug.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/debug\Timers.X.debug.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Timers.X.debug.o
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\Timers.X.debug.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug\Timers.X.debug.o
+__Lcomram 0 0 ABS 0 comram dist/default/debug\Timers.X.debug.o
+__Lconfig 0 0 CONFIG 4 config dist/default/debug\Timers.X.debug.o
+set_pin_ttl@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_LATFbits 4C3 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_open_drain 3C6E 0 CODE 0 text12 dist/default/debug\Timers.X.debug.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\Timers.X.debug.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+__end_of_TIMER0_Init 3FBC 0 CODE 0 text1 dist/default/debug\Timers.X.debug.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\Timers.X.debug.o
+isa$std 1 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+configure_pin@enable_pullup 508 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_set_pin_sr_limited 37F6 0 CODE 0 text8 dist/default/debug\Timers.X.debug.o
+configure_pin@port_name 50C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+stackhi 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+_OSCCON1 AD 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\Timers.X.debug.o
+__Lspace_0 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Lspace_1 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Lspace_2 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Lspace_4 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_PIR3bits 4B1 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+end_of_initialization 4028 0 CODE 0 cinit dist/default/debug\Timers.X.debug.o
+ivt0x3008_undefint 3100 0 CODE 0 ivt0x3008 dist/default/debug\Timers.X.debug.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Timers.X.debug.o
+_set_pin_open_drain 3B50 0 CODE 0 text12 dist/default/debug\Timers.X.debug.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\Timers.X.debug.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/debug\Timers.X.debug.o
+reset_pin_pullup@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug\Timers.X.debug.o
+_set_pin_input 3D8C 0 CODE 0 text13 dist/default/debug\Timers.X.debug.o
+configure_pin@pin_number 505 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__pcinit 401A 0 CODE 0 cinit dist/default/debug\Timers.X.debug.o
+reset_pin_pullup@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__ptext0 4002 0 CODE 0 text0 dist/default/debug\Timers.X.debug.o
+__ptext1 3F92 0 CODE 0 text1 dist/default/debug\Timers.X.debug.o
+__ptext2 3FE0 0 CODE 0 text2 dist/default/debug\Timers.X.debug.o
+__ptext3 3FBC 0 CODE 0 text3 dist/default/debug\Timers.X.debug.o
+__ptext4 3E9E 0 CODE 0 text4 dist/default/debug\Timers.X.debug.o
+__ptext5 3106 0 CODE 0 text5 dist/default/debug\Timers.X.debug.o
+__ptext6 36D8 0 CODE 0 text6 dist/default/debug\Timers.X.debug.o
+__ptext7 3230 0 CODE 0 text7 dist/default/debug\Timers.X.debug.o
+__ptext8 37F6 0 CODE 0 text8 dist/default/debug\Timers.X.debug.o
+__ptext9 335A 0 CODE 0 text9 dist/default/debug\Timers.X.debug.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\Timers.X.debug.o
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\Timers.X.debug.o
+__Ltext11 0 0 ABS 0 text11 dist/default/debug\Timers.X.debug.o
+__Ltext12 0 0 ABS 0 text12 dist/default/debug\Timers.X.debug.o
+__Ltext13 0 0 ABS 0 text13 dist/default/debug\Timers.X.debug.o
+__Ltext14 0 0 ABS 0 text14 dist/default/debug\Timers.X.debug.o
+__Ltext15 0 0 ABS 0 text15 dist/default/debug\Timers.X.debug.o
+__Ltext16 0 0 ABS 0 text16 dist/default/debug\Timers.X.debug.o
+__Ltext17 0 0 ABS 0 text17 dist/default/debug\Timers.X.debug.o
+__Ltext18 0 0 ABS 0 text18 dist/default/debug\Timers.X.debug.o
+set_pin_sr_limited@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+__pivt0x3008 3008 0 CODE 0 ivt0x3008 dist/default/debug\Timers.X.debug.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/debug\Timers.X.debug.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Timers.X.debug.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\Timers.X.debug.o
+__psmallconst 2500 0 SMALLCONST 0 smallconst dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_sr_maximum 335A 0 CODE 0 text7 dist/default/debug\Timers.X.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\Timers.X.debug.o
+_Clock_Init 4040 0 CODE 0 text17 dist/default/debug\Timers.X.debug.o
+configure_pin@is_digital 507 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_SLRCONA 403 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_SLRCONB 40B 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_SLRCONC 413 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_SLRCOND 41B 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_SLRCONE 423 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_SLRCONF 42B 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+___heap_hi 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAsi9c.\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Timers.X.debug.o
+__end_of__initialization 4028 0 CODE 0 cinit dist/default/debug\Timers.X.debug.o
+_INT_ISR 4030 0 CODE 0 text18 dist/default/debug\Timers.X.debug.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\Timers.X.debug.o
+_set_pin_st 36D8 0 CODE 0 text6 dist/default/debug\Timers.X.debug.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\Timers.X.debug.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_T0CON0bits 31A 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_T0CON1bits 31B 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+set_pin_open_drain@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_set_pin_sr_maximum 3230 0 CODE 0 text7 dist/default/debug\Timers.X.debug.o
+set_pin_open_drain@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__end_of_main 401A 0 CODE 0 text0 dist/default/debug\Timers.X.debug.o
+_PORTA 4CE 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_PORTB 4CF 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_PORTC 4D0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_PORTD 4D1 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_PORTE 4D2 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_PORTF 4D3 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TMR0H 319 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TMR0L 318 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TRISA 4C6 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TRISB 4C7 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TRISC 4C8 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TRISD 4C9 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TRISE 4CA 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+_TRISF 4CB 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+set_pin_pullup@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__HRAM 0 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Hbss 0 0 RAM 1 bss dist/default/debug\Timers.X.debug.o
+__Hram 0 0 ABS 0 ram dist/default/debug\Timers.X.debug.o
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\Timers.X.debug.o
+__LRAM 1 0 ABS 0 - dist/default/debug\Timers.X.debug.o
+__Lbss 0 0 RAM 1 bss dist/default/debug\Timers.X.debug.o
+__Lram 0 0 ABS 0 ram dist/default/debug\Timers.X.debug.o
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\Timers.X.debug.o
+set_pin_pullup@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+set_pin_st@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+_configure_pin 3E9E 0 CODE 0 text4 dist/default/debug\Timers.X.debug.o
+__end_of_Clock_Init 4048 0 CODE 0 text17 dist/default/debug\Timers.X.debug.o
+__initialization 401A 0 CODE 0 cinit dist/default/debug\Timers.X.debug.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\Timers.X.debug.o
+__Hsmallconst 2502 0 SMALLCONST 0 smallconst dist/default/debug\Timers.X.debug.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\Timers.X.debug.o
+set_pin_push_pull@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Timers.X.debug.o
+__end_of_set_pin_st 37F6 0 CODE 0 text6 dist/default/debug\Timers.X.debug.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Timers.X.debug.o
+_set_pin_digital_mode 3484 0 CODE 0 text14 dist/default/debug\Timers.X.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text18 0 4030 4030 18 1
+cstackCOMRAM 1 501 501 11 1
+reset_vec 0 0 0 4 1
+smallconst 0 2500 2500 2 1
+ivt0x3008 0 3008 3008 1026 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
