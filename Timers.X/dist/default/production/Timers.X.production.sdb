@@ -3,7 +3,44 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"30 D:\PIC_18F57Q43\Timers.X\main.c
+"19 D:\PIC_18F57Q43\Timers.X\main.c
+[e E17511 . `uc
+T0CKIPPS_NON_INVERTED 0
+T0CKIPPS_INVERTED 1
+FOSC_4 2
+HFINTOSC 3
+LFINTOSC 4
+MFINTOSC 5
+SOSC 6
+CLC1_OUT 7
+]
+[e E17521 . `uc
+TIMER_8BIT_MODE 0
+TIMER_16BIT_MODE 1
+]
+[e E17525 . `uc
+SYNCRONIZED 0
+NOT_SYNCRONIZED 1
+]
+[e E17529 . `uc
+CKPS_1_1 0
+CKPS_1_2 1
+CKPS_1_4 2
+CKPS_1_8 3
+CKPS_1_16 4
+CKPS_1_32 5
+CKPS_1_64 6
+CKPS_1_128 7
+CKPS_1_256 8
+CKPS_1_512 9
+CKPS_1_1024 10
+CKPS_1_2048 11
+CKPS_1_4096 12
+CKPS_1_8192 13
+CKPS_1_16384 14
+CKPS_1_32768 15
+]
+"34
 [e E17446 . `uc
 PORT_A 65
 PORT_B 66
@@ -20,6 +57,43 @@ PORT_C 67
 PORT_D 68
 PORT_E 69
 PORT_F 70
+]
+"3 D:\PIC_18F57Q43\Timers.X\timers.c
+[e E17115 . `uc
+T0CKIPPS_NON_INVERTED 0
+T0CKIPPS_INVERTED 1
+FOSC_4 2
+HFINTOSC 3
+LFINTOSC 4
+MFINTOSC 5
+SOSC 6
+CLC1_OUT 7
+]
+[e E17125 . `uc
+TIMER_8BIT_MODE 0
+TIMER_16BIT_MODE 1
+]
+[e E17129 . `uc
+SYNCRONIZED 0
+NOT_SYNCRONIZED 1
+]
+[e E17133 . `uc
+CKPS_1_1 0
+CKPS_1_2 1
+CKPS_1_4 2
+CKPS_1_8 3
+CKPS_1_16 4
+CKPS_1_32 5
+CKPS_1_64 6
+CKPS_1_128 7
+CKPS_1_256 8
+CKPS_1_512 9
+CKPS_1_1024 10
+CKPS_1_2048 11
+CKPS_1_4096 12
+CKPS_1_8192 13
+CKPS_1_16384 14
+CKPS_1_32768 15
 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -77,50 +151,52 @@ PORT_F 70
 [v _INTERRUPT_Init INTERRUPT_Init `(v  1 e 1 0 ]
 "26
 [v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
-"12 D:\PIC_18F57Q43\Timers.X\main.c
+"15 D:\PIC_18F57Q43\Timers.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"27
+"31
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 "3 D:\PIC_18F57Q43\Timers.X\timers.c
 [v _TIMER0_Init TIMER0_Init `(v  1 e 1 0 ]
+"12
+[v _TIMER0_Write TIMER0_Write `(v  1 e 1 0 ]
 "5210 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
 "23298
 [v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
 "23436
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
-[s S251 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S325 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "23724
-[s S257 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S331 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S263 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S337 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[s S269 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S343 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S274 . 1 `S251 1 . 1 0 `S257 1 . 1 0 `S263 1 . 1 0 `S269 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES274  1 e 1 @794 ]
-[s S193 . 1 `uc 1 CKPS 1 0 :4:0 
+[u S348 . 1 `S325 1 . 1 0 `S331 1 . 1 0 `S337 1 . 1 0 `S343 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES348  1 e 1 @794 ]
+[s S267 . 1 `uc 1 CKPS 1 0 :4:0 
 `uc 1 ASYNC 1 0 :1:4 
 `uc 1 CS 1 0 :3:5 
 ]
 "23851
-[s S197 . 1 `uc 1 CKPS0 1 0 :1:0 
+[s S271 . 1 `uc 1 CKPS0 1 0 :1:0 
 `uc 1 CKPS1 1 0 :1:1 
 `uc 1 CKPS2 1 0 :1:2 
 `uc 1 CKPS3 1 0 :1:3 
@@ -129,11 +205,11 @@ PORT_F 70
 `uc 1 CS1 1 0 :1:6 
 `uc 1 CS2 1 0 :1:7 
 ]
-[s S206 . 1 `uc 1 T0CKPS 1 0 :4:0 
+[s S280 . 1 `uc 1 T0CKPS 1 0 :4:0 
 `uc 1 . 1 0 :1:4 
 `uc 1 T0CS 1 0 :3:5 
 ]
-[s S210 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+[s S284 . 1 `uc 1 T0CKPS0 1 0 :1:0 
 `uc 1 T0CKPS1 1 0 :1:1 
 `uc 1 T0CKPS2 1 0 :1:2 
 `uc 1 T0CKPS3 1 0 :1:3 
@@ -142,9 +218,9 @@ PORT_F 70
 `uc 1 T0CS1 1 0 :1:6 
 `uc 1 T0CS2 1 0 :1:7 
 ]
-[u S219 . 1 `S193 1 . 1 0 `S197 1 . 1 0 `S206 1 . 1 0 `S210 1 . 1 0 ]
-[v _T0CON1bits T0CON1bits `VES219  1 e 1 @795 ]
-[s S382 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+[u S293 . 1 `S267 1 . 1 0 `S271 1 . 1 0 `S280 1 . 1 0 `S284 1 . 1 0 ]
+[v _T0CON1bits T0CON1bits `VES293  1 e 1 @795 ]
+[s S463 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
 `uc 1 SPI1TXIP 1 0 :1:1 
 `uc 1 SPI1IP 1 0 :1:2 
 `uc 1 TMR2IP 1 0 :1:3 
@@ -154,8 +230,8 @@ PORT_F 70
 `uc 1 TMR0IP 1 0 :1:7 
 ]
 "32039
-[u S391 . 1 `S382 1 . 1 0 ]
-[v _IPR3bits IPR3bits `VES391  1 e 1 @869 ]
+[u S472 . 1 `S463 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES472  1 e 1 @869 ]
 "40015
 [v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
 "40077
@@ -222,7 +298,7 @@ PORT_F 70
 [v _IVTBASEH IVTBASEH `VEuc  1 e 1 @1118 ]
 "45382
 [v _IVTBASEU IVTBASEU `VEuc  1 e 1 @1119 ]
-[s S361 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+[s S442 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
 `uc 1 SPI1TXIE 1 0 :1:1 
 `uc 1 SPI1IE 1 0 :1:2 
 `uc 1 TMR2IE 1 0 :1:3 
@@ -232,11 +308,11 @@ PORT_F 70
 `uc 1 TMR0IE 1 0 :1:7 
 ]
 "47289
-[u S370 . 1 `S361 1 . 1 0 ]
+[u S451 . 1 `S442 1 . 1 0 ]
 "47289
 "47289
-[v _PIE3bits PIE3bits `VES370  1 e 1 @1185 ]
-[s S340 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+[v _PIE3bits PIE3bits `VES451  1 e 1 @1185 ]
+[s S421 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
 `uc 1 SPI1TXIF 1 0 :1:1 
 `uc 1 SPI1IF 1 0 :1:2 
 `uc 1 TMR2IF 1 0 :1:3 
@@ -246,10 +322,10 @@ PORT_F 70
 `uc 1 TMR0IF 1 0 :1:7 
 ]
 "48163
-[u S349 . 1 `S340 1 . 1 0 ]
+[u S430 . 1 `S421 1 . 1 0 ]
 "48163
 "48163
-[v _PIR3bits PIR3bits `VES349  1 e 1 @1201 ]
+[v _PIR3bits PIR3bits `VES430  1 e 1 @1201 ]
 "48861
 [v _LATA LATA `VEuc  1 e 1 @1214 ]
 "48923
@@ -262,7 +338,7 @@ PORT_F 70
 [v _LATE LATE `VEuc  1 e 1 @1218 ]
 "49141
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
-[s S406 . 1 `uc 1 LATF0 1 0 :1:0 
+[s S487 . 1 `uc 1 LATF0 1 0 :1:0 
 `uc 1 LATF1 1 0 :1:1 
 `uc 1 LATF2 1 0 :1:2 
 `uc 1 LATF3 1 0 :1:3 
@@ -272,10 +348,10 @@ PORT_F 70
 `uc 1 LATF7 1 0 :1:7 
 ]
 "49158
-[u S415 . 1 `S406 1 . 1 0 ]
+[u S496 . 1 `S487 1 . 1 0 ]
 "49158
 "49158
-[v _LATFbits LATFbits `VES415  1 e 1 @1219 ]
+[v _LATFbits LATFbits `VES496  1 e 1 @1219 ]
 "49203
 [v _TRISA TRISA `VEuc  1 e 1 @1222 ]
 "49265
@@ -300,7 +376,7 @@ PORT_F 70
 [v _PORTE PORTE `VEuc  1 e 1 @1234 ]
 "49831
 [v _PORTF PORTF `VEuc  1 e 1 @1235 ]
-[s S314 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S395 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -309,33 +385,50 @@ PORT_F 70
 `uc 1 GIE 1 0 :1:7 
 ]
 "49913
-[s S322 . 1 `uc 1 . 1 0 :7:0 
+[s S403 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "49913
-[u S325 . 1 `S314 1 . 1 0 `S322 1 . 1 0 ]
+[u S406 . 1 `S395 1 . 1 0 `S403 1 . 1 0 ]
 "49913
 "49913
-[v _INTCON0bits INTCON0bits `VES325  1 e 1 @1238 ]
-"12 D:\PIC_18F57Q43\Timers.X\main.c
+[v _INTCON0bits INTCON0bits `VES406  1 e 1 @1238 ]
+"15 D:\PIC_18F57Q43\Timers.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"25
+"29
 } 0
-"3 D:\PIC_18F57Q43\Timers.X\timers.c
+"12 D:\PIC_18F57Q43\Timers.X\timers.c
+[v _TIMER0_Write TIMER0_Write `(v  1 e 1 0 ]
+{
+[v TIMER0_Write@TMR0H_value TMR0H_value `uc  1 a 1 wreg ]
+[v TIMER0_Write@TMR0H_value TMR0H_value `uc  1 a 1 wreg ]
+[v TIMER0_Write@TMR0L_value TMR0L_value `uc  1 p 1 0 ]
+"14
+[v TIMER0_Write@TMR0H_value TMR0H_value `uc  1 a 1 1 ]
+"17
+} 0
+"3
 [v _TIMER0_Init TIMER0_Init `(v  1 e 1 0 ]
 {
-"18
+[v TIMER0_Init@timer_clock_source timer_clock_source `E17115  1 a 1 wreg ]
+[v TIMER0_Init@timer_clock_source timer_clock_source `E17115  1 a 1 wreg ]
+[v TIMER0_Init@timer_mode timer_mode `E17125  1 p 1 0 ]
+[v TIMER0_Init@timer_async timer_async `E17129  1 p 1 1 ]
+[v TIMER0_Init@timer_prescaler timer_prescaler `E17133  1 p 1 2 ]
+"5
+[v TIMER0_Init@timer_clock_source timer_clock_source `E17115  1 a 1 4 ]
+"10
 } 0
 "4 D:\PIC_18F57Q43\Timers.X\interrupt.c
 [v _INTERRUPT_Init INTERRUPT_Init `(v  1 e 1 0 ]
 {
 "24
 } 0
-"27 D:\PIC_18F57Q43\Timers.X\main.c
+"31 D:\PIC_18F57Q43\Timers.X\main.c
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 {
-"31
+"35
 } 0
 "325 D:\PIC_18F57Q43\Timers.X\gpio.c
 [v _configure_pin configure_pin `(v  1 e 1 0 ]

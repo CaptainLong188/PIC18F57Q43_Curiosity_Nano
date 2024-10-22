@@ -29264,23 +29264,74 @@ unsigned char __t3rd16on(void);
 # 4 "./timers.h" 2
 
 
-void TIMER0_Init(void);
+
+
+
+
+
+
+typedef enum
+{
+    T0CKIPPS_NON_INVERTED,
+            T0CKIPPS_INVERTED,
+            FOSC_4,
+            HFINTOSC,
+            LFINTOSC,
+            MFINTOSC,
+            SOSC,
+            CLC1_OUT
+}timerClockSource_t;
+
+typedef enum
+{
+    TIMER_8BIT_MODE,
+            TIMER_16BIT_MODE
+}timerMode_t;
+
+typedef enum
+{
+    SYNCRONIZED,
+            NOT_SYNCRONIZED
+}timerAsync_t;
+
+typedef enum
+{
+    CKPS_1_1,
+    CKPS_1_2,
+    CKPS_1_4,
+    CKPS_1_8,
+    CKPS_1_16,
+    CKPS_1_32,
+    CKPS_1_64,
+    CKPS_1_128,
+    CKPS_1_256,
+    CKPS_1_512,
+    CKPS_1_1024,
+    CKPS_1_2048,
+    CKPS_1_4096,
+    CKPS_1_8192,
+    CKPS_1_16384,
+    CKPS_1_32768
+} timerPrescaler_t;
+
+
+void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler);
+void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value);
 # 1 "timers.c" 2
 
 
-void TIMER0_Init(void)
+void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler)
 {
+    T0CON1bits.CS = timer_clock_source;
+    T0CON0bits.MD16 = timer_mode;
+    T0CON1bits.ASYNC = timer_async;
+    T0CON1bits.CKPS = timer_prescaler;
+    T0CON0bits.OUTPS = 0b0000;
+}
 
-
-
-
-
-    T0CON1bits.CS = 0b010;
-    T0CON1bits.ASYNC = 0;
-    T0CON1bits.CKPS = 0b1100;
-    T0CON0bits.MD16 = 1;
-    T0CON0bits.OUTPS = 0b0001;
-    TMR0H = 0xF3;
-    TMR0L = 0xE7;
+void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value)
+{
+    TMR0H = TMR0H_value;
+    TMR0L = TMR0L_value;
     T0CON0bits.EN = 1;
 }

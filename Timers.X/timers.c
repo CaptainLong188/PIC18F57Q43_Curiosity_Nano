@@ -1,18 +1,17 @@
 #include "timers.h"
 
-void TIMER0_Init(void)
+void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler)
 {
-    /*
-     * Para timer de 16 bits ->  TMR0 = 65535 - tiempo * Fosc / (4 * Prescaler * Postscaler) 
-     * Para timer de 8 bits  ->  TMR0H = tiempo * Fosc / (4 * Prescaler * Postcaler)
-     */
-    
-    T0CON1bits.CS = 0b010;      // Fosc/4 como fuente de clock
-    T0CON1bits.ASYNC = 0;       // Sincronizado con Fosc/4
-    T0CON1bits.CKPS = 0b1100;   // Prescaler de 1:4096
-    T0CON0bits.MD16 = 1;        // Timer de 16 bits
-    T0CON0bits.OUTPS = 0b0001;  // Postscaler de 1:2
-    TMR0H = 0xF3;               // Tiempo : ??
-    TMR0L = 0xE7;
+    T0CON1bits.CS = timer_clock_source;     // Fosc/4 como fuente de clock
+    T0CON0bits.MD16 = timer_mode;           // Timer de 16 bits
+    T0CON1bits.ASYNC = timer_async;         // Sincronizado con Fosc/4
+    T0CON1bits.CKPS = timer_prescaler;      // Prescaler de 1:4096
+    T0CON0bits.OUTPS = 0b0000;              // Postscaler de 1:1
+}
+
+void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value)
+{
+    TMR0H = TMR0H_value;               
+    TMR0L = TMR0L_value;
     T0CON0bits.EN = 1;          // Habilitar TIMER 0
 }

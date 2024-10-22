@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o
+ C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o
  -Odist/default/production\Timers.X.production.hex
  -logfile=dist/default/production\Timers.X.production.hxl
  -addressing=1
@@ -9,23 +9,23 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
-  2500h - 2501h		(C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
-  3008h - 402Dh		(C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
-  4030h - 4047h		(C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
-  300000h - 300007h		(C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
-  300009h - 300009h		(C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
+  2500h - 2501h		(C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
+  3008h - 4069h		(C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
+  406Ch - 4083h		(C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
+  300000h - 300007h		(C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
+  300009h - 300009h		(C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
  Unused ranges:
   4h - 24FFh
   2502h - 3007h
-  402Eh - 402Fh
-  4048h - 2FFFFFh
+  406Ah - 406Bh
+  4084h - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\GIRALDO\AppData\Local\Temp\xcAskjg.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\GIRALDO\AppData\Local\Temp\xcBs6og.1\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -291,9 +291,13 @@
 00003FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00004020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00004020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00004030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00004040 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
+00004040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00004050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00004060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
+00004070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00004080 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --

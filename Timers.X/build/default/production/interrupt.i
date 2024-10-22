@@ -29501,7 +29501,7 @@ void INTERRUPT_Init(void)
 void __attribute__((picinterrupt(("irq(31), base(0x3008)")))) INT_ISR(void)
 {
     (LATFbits.LATF3 ^= 1);
-    TMR0H = 0xF3;
-    TMR0L = 0xE7;
+    TMR0H = 0xC2;
+    TMR0L = 0xF6;
     PIR3bits.TMR0IF = 0;
 }

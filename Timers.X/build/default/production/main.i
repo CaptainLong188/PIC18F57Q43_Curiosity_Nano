@@ -29481,12 +29481,54 @@ _Bool get_pin_value(PortName_t port_name, uint8_t pin_number);
 # 6 "main.c" 2
 
 # 1 "./timers.h" 1
+# 12 "./timers.h"
+typedef enum
+{
+    T0CKIPPS_NON_INVERTED,
+            T0CKIPPS_INVERTED,
+            FOSC_4,
+            HFINTOSC,
+            LFINTOSC,
+            MFINTOSC,
+            SOSC,
+            CLC1_OUT
+}timerClockSource_t;
+
+typedef enum
+{
+    TIMER_8BIT_MODE,
+            TIMER_16BIT_MODE
+}timerMode_t;
+
+typedef enum
+{
+    SYNCRONIZED,
+            NOT_SYNCRONIZED
+}timerAsync_t;
+
+typedef enum
+{
+    CKPS_1_1,
+    CKPS_1_2,
+    CKPS_1_4,
+    CKPS_1_8,
+    CKPS_1_16,
+    CKPS_1_32,
+    CKPS_1_64,
+    CKPS_1_128,
+    CKPS_1_256,
+    CKPS_1_512,
+    CKPS_1_1024,
+    CKPS_1_2048,
+    CKPS_1_4096,
+    CKPS_1_8192,
+    CKPS_1_16384,
+    CKPS_1_32768
+} timerPrescaler_t;
 
 
-
-
-
-void TIMER0_Init(void);
+void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler);
+void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value);
 # 7 "main.c" 2
 
 # 1 "./interrupt.h" 1
@@ -29501,13 +29543,17 @@ void INTERRUPT_Init(void);
 # 8 "main.c" 2
 
 
+#pragma warning disable 520
+#pragma warning disable 2020
+
 void GPIO_Init(void);
 
 int main(int argc, char** argv) {
 
     Clock_Init();
     GPIO_Init();
-    TIMER0_Init();
+    TIMER0_Init(FOSC_4, TIMER_16BIT_MODE, SYNCRONIZED, CKPS_1_2048);
+    TIMER0_Write(0xC2, 0xF6);
     INTERRUPT_Init();
 
     while(1)

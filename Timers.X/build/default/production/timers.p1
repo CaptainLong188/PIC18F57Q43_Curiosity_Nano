@@ -1,4 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"3 timers.c
+[; ;timers.c: 3: void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler)
+[c E17115 0 1 2 3 4 5 6 7 .. ]
+[n E17115 . T0CKIPPS_NON_INVERTED T0CKIPPS_INVERTED FOSC_4 HFINTOSC LFINTOSC MFINTOSC SOSC CLC1_OUT  ]
+[c E17125 0 1 .. ]
+[n E17125 . TIMER_8BIT_MODE TIMER_16BIT_MODE  ]
+[c E17129 0 1 .. ]
+[n E17129 . SYNCRONIZED NOT_SYNCRONIZED  ]
+[c E17133 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
+[n E17133 . CKPS_1_1 CKPS_1_2 CKPS_1_4 CKPS_1_8 CKPS_1_16 CKPS_1_32 CKPS_1_64 CKPS_1_128 CKPS_1_256 CKPS_1_512 CKPS_1_1024 CKPS_1_2048 CKPS_1_4096 CKPS_1_8192 CKPS_1_16384 CKPS_1_32768  ]
 "23820 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 23820:     struct {
 [s S1142 :4 `uc 1 :1 `uc 1 :3 `uc 1 ]
@@ -2623,38 +2633,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
 "3 timers.c
-[; ;timers.c: 3: void TIMER0_Init(void)
-[v _TIMER0_Init `(v ~T0 @X0 1 ef ]
+[; ;timers.c: 3: void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler)
+[v _TIMER0_Init `(v ~T0 @X0 1 ef4`E17115`E17125`E17129`E17133 ]
 "4
 [; ;timers.c: 4: {
 {
 [e :U _TIMER0_Init ]
+"3
+[; ;timers.c: 3: void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler)
+[v _timer_clock_source `E17115 ~T0 @X0 1 r1 ]
+[v _timer_mode `E17125 ~T0 @X0 1 r2 ]
+[v _timer_async `E17129 ~T0 @X0 1 r3 ]
+[v _timer_prescaler `E17133 ~T0 @X0 1 r4 ]
+"4
+[; ;timers.c: 4: {
 [f ]
+"5
+[; ;timers.c: 5:     T0CON1bits.CS = timer_clock_source;
+[e = . . _T0CON1bits 0 2 -> _timer_clock_source `uc ]
+"6
+[; ;timers.c: 6:     T0CON0bits.MD16 = timer_mode;
+[e = . . _T0CON0bits 0 1 -> _timer_mode `uc ]
+"7
+[; ;timers.c: 7:     T0CON1bits.ASYNC = timer_async;
+[e = . . _T0CON1bits 0 1 -> _timer_async `uc ]
+"8
+[; ;timers.c: 8:     T0CON1bits.CKPS = timer_prescaler;
+[e = . . _T0CON1bits 0 0 -> _timer_prescaler `uc ]
+"9
+[; ;timers.c: 9:     T0CON0bits.OUTPS = 0b0000;
+[e = . . _T0CON0bits 0 0 -> -> 0 `i `uc ]
 "10
-[; ;timers.c: 10:     T0CON1bits.CS = 0b010;
-[e = . . _T0CON1bits 0 2 -> -> 2 `i `uc ]
-"11
-[; ;timers.c: 11:     T0CON1bits.ASYNC = 0;
-[e = . . _T0CON1bits 0 1 -> -> 0 `i `uc ]
-"12
-[; ;timers.c: 12:     T0CON1bits.CKPS = 0b1100;
-[e = . . _T0CON1bits 0 0 -> -> 12 `i `uc ]
-"13
-[; ;timers.c: 13:     T0CON0bits.MD16 = 1;
-[e = . . _T0CON0bits 0 1 -> -> 1 `i `uc ]
-"14
-[; ;timers.c: 14:     T0CON0bits.OUTPS = 0b0001;
-[e = . . _T0CON0bits 0 0 -> -> 1 `i `uc ]
-"15
-[; ;timers.c: 15:     TMR0H = 0xF3;
-[e = _TMR0H -> -> 243 `i `uc ]
-"16
-[; ;timers.c: 16:     TMR0L = 0xE7;
-[e = _TMR0L -> -> 231 `i `uc ]
-"17
-[; ;timers.c: 17:     T0CON0bits.EN = 1;
-[e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
-"18
-[; ;timers.c: 18: }
+[; ;timers.c: 10: }
 [e :UE 2413 ]
+}
+"12
+[; ;timers.c: 12: void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value)
+[v _TIMER0_Write `(v ~T0 @X0 1 ef2`uc`uc ]
+"13
+[; ;timers.c: 13: {
+{
+[e :U _TIMER0_Write ]
+"12
+[; ;timers.c: 12: void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value)
+[v _TMR0H_value `uc ~T0 @X0 1 r1 ]
+[v _TMR0L_value `uc ~T0 @X0 1 r2 ]
+"13
+[; ;timers.c: 13: {
+[f ]
+"14
+[; ;timers.c: 14:     TMR0H = TMR0H_value;
+[e = _TMR0H _TMR0H_value ]
+"15
+[; ;timers.c: 15:     TMR0L = TMR0L_value;
+[e = _TMR0L _TMR0L_value ]
+"16
+[; ;timers.c: 16:     T0CON0bits.EN = 1;
+[e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
+"17
+[; ;timers.c: 17: }
+[e :UE 2414 ]
 }

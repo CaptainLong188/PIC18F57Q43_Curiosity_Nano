@@ -26,7 +26,7 @@ void INTERRUPT_Init(void)
 void __interrupt(irq(IRQ_TMR0), base(0x3008)) INT_ISR(void)
 {    
     LED_INTERNAL_TOGGLE();
-    TMR0H = 0xF3;             
-    TMR0L = 0xE7;
+    TMR0H = 0xC2;             
+    TMR0L = 0xF6;
     PIR3bits.TMR0IF = 0;
 }
