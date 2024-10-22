@@ -1,0 +1,1153 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\LCD_Pruebas.X.production.o
+cinit CODE 0 3BAE 3BAE 32 1 2
+text0 CODE 0 2518 2518 12E 1 2
+text1 CODE 0 33EA 33EA 112 1 2
+text2 CODE 0 3B22 3B22 4C 1 2
+text3 CODE 0 38FA 38FA AE 1 2
+text4 CODE 0 3C1E 3C1E A 1 2
+text5 CODE 0 3C28 3C28 8 1 2
+text6 CODE 0 3A3E 3A3E 84 1 2
+text7 CODE 0 3BE0 3BE0 1E 1 2
+text8 CODE 0 3B6E 3B6E 40 1 2
+text9 CODE 0 360E 360E FC 1 2
+text10 CODE 0 3AC2 3AC2 60 1 2
+text11 CODE 0 370A 370A FC 1 2
+text12 CODE 0 3C10 3C10 E 1 2
+text13 CODE 0 39A8 39A8 96 1 2
+text14 CODE 0 2C18 2C18 11E 1 2
+text15 CODE 0 3806 3806 F4 1 2
+text16 CODE 0 2646 2646 12A 1 2
+text17 CODE 0 2D36 2D36 11E 1 2
+text18 CODE 0 2770 2770 12A 1 2
+text19 CODE 0 2E54 2E54 11E 1 2
+text20 CODE 0 289A 289A 12A 1 2
+text21 CODE 0 2F72 2F72 11E 1 2
+text22 CODE 0 3090 3090 11E 1 2
+text23 CODE 0 31AE 31AE 11E 1 2
+text24 CODE 0 34FC 34FC 112 1 2
+text25 CODE 0 29C4 29C4 12A 1 2
+text26 CODE 0 32CC 32CC 11E 1 2
+text27 CODE 0 2AEE 2AEE 12A 1 2
+text28 CODE 0 3C30 3C30 8 1 2
+idataCOMRAM CODE 0 3BFE 3BFE 12 1 1
+cstackCOMRAM COMRAM 1 501 501 1A 1 1
+smallconst SMALLCONST 0 2500 2500 18 1 2
+dataCOMRAM COMRAM 1 51B 51B 12 1 1
+bssCOMRAM COMRAM 1 52D 52D 8 1 1
+config CONFIG 4 300000 300000 A 1 1
+$C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+init CODE 0 1FFFC 1FFFC 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-24FF 1
+CONST 3C38-1FFFB 1
+IDLOC 200000-20003F 1
+SMALLCONST 3C38-1FFFB 1
+CODE 4-24FF 1
+CODE 3C38-1FFFB 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 535-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 535-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 3C38-FFFF 1
+MEDIUMCONST 12500-1FFFB 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\LCD_Pruebas.X.production.o
+3C30 text28 CODE >57:D:\PIC_18F57Q43\LCD_Pruebas.X\config.c
+3C30 text28 CODE >59:D:\PIC_18F57Q43\LCD_Pruebas.X\config.c
+3C36 text28 CODE >60:D:\PIC_18F57Q43\LCD_Pruebas.X\config.c
+2AEE text27 CODE >137:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AF0 text27 CODE >139:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AF4 text27 CODE >142:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B14 text27 CODE >143:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B18 text27 CODE >145:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B38 text27 CODE >146:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B3C text27 CODE >148:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B5C text27 CODE >149:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B60 text27 CODE >151:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B80 text27 CODE >152:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2B84 text27 CODE >154:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BA4 text27 CODE >155:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BA8 text27 CODE >157:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BC8 text27 CODE >158:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BCC text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BD6 text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BE4 text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BEC text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BF4 text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2BFC text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C04 text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C0C text27 CODE >161:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C16 text27 CODE >162:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32CC text26 CODE >83:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32CE text26 CODE >85:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32D2 text26 CODE >88:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32F0 text26 CODE >89:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32F4 text26 CODE >91:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3312 text26 CODE >92:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3316 text26 CODE >94:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3334 text26 CODE >95:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3338 text26 CODE >97:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3356 text26 CODE >98:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+335A text26 CODE >100:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3378 text26 CODE >101:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+337C text26 CODE >103:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+339A text26 CODE >104:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+339E text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33A8 text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33B6 text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33BE text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33C6 text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33CE text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33D6 text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33DE text26 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33E8 text26 CODE >108:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29C4 text25 CODE >57:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29C6 text25 CODE >59:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29CA text25 CODE >62:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29EA text25 CODE >63:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29EE text25 CODE >65:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A0E text25 CODE >66:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A12 text25 CODE >68:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A32 text25 CODE >69:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A36 text25 CODE >71:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A56 text25 CODE >72:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A5A text25 CODE >74:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A7A text25 CODE >75:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A7E text25 CODE >77:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2A9E text25 CODE >78:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AA2 text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AAC text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2ABA text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AC2 text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2ACA text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AD2 text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2ADA text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AE2 text25 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2AEC text25 CODE >82:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34FC text24 CODE >3:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34FE text24 CODE >5:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3502 text24 CODE >8:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+351E text24 CODE >9:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3522 text24 CODE >11:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+353E text24 CODE >12:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3542 text24 CODE >14:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+355E text24 CODE >15:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3562 text24 CODE >17:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+357E text24 CODE >18:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3582 text24 CODE >20:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+359E text24 CODE >21:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35A2 text24 CODE >23:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35BE text24 CODE >24:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35C2 text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35CC text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35DA text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35E2 text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35EA text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35F2 text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+35FA text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3602 text24 CODE >27:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+360C text24 CODE >29:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31AE text23 CODE >298:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31B0 text23 CODE >300:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31B4 text23 CODE >303:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31D2 text23 CODE >304:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31D6 text23 CODE >306:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31F4 text23 CODE >307:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31F8 text23 CODE >309:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3216 text23 CODE >310:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+321A text23 CODE >312:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3238 text23 CODE >313:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+323C text23 CODE >315:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+325A text23 CODE >316:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+325E text23 CODE >318:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+327C text23 CODE >319:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3280 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+328A text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3298 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32A0 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32A8 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32B0 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32B8 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32C0 text23 CODE >322:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+32CA text23 CODE >323:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3090 text22 CODE >31:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3092 text22 CODE >33:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3096 text22 CODE >36:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+30B4 text22 CODE >37:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+30B8 text22 CODE >39:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+30D6 text22 CODE >40:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+30DA text22 CODE >42:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+30F8 text22 CODE >43:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+30FC text22 CODE >45:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+311A text22 CODE >46:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+311E text22 CODE >48:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+313C text22 CODE >49:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3140 text22 CODE >51:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+315E text22 CODE >52:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3162 text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+316C text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+317A text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3182 text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+318A text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3192 text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+319A text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31A2 text22 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+31AC text22 CODE >56:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F72 text21 CODE >110:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F74 text21 CODE >112:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F78 text21 CODE >115:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F96 text21 CODE >116:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F9A text21 CODE >118:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2FB8 text21 CODE >119:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2FBC text21 CODE >121:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2FDA text21 CODE >122:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2FDE text21 CODE >124:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2FFC text21 CODE >125:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3000 text21 CODE >127:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+301E text21 CODE >128:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3022 text21 CODE >130:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3040 text21 CODE >131:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3044 text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+304E text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+305C text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3064 text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+306C text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3074 text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+307C text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3084 text21 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+308E text21 CODE >135:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+289A text20 CODE >271:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+289C text20 CODE >273:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+28A0 text20 CODE >276:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+28C0 text20 CODE >277:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+28C4 text20 CODE >279:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+28E4 text20 CODE >280:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+28E8 text20 CODE >282:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2908 text20 CODE >283:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+290C text20 CODE >285:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+292C text20 CODE >286:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2930 text20 CODE >288:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2950 text20 CODE >289:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2954 text20 CODE >291:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2974 text20 CODE >292:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2978 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2982 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2990 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2998 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29A0 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29A8 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29B0 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29B8 text20 CODE >295:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+29C2 text20 CODE >296:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E54 text19 CODE >217:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E56 text19 CODE >219:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E5A text19 CODE >222:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E78 text19 CODE >223:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E7C text19 CODE >225:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E9A text19 CODE >226:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E9E text19 CODE >228:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2EBC text19 CODE >229:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2EC0 text19 CODE >231:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2EDE text19 CODE >232:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2EE2 text19 CODE >234:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F00 text19 CODE >235:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F04 text19 CODE >237:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F22 text19 CODE >238:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F26 text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F30 text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F3E text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F46 text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F4E text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F56 text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F5E text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F66 text19 CODE >241:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2F70 text19 CODE >242:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2770 text18 CODE >244:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2772 text18 CODE >246:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2776 text18 CODE >249:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2796 text18 CODE >250:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+279A text18 CODE >252:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+27BA text18 CODE >253:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+27BE text18 CODE >255:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+27DE text18 CODE >256:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+27E2 text18 CODE >258:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2802 text18 CODE >259:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2806 text18 CODE >261:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2826 text18 CODE >262:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+282A text18 CODE >264:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+284A text18 CODE >265:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+284E text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2858 text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2866 text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+286E text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2876 text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+287E text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2886 text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+288E text18 CODE >268:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2898 text18 CODE >269:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D36 text17 CODE >164:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D38 text17 CODE >166:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D3C text17 CODE >169:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D5A text17 CODE >170:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D5E text17 CODE >172:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D7C text17 CODE >173:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D80 text17 CODE >175:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D9E text17 CODE >176:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2DA2 text17 CODE >178:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2DC0 text17 CODE >179:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2DC4 text17 CODE >181:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2DE2 text17 CODE >182:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2DE6 text17 CODE >184:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E04 text17 CODE >185:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E08 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E12 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E20 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E28 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E30 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E38 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E40 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E48 text17 CODE >188:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2E52 text17 CODE >189:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2646 text16 CODE >191:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2648 text16 CODE >193:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+264C text16 CODE >196:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+266C text16 CODE >197:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2670 text16 CODE >199:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2690 text16 CODE >200:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2694 text16 CODE >202:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+26B4 text16 CODE >203:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+26B8 text16 CODE >205:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+26D8 text16 CODE >206:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+26DC text16 CODE >208:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+26FC text16 CODE >209:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2700 text16 CODE >211:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2720 text16 CODE >212:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2724 text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+272E text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+273C text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2744 text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+274C text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2754 text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+275C text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2764 text16 CODE >215:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+276E text16 CODE >216:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3806 text15 CODE >325:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3808 text15 CODE >329:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3818 text15 CODE >330:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3826 text15 CODE >332:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3830 text15 CODE >334:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3840 text15 CODE >335:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+384E text15 CODE >337:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3858 text15 CODE >339:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3868 text15 CODE >340:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3876 text15 CODE >342:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3880 text15 CODE >344:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3890 text15 CODE >345:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+389E text15 CODE >347:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38A8 text15 CODE >349:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38B8 text15 CODE >350:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38C6 text15 CODE >352:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38D0 text15 CODE >354:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38E0 text15 CODE >355:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38EE text15 CODE >357:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+38F8 text15 CODE >359:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C18 text14 CODE >388:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C1A text14 CODE >390:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C1E text14 CODE >393:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C3C text14 CODE >394:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C40 text14 CODE >396:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C5E text14 CODE >397:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C62 text14 CODE >399:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C80 text14 CODE >400:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2C84 text14 CODE >402:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CA2 text14 CODE >403:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CA6 text14 CODE >405:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CC4 text14 CODE >406:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CC8 text14 CODE >408:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CE6 text14 CODE >409:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CEA text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2CF4 text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D02 text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D0A text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D12 text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D1A text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D22 text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D2A text14 CODE >412:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2D34 text14 CODE >413:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+39A8 text13 CODE >97:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+39A8 text13 CODE >100:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+39CA text13 CODE >101:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+39CC text13 CODE >104:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+39EE text13 CODE >107:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3A10 text13 CODE >108:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3A1A text13 CODE >111:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3A3C text13 CODE >112:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3C10 text12 CODE >64:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C10 text12 CODE >66:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C12 text12 CODE >67:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C1A text12 CODE >68:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C1C text12 CODE >69:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+370A text11 CODE >76:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+370C text11 CODE >78:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+370E text11 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3728 text11 CODE >82:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+374E text11 CODE >83:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3772 text11 CODE >84:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+378C text11 CODE >87:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3790 text11 CODE >90:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+37B2 text11 CODE >91:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+37D2 text11 CODE >92:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+37EC text11 CODE >93:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3800 text11 CODE >96:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3804 text11 CODE >97:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AC2 text10 CODE >189:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AC4 text10 CODE >192:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AD8 text10 CODE >193:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AEE text10 CODE >194:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B04 text10 CODE >195:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B1A text10 CODE >198:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B20 text10 CODE >199:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+360E text9 CODE >104:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3610 text9 CODE >106:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3612 text9 CODE >109:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+362C text9 CODE >110:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3652 text9 CODE >111:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3676 text9 CODE >112:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3690 text9 CODE >115:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3694 text9 CODE >118:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+36B6 text9 CODE >119:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+36D6 text9 CODE >120:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+36F0 text9 CODE >121:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3704 text9 CODE >124:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3708 text9 CODE >125:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B6E text8 CODE >371:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B6E text8 CODE >376:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B7A text8 CODE >379:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B7E text8 CODE >380:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B90 text8 CODE >381:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BA2 text8 CODE >384:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BAC text8 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BE0 text7 CODE >278:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BE0 text7 CODE >281:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BE6 text7 CODE >284:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BF6 text7 CODE >287:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3BFC text7 CODE >288:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A3E text6 CODE >136:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A3E text6 CODE >139:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A42 text6 CODE >140:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A46 text6 CODE >141:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A4A text6 CODE >142:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A4E text6 CODE >143:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A52 text6 CODE >144:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A56 text6 CODE >151:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A6C text6 CODE >154:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A74 text6 CODE >157:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A78 text6 CODE >160:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A86 text6 CODE >163:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A8A text6 CODE >166:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A9A text6 CODE >169:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3A9E text6 CODE >172:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AA6 text6 CODE >175:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AAA text6 CODE >178:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AB0 text6 CODE >179:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AB6 text6 CODE >180:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3ABC text6 CODE >181:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3AC0 text6 CODE >182:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C28 text5 CODE >204:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C28 text5 CODE >207:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C2E text5 CODE >208:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C1E text4 CODE >404:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C20 text4 CODE >407:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3C26 text4 CODE >408:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+38FA text3 CODE >114:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+38FA text3 CODE >117:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3904 text3 CODE >119:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+390C text3 CODE >121:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3932 text3 CODE >122:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3938 text3 CODE >123:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+393C text3 CODE >124:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3950 text3 CODE >127:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+395A text3 CODE >129:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3962 text3 CODE >131:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3988 text3 CODE >132:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+398E text3 CODE >133:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3992 text3 CODE >134:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+39A6 text3 CODE >135:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3B22 text2 CODE >392:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B22 text2 CODE >395:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B2A text2 CODE >396:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B44 text2 CODE >397:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+3B6C text2 CODE >398:D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+33EA text1 CODE >361:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33EC text1 CODE >363:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+33F0 text1 CODE >366:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+340C text1 CODE >367:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3410 text1 CODE >369:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+342C text1 CODE >370:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3430 text1 CODE >372:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+344C text1 CODE >373:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3450 text1 CODE >375:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+346C text1 CODE >376:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3470 text1 CODE >378:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+348C text1 CODE >379:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+3490 text1 CODE >381:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34AC text1 CODE >382:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34B0 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34BA text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34C8 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34D0 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34D8 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34E0 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34E8 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34F0 text1 CODE >385:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+34FA text1 CODE >386:D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+2518 text0 CODE >42:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2518 text0 CODE >44:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+251C text0 CODE >45:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2520 text0 CODE >46:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2524 text0 CODE >47:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2534 text0 CODE >48:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2544 text0 CODE >49:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+254E text0 CODE >50:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2556 text0 CODE >51:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+255C text0 CODE >52:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2560 text0 CODE >53:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2566 text0 CODE >54:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2570 text0 CODE >55:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2578 text0 CODE >56:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+257E text0 CODE >57:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2582 text0 CODE >58:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2588 text0 CODE >60:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2590 text0 CODE >61:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2598 text0 CODE >62:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+259C text0 CODE >63:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+259C text0 CODE >67:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25B0 text0 CODE >69:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25C2 text0 CODE >71:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25D2 text0 CODE >73:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25D4 text0 CODE >74:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25DE text0 CODE >75:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25E2 text0 CODE >76:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25E6 text0 CODE >77:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25EA text0 CODE >78:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25EE text0 CODE >79:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25EE text0 CODE >81:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25F0 text0 CODE >82:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25FA text0 CODE >83:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+25FE text0 CODE >84:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2602 text0 CODE >85:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2606 text0 CODE >87:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2622 text0 CODE >90:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+2626 text0 CODE >91:D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+3BAE cinit CODE >7228:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BAE cinit CODE >7230:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BAE cinit CODE >7233:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BAE cinit CODE >7273:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BB0 cinit CODE >7274:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BB2 cinit CODE >7275:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BB4 cinit CODE >7276:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BB6 cinit CODE >7277:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BB8 cinit CODE >7278:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BBA cinit CODE >7279:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BBE cinit CODE >7280:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BC2 cinit CODE >7281:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BC2 cinit CODE >7282:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BC4 cinit CODE >7283:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BC8 cinit CODE >7284:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BCA cinit CODE >7285:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BCC cinit CODE >7286:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BCE cinit CODE >7290:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BD2 cinit CODE >7291:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BD4 cinit CODE >7292:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BD4 cinit CODE >7293:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BD6 cinit CODE >7294:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BD8 cinit CODE >7295:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BDA cinit CODE >7301:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BDA cinit CODE >7303:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+3BDC cinit CODE >7304:C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\LCD_Pruebas.X.production.o
+__Hspace_0 20000 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Hspace_1 535 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+LCD_Cursor_Set@row 505 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Write_Char 3C1E 0 CODE 0 text4 dist/default/production\LCD_Pruebas.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\LCD_Pruebas.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\LCD_Pruebas.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_input 360E 0 CODE 0 text24 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_output@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_high_state 51D 0 COMRAM 1 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lsmallconst 2500 0 SMALLCONST 0 smallconst dist/default/production\LCD_Pruebas.X.production.o
+set_pin_st@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_LATA 4BE 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_LATB 4BF 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_LATC 4C0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_LATD 4C1 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_LATE 4C2 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_LATF 4C3 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_WPUA 401 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_WPUB 409 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_WPUC 411 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_WPUD 419 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_WPUE 421 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_WPUF 429 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+_main 2518 0 CODE 0 text0 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_analog_mode@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+start 1FFFC 0 CODE 0 init C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_reset_pin_pullup 2AEE 0 CODE 0 text27 dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@use_ttl 509 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Init 3A3E 0 CODE 0 text6 dist/default/production\LCD_Pruebas.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_pulse_clock 3C1E 0 CODE 0 text12 dist/default/production\LCD_Pruebas.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__accesstop 560 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__end_of_LCD_Init 3AC2 0 CODE 0 text6 dist/default/production\LCD_Pruebas.X.production.o
+intlevel0 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+_set_pin_low 2C18 0 CODE 0 text14 dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_ttl 2646 0 CODE 0 text16 dist/default/production\LCD_Pruebas.X.production.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_Write_Char 3C28 0 CODE 0 text4 dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@use_push_pull 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+set_pin_output@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\LCD_Pruebas.X.production.o
+_LCD_entry_mode 51B 0 COMRAM 1 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\LCD_Pruebas.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Cursor_Set 3AC2 0 CODE 0 text10 dist/default/production\LCD_Pruebas.X.production.o
+__pidataCOMRAM 3BFE 0 CODE 0 idataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@is_input 506 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_ANSELA 400 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ANSELB 408 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ANSELC 410 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ANSELD 418 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ANSELE 420 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ANSELF 428 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_Cursor_Increment 3C30 0 CODE 0 text5 dist/default/production\LCD_Pruebas.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+LCD_Add_Character@address 508 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_configure_pin 38FA 0 CODE 0 text15 dist/default/production\LCD_Pruebas.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\LCD_Pruebas.X.production.o
+_LCD_pulse_clock 3C10 0 CODE 0 text12 dist/default/production\LCD_Pruebas.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\LCD_Pruebas.X.production.o
+set_pin_input@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_LCD_display_control 51C 0 COMRAM 1 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_Add_Character 3BAE 0 CODE 0 text8 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_push_pull@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_INLVLA 404 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_INLVLB 40C 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_INLVLC 414 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_INLVLD 41C 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_INLVLE 424 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_INLVLF 42C 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__end_of_reset_pin_pullup 2C18 0 CODE 0 text27 dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_analog_mode 32CC 0 CODE 0 text26 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_Cursor_Set 3B22 0 CODE 0 text10 dist/default/production\LCD_Pruebas.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+start_initialization 3BAE 0 CODE 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+LCD_Add_Character@i 509 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_ODCONA 402 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ODCONB 40A 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ODCONC 412 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ODCOND 41A 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ODCONE 422 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_ODCONF 42A 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\LCD_Pruebas.X.production.o
+_TRISCbits 4C8 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISFbits 4CB 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+set_pin_low@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+LCD_write_command@command 503 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_write_command 3806 0 CODE 0 text11 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_sr_maximum@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+set_pin_digital_mode@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@slew_rate_limited 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__end_of_set_pin_push_pull 29C4 0 CODE 0 text20 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_Clear 3BFE 0 CODE 0 text7 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_ttl@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\LCD_Pruebas.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\LCD_Pruebas.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\LCD_Pruebas.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\LCD_Pruebas.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\LCD_Pruebas.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\LCD_Pruebas.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\LCD_Pruebas.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\LCD_Pruebas.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\LCD_Pruebas.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\LCD_Pruebas.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\LCD_Pruebas.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\LCD_Pruebas.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\LCD_Pruebas.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\LCD_Pruebas.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\LCD_Pruebas.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\LCD_Pruebas.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\LCD_Pruebas.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\LCD_Pruebas.X.production.o
+LCD_Write_Char@character 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/production\LCD_Pruebas.X.production.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/production\LCD_Pruebas.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\LCD_Pruebas.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\LCD_Pruebas.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\LCD_Pruebas.X.production.o
+__smallconst 2500 0 SMALLCONST 0 smallconst C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__end_of_LCD_Update_Screen 39A8 0 CODE 0 text3 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_sr_limited@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\LCD_Pruebas.X.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Add_Character 3B6E 0 CODE 0 text8 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_high@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\LCD_Pruebas.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\LCD_Pruebas.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\LCD_Pruebas.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\LCD_Pruebas.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\LCD_Pruebas.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\LCD_Pruebas.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\LCD_Pruebas.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\LCD_Pruebas.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\LCD_Pruebas.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Clear 3BE0 0 CODE 0 text7 dist/default/production\LCD_Pruebas.X.production.o
+_PORTBbits 4CF 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_output 3090 0 CODE 0 text22 dist/default/production\LCD_Pruebas.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\LCD_Pruebas.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\LCD_Pruebas.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\LCD_Pruebas.X.production.o
+__Hinit 20000 0 CODE 0 init dist/default/production\LCD_Pruebas.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\LCD_Pruebas.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\LCD_Pruebas.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\LCD_Pruebas.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\LCD_Pruebas.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\LCD_Pruebas.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\LCD_Pruebas.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\LCD_Pruebas.X.production.o
+__Linit 1FFFC 0 CODE 0 init dist/default/production\LCD_Pruebas.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\LCD_Pruebas.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\LCD_Pruebas.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\LCD_Pruebas.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_pullup 2F72 0 CODE 0 text21 dist/default/production\LCD_Pruebas.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_analog_mode 33EA 0 CODE 0 text26 dist/default/production\LCD_Pruebas.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\LCD_Pruebas.X.production.o
+__S0 20000 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__S1 535 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__end_of_GPIO_Init 3A3E 0 CODE 0 text13 dist/default/production\LCD_Pruebas.X.production.o
+LCD_write_data@data 503 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_high 33EA 0 CODE 0 text1 dist/default/production\LCD_Pruebas.X.production.o
+_LCD_write_data 360E 0 CODE 0 text9 dist/default/production\LCD_Pruebas.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\LCD_Pruebas.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\LCD_Pruebas.X.production.o
+set_pin_input@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_low 2D36 0 CODE 0 text14 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_ttl 2770 0 CODE 0 text16 dist/default/production\LCD_Pruebas.X.production.o
+_LCD_write_command 370A 0 CODE 0 text11 dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Write_String 3B22 0 CODE 0 text2 dist/default/production\LCD_Pruebas.X.production.o
+_GPIO_Init 39A8 0 CODE 0 text13 dist/default/production\LCD_Pruebas.X.production.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/production\LCD_Pruebas.X.production.o
+set_pin_analog_mode@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_digital_mode 2AEE 0 CODE 0 text25 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_sr_maximum@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+set_pin_digital_mode@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_push_pull 289A 0 CODE 0 text20 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_output 31AE 0 CODE 0 text22 dist/default/production\LCD_Pruebas.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\LCD_Pruebas.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\LCD_Pruebas.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\LCD_Pruebas.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\LCD_Pruebas.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\LCD_Pruebas.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\LCD_Pruebas.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\LCD_Pruebas.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\LCD_Pruebas.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\LCD_Pruebas.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\LCD_Pruebas.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\LCD_Pruebas.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\LCD_Pruebas.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\LCD_Pruebas.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production\LCD_Pruebas.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\LCD_Pruebas.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\LCD_Pruebas.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production\LCD_Pruebas.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production\LCD_Pruebas.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_sr_limited 2F72 0 CODE 0 text19 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_pullup 3090 0 CODE 0 text21 dist/default/production\LCD_Pruebas.X.production.o
+LCD_Update_Screen@input_size 508 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__ptext10 3AC2 0 CODE 0 text10 dist/default/production\LCD_Pruebas.X.production.o
+__ptext11 370A 0 CODE 0 text11 dist/default/production\LCD_Pruebas.X.production.o
+__ptext12 3C10 0 CODE 0 text12 dist/default/production\LCD_Pruebas.X.production.o
+__ptext13 39A8 0 CODE 0 text13 dist/default/production\LCD_Pruebas.X.production.o
+__ptext14 2C18 0 CODE 0 text14 dist/default/production\LCD_Pruebas.X.production.o
+__ptext15 3806 0 CODE 0 text15 dist/default/production\LCD_Pruebas.X.production.o
+__ptext16 2646 0 CODE 0 text16 dist/default/production\LCD_Pruebas.X.production.o
+__ptext17 2D36 0 CODE 0 text17 dist/default/production\LCD_Pruebas.X.production.o
+__ptext18 2770 0 CODE 0 text18 dist/default/production\LCD_Pruebas.X.production.o
+__ptext19 2E54 0 CODE 0 text19 dist/default/production\LCD_Pruebas.X.production.o
+__ptext20 289A 0 CODE 0 text20 dist/default/production\LCD_Pruebas.X.production.o
+__ptext21 2F72 0 CODE 0 text21 dist/default/production\LCD_Pruebas.X.production.o
+__ptext22 3090 0 CODE 0 text22 dist/default/production\LCD_Pruebas.X.production.o
+__ptext23 31AE 0 CODE 0 text23 dist/default/production\LCD_Pruebas.X.production.o
+__ptext24 34FC 0 CODE 0 text24 dist/default/production\LCD_Pruebas.X.production.o
+__ptext25 29C4 0 CODE 0 text25 dist/default/production\LCD_Pruebas.X.production.o
+__ptext26 32CC 0 CODE 0 text26 dist/default/production\LCD_Pruebas.X.production.o
+__ptext27 2AEE 0 CODE 0 text27 dist/default/production\LCD_Pruebas.X.production.o
+__ptext28 3C30 0 CODE 0 text28 dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Update_Screen 38FA 0 CODE 0 text3 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/production\LCD_Pruebas.X.production.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/production\LCD_Pruebas.X.production.o
+LCD_Write_String@string 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_LCD_Cursor_Increment 3C28 0 CODE 0 text5 dist/default/production\LCD_Pruebas.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\LCD_Pruebas.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\LCD_Pruebas.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\LCD_Pruebas.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\LCD_Pruebas.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\LCD_Pruebas.X.production.o
+set_pin_ttl@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_LATCbits 4C0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_LATFbits 4C3 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_write_data 370A 0 CODE 0 text9 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_open_drain 32CC 0 CODE 0 text23 dist/default/production\LCD_Pruebas.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\LCD_Pruebas.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+main@input 515 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\LCD_Pruebas.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+configure_pin@enable_pullup 508 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_high 34FC 0 CODE 0 text1 dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_sr_limited 2E54 0 CODE 0 text19 dist/default/production\LCD_Pruebas.X.production.o
+LCD_Write_String@i 506 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@port_name 50C 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+stackhi 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+main@previous_state 517 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_OSCCON1 AD 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\LCD_Pruebas.X.production.o
+set_pin_low@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__pbssCOMRAM 52D 0 COMRAM 1 bssCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+LCD_Add_Character@pattern 506 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_LCD_Write_String 3B6E 0 CODE 0 text2 dist/default/production\LCD_Pruebas.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+LCD_Update_Screen@i_295 50D 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+LCD_Update_Screen@input 506 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+end_of_initialization 3BDA 0 CODE 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\LCD_Pruebas.X.production.o
+LCD_Cursor_Set@column 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_open_drain 31AE 0 CODE 0 text23 dist/default/production\LCD_Pruebas.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\LCD_Pruebas.X.production.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/production\LCD_Pruebas.X.production.o
+reset_pin_pullup@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_input 34FC 0 CODE 0 text24 dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@pin_number 505 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__pcinit 3BAE 0 CODE 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+reset_pin_pullup@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__ptext0 2518 0 CODE 0 text0 dist/default/production\LCD_Pruebas.X.production.o
+__ptext1 33EA 0 CODE 0 text1 dist/default/production\LCD_Pruebas.X.production.o
+__ptext2 3B22 0 CODE 0 text2 dist/default/production\LCD_Pruebas.X.production.o
+__ptext3 38FA 0 CODE 0 text3 dist/default/production\LCD_Pruebas.X.production.o
+__ptext4 3C1E 0 CODE 0 text4 dist/default/production\LCD_Pruebas.X.production.o
+__ptext5 3C28 0 CODE 0 text5 dist/default/production\LCD_Pruebas.X.production.o
+__ptext6 3A3E 0 CODE 0 text6 dist/default/production\LCD_Pruebas.X.production.o
+__ptext7 3BE0 0 CODE 0 text7 dist/default/production\LCD_Pruebas.X.production.o
+__ptext8 3B6E 0 CODE 0 text8 dist/default/production\LCD_Pruebas.X.production.o
+__ptext9 360E 0 CODE 0 text9 dist/default/production\LCD_Pruebas.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\LCD_Pruebas.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production\LCD_Pruebas.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_sr_limited@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\LCD_Pruebas.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\LCD_Pruebas.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\LCD_Pruebas.X.production.o
+__psmallconst 2500 0 SMALLCONST 0 smallconst dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_sr_maximum 289A 0 CODE 0 text18 dist/default/production\LCD_Pruebas.X.production.o
+main@output 518 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\LCD_Pruebas.X.production.o
+_Clock_Init 3C30 0 CODE 0 text28 dist/default/production\LCD_Pruebas.X.production.o
+configure_pin@is_digital 507 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_SLRCONA 403 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_SLRCONB 40B 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_SLRCONC 413 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_SLRCOND 41B 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_SLRCONE 423 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_SLRCONF 42B 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\GIRALDO\AppData\Local\Temp\xcAskqc.\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\LCD_Pruebas.X.production.o
+__end_of__initialization 3BDA 0 CODE 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\LCD_Pruebas.X.production.o
+LCD_Update_Screen@output_size 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_st 2D36 0 CODE 0 text17 dist/default/production\LCD_Pruebas.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\LCD_Pruebas.X.production.o
+LCD_Update_Screen@output 509 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+main@current_state 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+set_pin_open_drain@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_sr_maximum 2770 0 CODE 0 text18 dist/default/production\LCD_Pruebas.X.production.o
+set_pin_open_drain@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_main 2646 0 CODE 0 text0 dist/default/production\LCD_Pruebas.X.production.o
+_PORTA 4CE 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_PORTB 4CF 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_PORTC 4D0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_PORTD 4D1 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_PORTE 4D2 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_PORTF 4D3 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISA 4C6 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISB 4C7 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISC 4C8 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISD 4C9 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISE 4CA 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+_TRISF 4CB 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+set_pin_pullup@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\LCD_Pruebas.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\LCD_Pruebas.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\LCD_Pruebas.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\LCD_Pruebas.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\LCD_Pruebas.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\LCD_Pruebas.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\LCD_Pruebas.X.production.o
+set_pin_pullup@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+LCD_Update_Screen@i 50C 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+set_pin_st@port_name 504 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+_configure_pin 3806 0 CODE 0 text15 dist/default/production\LCD_Pruebas.X.production.o
+__end_of_Clock_Init 3C38 0 CODE 0 text28 dist/default/production\LCD_Pruebas.X.production.o
+__initialization 3BAE 0 CODE 0 cinit dist/default/production\LCD_Pruebas.X.production.o
+__pdataCOMRAM 51B 0 COMRAM 1 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\LCD_Pruebas.X.production.o
+_low_state 525 0 COMRAM 1 dataCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Hsmallconst 2518 0 SMALLCONST 0 smallconst dist/default/production\LCD_Pruebas.X.production.o
+set_pin_high@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\LCD_Pruebas.X.production.o
+set_pin_push_pull@pin_number 501 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD_Pruebas.X.production.o
+__end_of_set_pin_st 2E54 0 CODE 0 text17 dist/default/production\LCD_Pruebas.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\LCD_Pruebas.X.production.o
+_set_pin_digital_mode 29C4 0 CODE 0 text25 dist/default/production\LCD_Pruebas.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text0 0 2518 2518 1720 1
+cstackCOMRAM 1 501 501 34 1
+init 0 1FFFC 1FFFC 4 1
+reset_vec 0 0 0 4 1
+smallconst 0 2500 2500 18 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
