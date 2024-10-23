@@ -4,7 +4,7 @@
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
 "3 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
-[e E17445 . `uc
+[e E17440 . `uc
 PORT_A 65
 PORT_B 66
 PORT_C 67
@@ -13,7 +13,7 @@ PORT_E 69
 PORT_F 70
 ]
 "74 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
-[e E17446 . `uc
+[e E17441 . `uc
 PORT_A 65
 PORT_B 66
 PORT_C 67
@@ -109,9 +109,9 @@ PORT_F 70
 [v _LCD_Write_Variable LCD_Write_Variable `(v  1 e 1 0 ]
 "42 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"97
+"96
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
-"114
+"113
 [v _LCD_Update_Screen LCD_Update_Screen `(v  1 e 1 0 ]
 "5210 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
@@ -181,7 +181,7 @@ PORT_F 70
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
 "48985
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S296 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S290 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -191,10 +191,10 @@ PORT_F 70
 `uc 1 LATC7 1 0 :1:7 
 ]
 "49002
-[u S305 . 1 `S296 1 . 1 0 ]
+[u S299 . 1 `S290 1 . 1 0 ]
 "49002
 "49002
-[v _LATCbits LATCbits `VES305  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES299  1 e 1 @1216 ]
 "49047
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
 "49109
@@ -221,7 +221,7 @@ PORT_F 70
 [v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "49327
 [v _TRISC TRISC `VEuc  1 e 1 @1224 ]
-[s S331 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S329 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -231,17 +231,17 @@ PORT_F 70
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "49344
-[u S340 . 1 `S331 1 . 1 0 ]
+[u S338 . 1 `S329 1 . 1 0 ]
 "49344
 "49344
-[v _TRISCbits TRISCbits `VES340  1 e 1 @1224 ]
+[v _TRISCbits TRISCbits `VES338  1 e 1 @1224 ]
 "49389
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
 "49451
 [v _TRISE TRISE `VEuc  1 e 1 @1226 ]
 "49483
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-[s S352 . 1 `uc 1 TRISF0 1 0 :1:0 
+[s S350 . 1 `uc 1 TRISF0 1 0 :1:0 
 `uc 1 TRISF1 1 0 :1:1 
 `uc 1 TRISF2 1 0 :1:2 
 `uc 1 TRISF3 1 0 :1:3 
@@ -251,10 +251,10 @@ PORT_F 70
 `uc 1 TRISF7 1 0 :1:7 
 ]
 "49500
-[u S361 . 1 `S352 1 . 1 0 ]
+[u S359 . 1 `S350 1 . 1 0 ]
 "49500
 "49500
-[v _TRISFbits TRISFbits `VES361  1 e 1 @1227 ]
+[v _TRISFbits TRISFbits `VES359  1 e 1 @1227 ]
 "49545
 [v _PORTA PORTA `VEuc  1 e 1 @1230 ]
 "49607
@@ -293,22 +293,22 @@ PORT_F 70
 [v _main main `(i  1 e 2 0 ]
 {
 "61
-[v main@output output `[2]uc  1 a 2 23 ]
+[v main@output output `[2]uc  1 a 2 21 ]
 "60
-[v main@input input `[2]uc  1 a 2 20 ]
+[v main@input input `[2]uc  1 a 2 18 ]
 "63
-[v main@current_state current_state `uc  1 a 1 25 ]
+[v main@current_state_btn_1 current_state_btn_1 `uc  1 a 1 23 ]
 "62
-[v main@previous_state previous_state `uc  1 a 1 22 ]
-"95
+[v main@previous_state_btn_1 previous_state_btn_1 `uc  1 a 1 20 ]
+"94
 } 0
 "361 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
 [v _set_pin_high set_pin_high `(v  1 e 1 0 ]
 {
-[v set_pin_high@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_high@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_high@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_high@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_high@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_high@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_high@port_name port_name `E17440  1 a 1 3 ]
 "386
 } 0
 "392 D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
@@ -320,19 +320,19 @@ PORT_F 70
 [v LCD_Write_String@string string `*.31uc  1 p 1 3 ]
 "398
 } 0
-"114 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+"113 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
 [v _LCD_Update_Screen LCD_Update_Screen `(v  1 e 1 0 ]
 {
-"129
-[v LCD_Update_Screen@i_295 i `uc  1 a 1 12 ]
-"119
+"128
+[v LCD_Update_Screen@i_289 i `uc  1 a 1 12 ]
+"118
 [v LCD_Update_Screen@i i `uc  1 a 1 11 ]
-"114
+"113
 [v LCD_Update_Screen@input input `*.39uc  1 p 2 5 ]
 [v LCD_Update_Screen@input_size input_size `uc  1 p 1 7 ]
 [v LCD_Update_Screen@output output `*.39uc  1 p 2 8 ]
 [v LCD_Update_Screen@output_size output_size `uc  1 p 1 10 ]
-"135
+"134
 } 0
 "404 D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
 [v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
@@ -401,25 +401,25 @@ PORT_F 70
 {
 "69
 } 0
-"97 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+"96 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 {
-"112
+"111
 } 0
 "388 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
 [v _set_pin_low set_pin_low `(v  1 e 1 0 ]
 {
-[v set_pin_low@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_low@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_low@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_low@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_low@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_low@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_low@port_name port_name `E17440  1 a 1 3 ]
 "413
 } 0
 "325
 [v _configure_pin configure_pin `(v  1 e 1 0 ]
 {
-[v configure_pin@port_name port_name `E17445  1 a 1 wreg ]
-[v configure_pin@port_name port_name `E17445  1 a 1 wreg ]
+[v configure_pin@port_name port_name `E17440  1 a 1 wreg ]
+[v configure_pin@port_name port_name `E17440  1 a 1 wreg ]
 [v configure_pin@pin_number pin_number `uc  1 p 1 4 ]
 [v configure_pin@is_input is_input `a  1 p 1 5 ]
 "326
@@ -430,115 +430,115 @@ PORT_F 70
 "327
 [v configure_pin@use_push_pull use_push_pull `a  1 p 1 10 ]
 "329
-[v configure_pin@port_name port_name `E17445  1 a 1 11 ]
+[v configure_pin@port_name port_name `E17440  1 a 1 11 ]
 "359
 } 0
 "191
 [v _set_pin_ttl set_pin_ttl `(v  1 e 1 0 ]
 {
-[v set_pin_ttl@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_ttl@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_ttl@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_ttl@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_ttl@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_ttl@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_ttl@port_name port_name `E17440  1 a 1 3 ]
 "216
 } 0
 "164
 [v _set_pin_st set_pin_st `(v  1 e 1 0 ]
 {
-[v set_pin_st@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_st@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_st@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_st@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_st@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_st@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_st@port_name port_name `E17440  1 a 1 3 ]
 "189
 } 0
 "244
 [v _set_pin_sr_maximum set_pin_sr_maximum `(v  1 e 1 0 ]
 {
-[v set_pin_sr_maximum@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_sr_maximum@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_sr_maximum@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_sr_maximum@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_sr_maximum@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_sr_maximum@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_sr_maximum@port_name port_name `E17440  1 a 1 3 ]
 "269
 } 0
 "217
 [v _set_pin_sr_limited set_pin_sr_limited `(v  1 e 1 0 ]
 {
-[v set_pin_sr_limited@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_sr_limited@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_sr_limited@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_sr_limited@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_sr_limited@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_sr_limited@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_sr_limited@port_name port_name `E17440  1 a 1 3 ]
 "242
 } 0
 "271
 [v _set_pin_push_pull set_pin_push_pull `(v  1 e 1 0 ]
 {
-[v set_pin_push_pull@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_push_pull@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_push_pull@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_push_pull@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_push_pull@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_push_pull@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_push_pull@port_name port_name `E17440  1 a 1 3 ]
 "296
 } 0
 "110
 [v _set_pin_pullup set_pin_pullup `(v  1 e 1 0 ]
 {
-[v set_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_pullup@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_pullup@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_pullup@port_name port_name `E17440  1 a 1 3 ]
 "135
 } 0
 "31
 [v _set_pin_output set_pin_output `(v  1 e 1 0 ]
 {
-[v set_pin_output@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_output@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_output@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_output@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_output@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_output@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_output@port_name port_name `E17440  1 a 1 3 ]
 "56
 } 0
 "298
 [v _set_pin_open_drain set_pin_open_drain `(v  1 e 1 0 ]
 {
-[v set_pin_open_drain@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_open_drain@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_open_drain@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_open_drain@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_open_drain@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_open_drain@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_open_drain@port_name port_name `E17440  1 a 1 3 ]
 "323
 } 0
 "3
 [v _set_pin_input set_pin_input `(v  1 e 1 0 ]
 {
-[v set_pin_input@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_input@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_input@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_input@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_input@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_input@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_input@port_name port_name `E17440  1 a 1 3 ]
 "29
 } 0
 "57
 [v _set_pin_digital_mode set_pin_digital_mode `(v  1 e 1 0 ]
 {
-[v set_pin_digital_mode@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_digital_mode@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_digital_mode@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_digital_mode@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_digital_mode@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_digital_mode@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_digital_mode@port_name port_name `E17440  1 a 1 3 ]
 "82
 } 0
 "83
 [v _set_pin_analog_mode set_pin_analog_mode `(v  1 e 1 0 ]
 {
-[v set_pin_analog_mode@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_analog_mode@port_name port_name `E17445  1 a 1 wreg ]
+[v set_pin_analog_mode@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_analog_mode@port_name port_name `E17440  1 a 1 wreg ]
 [v set_pin_analog_mode@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_analog_mode@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_analog_mode@port_name port_name `E17440  1 a 1 3 ]
 "108
 } 0
 "137
 [v _reset_pin_pullup reset_pin_pullup `(v  1 e 1 0 ]
 {
-[v reset_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
-[v reset_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
+[v reset_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
+[v reset_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
 [v reset_pin_pullup@pin_number pin_number `uc  1 p 1 0 ]
-[v reset_pin_pullup@port_name port_name `E17445  1 a 1 3 ]
+[v reset_pin_pullup@port_name port_name `E17440  1 a 1 3 ]
 "162
 } 0
 "57 D:\PIC_18F57Q43\LCD_Pruebas.X\config.c

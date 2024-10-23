@@ -29430,16 +29430,7 @@ void Clock_Init(void);
 # 7 "main.c" 2
 
 # 1 "./gpio.h" 1
-# 43 "./gpio.h"
-typedef enum
-{
-    BUTTON_INTERNAL,
-            BUTTON_EXTERNAL_1,
-            BUTTON_EXTERNAL_2
-} button_t;
-
-
-
+# 45 "./gpio.h"
 typedef struct
 {
     char port;
@@ -29454,6 +29445,10 @@ typedef enum {
     PORT_E,
     PORT_F
 }PortName_t;
+
+
+
+
 
 void set_pin_input(PortName_t port_name, uint8_t pin_number);
 void set_pin_output(PortName_t port_name, uint8_t pin_number);
@@ -29551,16 +29546,16 @@ int main(int argc, char** argv) {
 
     uint8_t input[2] = {0, 0};
     uint8_t output[2] = {0, 0};
-    uint8_t previous_state = 0;
-    uint8_t current_state = 0;
+    uint8_t previous_state_btn_1 = 0;
+    uint8_t current_state_btn_1 = 0;
 
     while(1)
     {
-        current_state = (PORTBbits.RB4 == 0);
+        current_state_btn_1 = (PORTBbits.RB4 == 0);
 
-        if(current_state != previous_state)
+        if(current_state_btn_1 != previous_state_btn_1)
         {
-            if(current_state == 1)
+            if(current_state_btn_1 == 1)
             {
                 (LATFbits.LATF3 = 0);
                 set_pin_high(PORT_F, 2);
@@ -29579,8 +29574,7 @@ int main(int argc, char** argv) {
             LCD_Update_Screen(input, 2, output, 2);
         }
 
-        previous_state = current_state;
-        _delay((unsigned long)((100)*(64000000UL/4000.0)));
+        previous_state_btn_1 = current_state_btn_1;
     }
 
     return (0);

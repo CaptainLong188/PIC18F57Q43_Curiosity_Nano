@@ -48,24 +48,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATFbits `VS2291 ~T0 @X0 0 e@1219 ]
 "74 main.c
 [; ;main.c: 74:             LCD_Update_Screen(input, 2, output, 2);
-[c E17446 65 66 67 68 69 70 .. ]
-[n E17446 . PORT_A PORT_B PORT_C PORT_D PORT_E PORT_F  ]
-"82 ./gpio.h
-[; ;./gpio.h: 82: void set_pin_high(PortName_t port_name, uint8_t pin_number);
-[v _set_pin_high `(v ~T0 @X0 0 ef2`E17446`uc ]
-"83
-[; ;./gpio.h: 83: void set_pin_low(PortName_t port_name, uint8_t pin_number);
-[v _set_pin_low `(v ~T0 @X0 0 ef2`E17446`uc ]
+[c E17441 65 66 67 68 69 70 .. ]
+[n E17441 . PORT_A PORT_B PORT_C PORT_D PORT_E PORT_F  ]
+"79 ./gpio.h
+[; ;./gpio.h: 79: void set_pin_high(PortName_t port_name, uint8_t pin_number);
+[v _set_pin_high `(v ~T0 @X0 0 ef2`E17441`uc ]
+"80
+[; ;./gpio.h: 80: void set_pin_low(PortName_t port_name, uint8_t pin_number);
+[v _set_pin_low `(v ~T0 @X0 0 ef2`E17441`uc ]
 "14 main.c
 [; ;main.c: 14:   0b11111
 [v _LCD_Update_Screen `(v ~T0 @X0 0 ef4`*uc`uc`*uc`uc ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
-[p i __delay ]
-"79 ./gpio.h
-[; ;./gpio.h: 79: void configure_pin(PortName_t port_name, uint8_t pin_number, _Bool is_input,
-[v _configure_pin `(v ~T0 @X0 0 ef8`E17446`uc`a`a`a`a`a`a ]
+"76 ./gpio.h
+[; ;./gpio.h: 76: void configure_pin(PortName_t port_name, uint8_t pin_number, _Bool is_input,
+[v _configure_pin `(v ~T0 @X0 0 ef8`E17441`uc`a`a`a`a`a`a ]
 "328 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2695,10 +2691,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 48:     uint8_t output[2] = {0, 0};
 [e ( _LCD_Add_Character (2 , &U _high_state -> -> 1 `i `uc ]
 "49
-[; ;main.c: 49:     uint8_t previous_state = 0;
+[; ;main.c: 49:     uint8_t previous_state_btn_1 = 0;
 [e ( _LCD_Cursor_Set (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "50
-[; ;main.c: 50:     uint8_t current_state = 0;
+[; ;main.c: 50:     uint8_t current_state_btn_1 = 0;
 [e ( _LCD_Write_String (1 :s 1C ]
 "51
 [; ;main.c: 51: 
@@ -2710,22 +2706,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 53:     {
 [e ( _LCD_Write_Char (1 -> -> 0 `i `uc ]
 "54
-[; ;main.c: 54:         current_state = (PORTBbits.RB4 == 0);
+[; ;main.c: 54:         current_state_btn_1 = (PORTBbits.RB4 == 0);
 [e ( _LCD_Cursor_Set (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
 "55
 [; ;main.c: 55: 
 [e ( _LCD_Write_String (1 :s 2C ]
 "56
-[; ;main.c: 56:         if(current_state != previous_state)
+[; ;main.c: 56:         if(current_state_btn_1 != previous_state_btn_1)
 [e ( _LCD_Write_Char (1 -> -> 0 `i `uc ]
 "57
 [; ;main.c: 57:         {
 [e ( _LCD_Cursor_Increment ..  ]
 "58
-[; ;main.c: 58:             if(current_state == 1)
+[; ;main.c: 58:             if(current_state_btn_1 == 1)
 [e ( _LCD_Write_Char (1 -> -> 0 `i `uc ]
-[v F17556 `uc ~T0 @X0 -> 2 `i s ]
-[i F17556
+[v F17551 `uc ~T0 @X0 -> 2 `i s ]
+[i F17551
 :U ..
 "60
 [; ;main.c: 60:                 (LATFbits.LATF3 = 0);
@@ -2734,9 +2730,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _input `uc ~T0 @X0 -> 2 `i a ]
-[e = _input F17556 ]
-[v F17558 `uc ~T0 @X0 -> 2 `i s ]
-[i F17558
+[e = _input F17551 ]
+[v F17553 `uc ~T0 @X0 -> 2 `i s ]
+[i F17553
 :U ..
 "61
 [; ;main.c: 61:                 set_pin_high(PORT_F, 2);
@@ -2745,15 +2741,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _output `uc ~T0 @X0 -> 2 `i a ]
-[e = _output F17558 ]
+[e = _output F17553 ]
 "62
 [; ;main.c: 62:                 input[0] = 1;
-[v _previous_state `uc ~T0 @X0 1 a ]
-[e = _previous_state -> -> 0 `i `uc ]
+[v _previous_state_btn_1 `uc ~T0 @X0 1 a ]
+[e = _previous_state_btn_1 -> -> 0 `i `uc ]
 "63
 [; ;main.c: 63:                 output[0] = 1;
-[v _current_state `uc ~T0 @X0 1 a ]
-[e = _current_state -> -> 0 `i `uc ]
+[v _current_state_btn_1 `uc ~T0 @X0 1 a ]
+[e = _current_state_btn_1 -> -> 0 `i `uc ]
 "65
 [; ;main.c: 65:             }
 [e :U 2418 ]
@@ -2762,16 +2758,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "67
 [; ;main.c: 67:             {
-[e = _current_state -> -> == -> . . _PORTBbits 0 4 `i -> 0 `i `i `uc ]
+[e = _current_state_btn_1 -> -> == -> . . _PORTBbits 0 4 `i -> 0 `i `i `uc ]
 "69
 [; ;main.c: 69:                 set_pin_low(PORT_F, 2);
-[e $ ! != -> _current_state `i -> _previous_state `i 2420  ]
+[e $ ! != -> _current_state_btn_1 `i -> _previous_state_btn_1 `i 2420  ]
 "70
 [; ;main.c: 70:                 input[0] = 0;
 {
 "71
 [; ;main.c: 71:                 output[0] = 0;
-[e $ ! == -> _current_state `i -> 1 `i 2421  ]
+[e $ ! == -> _current_state_btn_1 `i -> 1 `i 2421  ]
 "72
 [; ;main.c: 72:                 output[1] = 0;
 {
@@ -2780,7 +2776,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATFbits 0 3 -> -> 0 `i `uc ]
 "74
 [; ;main.c: 74:             LCD_Update_Screen(input, 2, output, 2);
-[e ( _set_pin_high (2 , . `E17446 5 -> -> 2 `i `uc ]
+[e ( _set_pin_high (2 , . `E17441 5 -> -> 2 `i `uc ]
 "75
 [; ;main.c: 75:         }
 [e = *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 1 `i `uc ]
@@ -2788,170 +2784,167 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 76: 
 [e = *U + &U _output * -> -> -> 0 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 1 `i `uc ]
 "77
-[; ;main.c: 77:         previous_state = current_state;
+[; ;main.c: 77:         previous_state_btn_1 = current_state_btn_1;
 [e = *U + &U _output * -> -> -> 1 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 1 `i `uc ]
 "78
-[; ;main.c: 78:         _delay((unsigned long)((100)*(64000000UL/4000.0)));
+[; ;main.c: 78:     }
 }
 [e $U 2422  ]
 "79
-[; ;main.c: 79:     }
+[; ;main.c: 79: 
 [e :U 2421 ]
 "80
-[; ;main.c: 80: 
+[; ;main.c: 80:     return (0);
 {
 "81
-[; ;main.c: 81:     return (0);
+[; ;main.c: 81: }
 [e = . . _LATFbits 0 3 -> -> 1 `i `uc ]
 "82
-[; ;main.c: 82: }
-[e ( _set_pin_low (2 , . `E17446 5 -> -> 2 `i `uc ]
+[; ;main.c: 82: 
+[e ( _set_pin_low (2 , . `E17441 5 -> -> 2 `i `uc ]
 "83
-[; ;main.c: 83: 
+[; ;main.c: 83: void GPIO_Init()
 [e = *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 0 `i `uc ]
 "84
-[; ;main.c: 84: void GPIO_Init()
+[; ;main.c: 84: {
 [e = *U + &U _output * -> -> -> 0 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 0 `i `uc ]
 "85
-[; ;main.c: 85: {
+[; ;main.c: 85: 
 [e = *U + &U _output * -> -> -> 1 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 0 `i `uc ]
 "86
-[; ;main.c: 86: 
+[; ;main.c: 86:     configure_pin(PORT_F, 3, 0, 1, 0, 1, 1, 1);
 }
 [e :U 2422 ]
 "87
-[; ;main.c: 87:     configure_pin(PORT_F, 3, 0, 1, 0, 1, 1, 1);
+[; ;main.c: 87:     (LATFbits.LATF3 = 1);
 [e ( _LCD_Update_Screen (4 , , , &U _input -> -> 2 `i `uc &U _output -> -> 2 `i `uc ]
 "88
-[; ;main.c: 88:     (LATFbits.LATF3 = 1);
+[; ;main.c: 88: 
 }
 [e :U 2420 ]
 "90
-[; ;main.c: 90: 
-[e = _previous_state _current_state ]
+[; ;main.c: 90:     configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
+[e = _previous_state_btn_1 _current_state_btn_1 ]
 "91
-[; ;main.c: 91:     configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `ul `d .4000.0 `ul ]
-"92
-[; ;main.c: 92: 
+[; ;main.c: 91: 
 }
 [e :U 2417 ]
 [e $U 2418  ]
 [e :U 2419 ]
-"94
-[; ;main.c: 94:     configure_pin(PORT_F, 2, 0, 1, 0, 1, 1, 1);
+"93
+[; ;main.c: 93:     configure_pin(PORT_F, 2, 0, 1, 0, 1, 1, 1);
 [e ) -> 0 `i ]
 [e $UE 2416  ]
-"95
-[; ;main.c: 95:     set_pin_low(PORT_F, 2);
+"94
+[; ;main.c: 94:     set_pin_low(PORT_F, 2);
 [e :UE 2416 ]
 }
-"97
-[; ;main.c: 97: 
+"96
+[; ;main.c: 96: 
 [v _GPIO_Init `(v ~T0 @X0 1 ef ]
-"98
-[; ;main.c: 98:     configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
+"97
+[; ;main.c: 97:     configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
 {
 [e :U _GPIO_Init ]
 [f ]
+"99
+[; ;main.c: 99: 
+[e ( _configure_pin (4 , , , , , , , . `E17441 5 -> -> 3 `i `uc -> -> 0 `i `a -> -> 1 `i `a -> -> 0 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
 "100
-[; ;main.c: 100: 
-[e ( _configure_pin (4 , , , , , , , . `E17446 5 -> -> 3 `i `uc -> -> 0 `i `a -> -> 1 `i `a -> -> 0 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
-"101
-[; ;main.c: 101: void LCD_Update_Screen(uint8_t input[], uint8_t input_size, uint8_t output[], uint8_t output_size)
+[; ;main.c: 100: void LCD_Update_Screen(uint8_t input[], uint8_t input_size, uint8_t output[], uint8_t output_size)
 [e = . . _LATFbits 0 3 -> -> 1 `i `uc ]
-"104
-[; ;main.c: 104:     LCD_Cursor_Set(1, 11);
-[e ( _configure_pin (4 , , , , , , , . `E17446 1 -> -> 4 `i `uc -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
+"103
+[; ;main.c: 103:     LCD_Cursor_Set(1, 11);
+[e ( _configure_pin (4 , , , , , , , . `E17441 1 -> -> 4 `i `uc -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
+"106
+[; ;main.c: 106:     {
+[e ( _configure_pin (4 , , , , , , , . `E17441 5 -> -> 2 `i `uc -> -> 0 `i `a -> -> 1 `i `a -> -> 0 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
 "107
-[; ;main.c: 107:     {
-[e ( _configure_pin (4 , , , , , , , . `E17446 5 -> -> 2 `i `uc -> -> 0 `i `a -> -> 1 `i `a -> -> 0 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
-"108
-[; ;main.c: 108:         if(input[i] == 0) LCD_Write_Char(0);
-[e ( _set_pin_low (2 , . `E17446 5 -> -> 2 `i `uc ]
+[; ;main.c: 107:         if(input[i] == 0) LCD_Write_Char(0);
+[e ( _set_pin_low (2 , . `E17441 5 -> -> 2 `i `uc ]
+"110
+[; ;main.c: 110:     }
+[e ( _configure_pin (4 , , , , , , , . `E17441 1 -> -> 4 `i `uc -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
 "111
-[; ;main.c: 111:     }
-[e ( _configure_pin (4 , , , , , , , . `E17446 1 -> -> 4 `i `uc -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a -> -> 1 `i `a ]
-"112
-[; ;main.c: 112: 
+[; ;main.c: 111: 
 [e :UE 2423 ]
 }
-"114
-[; ;main.c: 114:     LCD_Cursor_Set(2, 11);
+"113
+[; ;main.c: 113:     LCD_Cursor_Set(2, 11);
 [v _LCD_Update_Screen `(v ~T0 @X0 1 ef4`*uc`uc`*uc`uc ]
-"115
-[; ;main.c: 115: 
+"114
+[; ;main.c: 114: 
 {
 [e :U _LCD_Update_Screen ]
-"114
-[; ;main.c: 114:     LCD_Cursor_Set(2, 11);
+"113
+[; ;main.c: 113:     LCD_Cursor_Set(2, 11);
 [v _input `*uc ~T0 @X0 1 r1 ]
 [v _input_size `uc ~T0 @X0 1 r2 ]
 [v _output `*uc ~T0 @X0 1 r3 ]
 [v _output_size `uc ~T0 @X0 1 r4 ]
-"115
-[; ;main.c: 115: 
+"114
+[; ;main.c: 114: 
 [f ]
-"117
-[; ;main.c: 117:     {
+"116
+[; ;main.c: 116:     {
 [e ( _LCD_Cursor_Set (2 , -> -> 1 `i `uc -> -> 11 `i `uc ]
-"119
-[; ;main.c: 119:         else LCD_Write_Char(1);
+"118
+[; ;main.c: 118:         else LCD_Write_Char(1);
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 2428  ]
 [e :U 2425 ]
-"120
-[; ;main.c: 120:         LCD_Cursor_Increment();
+"119
+[; ;main.c: 119:         LCD_Cursor_Increment();
 {
-"121
-[; ;main.c: 121:     }
+"120
+[; ;main.c: 120:     }
 [e $ ! == -> *U + _input * -> _i `ux -> -> # *U _input `ui `ux `i -> 0 `i 2429  ]
 [e ( _LCD_Write_Char (1 -> -> 0 `i `uc ]
 [e $U 2430  ]
-"122
-[; ;main.c: 122: }
+"121
+[; ;main.c: 121: }
 [e :U 2429 ]
 [e ( _LCD_Write_Char (1 -> -> 1 `i `uc ]
 [e :U 2430 ]
-"123
+"122
 [e ( _LCD_Cursor_Increment ..  ]
-"124
+"123
 }
 [e =+ _i -> -> 1 `i `uc ]
 [e :U 2428 ]
 [e $ < -> _i `i -> _input_size `i 2425  ]
 [e :U 2426 ]
 }
-"127
+"126
 [e ( _LCD_Cursor_Set (2 , -> -> 2 `i `uc -> -> 11 `i `uc ]
-"129
+"128
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 2434  ]
 [e :U 2431 ]
-"130
+"129
 {
-"131
+"130
 [e $ ! == -> *U + _output * -> _i `ux -> -> # *U _output `ui `ux `i -> 0 `i 2435  ]
 [e ( _LCD_Write_Char (1 -> -> 0 `i `uc ]
 [e $U 2436  ]
-"132
+"131
 [e :U 2435 ]
 [e ( _LCD_Write_Char (1 -> -> 1 `i `uc ]
 [e :U 2436 ]
-"133
+"132
 [e ( _LCD_Cursor_Increment ..  ]
-"134
+"133
 }
 [e =+ _i -> -> 1 `i `uc ]
 [e :U 2434 ]
 [e $ < -> _i `i -> _output_size `i 2431  ]
 [e :U 2432 ]
 }
-"135
+"134
 [e :UE 2424 ]
 }
 [a 1C 69 110 116 114 97 100 97 115 58 32 0 ]

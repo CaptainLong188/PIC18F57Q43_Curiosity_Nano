@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/*Definir las macros para la configuración de los pines*/
 #define INPUT   1
 #define OUTPUT  0
 
@@ -24,7 +25,7 @@
 #define PUSHPULL    1
 #define OPENDRAIN   0
 
-/*Macros para la escritura de los estados de los LED's*/
+/*Definir las macros para la escritura de los estados de los LED's*/
 #define LED_INTERNAL_ON()         (LATFbits.LATF3 = 0)
 #define LED_INTERNAL_OFF()        (LATFbits.LATF3 = 1)
 #define LED_EXTERNAL_1_ON()       (LATDbits.LATD0 = 1)
@@ -35,20 +36,12 @@
 #define LED_EXTERNAL_1_TOGGLE()   (LATDbits.LATD0 ^= 1)
 #define LED_EXTERNAL_2_TOGGLE()   (LATDbits.LATD1 ^= 1)
 
-/*Macros para lectura de los botones*/
+/*Definir las macros para la lectura de los estados de los botones*/
 #define READ_BUTTON_INTERNAL()   (PORTBbits.RB4 == 0)
-#define READ_BUTTON_EXTERNAL_1() (PORTEbits.RE0 == 0)
+#define READ_BUTTON_EXTERNAL_1() (PORTBbits.RB0 == 0)
 #define READ_BUTTON_EXTERNAL_2() (PORTCbits.RC5 == 0)
 
-typedef enum
-{
-    BUTTON_INTERNAL,
-            BUTTON_EXTERNAL_1,
-            BUTTON_EXTERNAL_2
-} button_t; 
-
-// Estructura para representar un pin
-
+/*Estructura definir un pin PORT[A - F][0-7]*/
 typedef struct
 {
     char port;   // 'A', 'B', 'C', ...
@@ -63,6 +56,10 @@ typedef enum {
     PORT_E,
     PORT_F
 }PortName_t;
+
+/**************************************************************************/
+/*************************** Function prototypes **************************/
+/**************************************************************************/
 
 void set_pin_input(PortName_t port_name, uint8_t pin_number);
 void set_pin_output(PortName_t port_name, uint8_t pin_number);

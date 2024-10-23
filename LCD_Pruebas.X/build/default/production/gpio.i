@@ -29420,16 +29420,7 @@ char *tempnam(const char *, const char *);
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
 # 7 "./gpio.h" 2
-# 43 "./gpio.h"
-typedef enum
-{
-    BUTTON_INTERNAL,
-            BUTTON_EXTERNAL_1,
-            BUTTON_EXTERNAL_2
-} button_t;
-
-
-
+# 45 "./gpio.h"
 typedef struct
 {
     char port;
@@ -29444,6 +29435,10 @@ typedef enum {
     PORT_E,
     PORT_F
 }PortName_t;
+
+
+
+
 
 void set_pin_input(PortName_t port_name, uint8_t pin_number);
 void set_pin_output(PortName_t port_name, uint8_t pin_number);
