@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "timers.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,11 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "timers.c" 2
+# 1 "./timers.h" 1
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -29257,222 +29261,15 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 1 "main.c" 2
+# 4 "./timers.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef void * va_list[1];
 
 
 
 
-typedef void * __isoc_va_list[1];
-# 143 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 ssize_t;
-# 255 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 409 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
 
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
 
 
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-
-
-
-
-
-int ungetc(int, FILE *);
-int getch(void);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-
-
-
-
-void putch(char);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 2 "main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 3 "main.c" 2
-
-
-
-
-# 1 "./config.h" 1
-
-
-
-
-
-
-void Clock_Init(void);
-# 7 "main.c" 2
-
-# 1 "./gpio.h" 1
-# 45 "./gpio.h"
-typedef struct
-{
-    char port;
-    uint8_t pin;
-}pin_t;
-
-typedef enum {
-    PORT_A = 'A',
-    PORT_B,
-    PORT_C,
-    PORT_D,
-    PORT_E,
-    PORT_F
-}PortName_t;
-
-
-
-
-
-void set_pin_input(PortName_t port_name, uint8_t pin_number);
-void set_pin_output(PortName_t port_name, uint8_t pin_number);
-void set_pin_digital_mode(PortName_t port_name, uint8_t pin_number);
-void set_pin_analog_mode(PortName_t port_name, uint8_t pin_number);
-void set_pin_pullup(PortName_t port_name, uint8_t pin_number);
-void reset_pin_pullup(PortName_t port_name, uint8_t pin_number);
-void set_pin_st(PortName_t port_name, uint8_t pin_number);
-void set_pin_ttl(PortName_t port_name, uint8_t pin_number);
-void set_pin_sr_limited(PortName_t port_name, uint8_t pin_number);
-void set_pin_sr_maximum(PortName_t port_name, uint8_t pin_number);
-void set_pin_push_pull(PortName_t port_name, uint8_t pin_number);
-void set_pin_open_drain(PortName_t port_name, uint8_t pin_number);
-void configure_pin(PortName_t port_name, uint8_t pin_number, _Bool is_input,
-                   _Bool is_digital, _Bool enable_pullup, _Bool use_ttl, _Bool slew_rate_limited,
-                   _Bool use_push_pull);
-void set_pin_high(PortName_t port_name, uint8_t pin_number);
-void set_pin_low(PortName_t port_name, uint8_t pin_number);
-void toggle_pin(PortName_t port_name, uint8_t pin_number);
-_Bool get_pin_value(PortName_t port_name, uint8_t pin_number);
-# 8 "main.c" 2
-
-# 1 "./timers.h" 1
-# 12 "./timers.h"
 typedef enum
 {
     T0CKIPPS_NON_INVERTED,
@@ -29523,158 +29320,21 @@ typedef enum
 
 void TIMER0_Init(timerClockSource_t, timerMode_t, timerAsync_t, timerPrescaler_t);
 void TIMER0_Write(uint8_t, uint8_t);
-# 9 "main.c" 2
-
-# 1 "./interrupt.h" 1
+# 1 "timers.c" 2
 
 
-
-
-
-
-volatile uint8_t button_flag[2] = {};
-volatile uint8_t x[2] = {};
-volatile uint8_t button_press_counter[2] = {};
-
-void INTERRUPT_Init(void);
-# 10 "main.c" 2
-
-# 1 "./lcd.h" 1
-# 79 "./lcd.h"
-    void LCD_Init(void);
-    void LCD_Cursor_Set(uint8_t, uint8_t);
-    void LCD_Cursor_Increment(void);
-    void LCD_Cursor_Decrement(void);
-    void LCD_Configure_Display(uint8_t);
-    void LCD_Configure_Cursor_Display(uint8_t);
-    void LCD_Configure_Cursor_Blink(uint8_t);
-    void LCD_Clear(void);
-    void LCD_Shift_Reset(void);
-    void LCD_Shift_Left(void);
-    void LCD_Shift_Right(void);
-    void LCD_Configure_Entry_ID(uint8_t);
-    void LCD_Configure_Entry_Shift(uint8_t);
-    void LCD_Add_Character(char*, uint8_t);
-
-    void LCD_Write_String(char*);
-    void LCD_Write_Char(char);
-    void LCD_Write_Variable(int32_t, uint8_t);
-    void LCD_Write_Float(float, uint8_t, uint8_t);
-# 11 "main.c" 2
-
-
-#pragma warning disable 520
-#pragma warning disable 2020
-
-void GPIO_Init(void);
-void LCD_Initial_Screen(void);
-void LCD_Update_Screen(uint8_t[], uint8_t, uint8_t[], uint8_t);
-
-
-
-char low_state[] =
+void TIMER0_Init(timerClockSource_t timer_clock_source, timerMode_t timer_mode, timerAsync_t timer_async, timerPrescaler_t timer_prescaler)
 {
-  0b11111,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b11111
-};
-
-char high_state[] =
-{
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111
-};
-
-int main(int argc, char** argv) {
-
-    Clock_Init();
-    GPIO_Init();
-    LCD_Init();
-    LCD_Initial_Screen();
-    TIMER0_Init(FOSC_4, TIMER_16BIT_MODE, SYNCRONIZED, CKPS_1_1);
-    TIMER0_Write(0xC1, 0x7F);
-    INTERRUPT_Init();
-
-    uint8_t input[2] = {0, 0};
-    uint8_t output[2] = {0, 0};
-
-    while(1)
-    {
-        input[0] = (PORTBbits.RB4 == 0);
-        input[1] = (PORTBbits.RB0 == 0);
-        output[0] = ~get_pin_value(PORT_F, 3);
-        output[1] = get_pin_value(PORT_F, 2);
-
-        LCD_Update_Screen(input, 2, output, 2);
-        _delay((unsigned long)((100)*(64000000UL/4000.0)));
-    }
-
-    return (0);
+    T0CON1bits.CS = timer_clock_source;
+    T0CON0bits.MD16 = timer_mode;
+    T0CON1bits.ASYNC = timer_async;
+    T0CON1bits.CKPS = timer_prescaler;
+    T0CON0bits.OUTPS = 0b0000;
 }
 
-void GPIO_Init()
+void TIMER0_Write(uint8_t TMR0H_value, uint8_t TMR0L_value)
 {
-
-    configure_pin(PORT_F, 3, 0, 1, 0, 1, 1, 1);
-    (LATFbits.LATF3 = 1);
-
-
-    configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
-
-
-    configure_pin(PORT_F, 2, 0, 1, 0, 1, 1, 1);
-    set_pin_low(PORT_F, 2);
-
-
-    configure_pin(PORT_B, 0, 1, 1, 1, 1, 1, 1);
-}
-
-void LCD_Initial_Screen()
-{
-    LCD_Add_Character(low_state, 0);
-    LCD_Add_Character(high_state, 1);
-    LCD_Cursor_Set(1, 1);
-    LCD_Write_String("Entradas: ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-    LCD_Cursor_Set(2, 1);
-    LCD_Write_String("Salidas:  ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-}
-
-void LCD_Update_Screen(uint8_t input[], uint8_t input_size, uint8_t output[], uint8_t output_size)
-{
-
-    LCD_Cursor_Set(1, 11);
-
-    for(uint8_t i = 0; i < input_size; ++i)
-    {
-        if(input[i] == 0) LCD_Write_Char(0);
-        else LCD_Write_Char(1);
-        LCD_Cursor_Increment();
-    }
-
-
-    LCD_Cursor_Set(2, 11);
-
-    for(uint8_t i = 0; i < output_size; ++i)
-    {
-        if(output[i] == 0) LCD_Write_Char(0);
-        else LCD_Write_Char(1);
-        LCD_Cursor_Increment();
-    }
+    TMR0H = TMR0H_value;
+    TMR0L = TMR0L_value;
+    T0CON0bits.EN = 1;
 }

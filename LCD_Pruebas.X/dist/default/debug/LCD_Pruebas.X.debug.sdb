@@ -4,7 +4,7 @@
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
 "3 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
-[e E17445 . `uc
+[e E17440 . `uc
 PORT_A 65
 PORT_B 66
 PORT_C 67
@@ -12,14 +12,88 @@ PORT_D 68
 PORT_E 69
 PORT_F 70
 ]
-"74 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
-[e E17446 . `uc
+"52 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+[e E17506 . `uc
+T0CKIPPS_NON_INVERTED 0
+T0CKIPPS_INVERTED 1
+FOSC_4 2
+HFINTOSC 3
+LFINTOSC 4
+MFINTOSC 5
+SOSC 6
+CLC1_OUT 7
+]
+[e E17516 . `uc
+TIMER_8BIT_MODE 0
+TIMER_16BIT_MODE 1
+]
+[e E17520 . `uc
+SYNCRONIZED 0
+NOT_SYNCRONIZED 1
+]
+[e E17524 . `uc
+CKPS_1_1 0
+CKPS_1_2 1
+CKPS_1_4 2
+CKPS_1_8 3
+CKPS_1_16 4
+CKPS_1_32 5
+CKPS_1_64 6
+CKPS_1_128 7
+CKPS_1_256 8
+CKPS_1_512 9
+CKPS_1_1024 10
+CKPS_1_2048 11
+CKPS_1_4096 12
+CKPS_1_8192 13
+CKPS_1_16384 14
+CKPS_1_32768 15
+]
+"63
+[e E17441 . `uc
 PORT_A 65
 PORT_B 66
 PORT_C 67
 PORT_D 68
 PORT_E 69
 PORT_F 70
+]
+"3 D:\PIC_18F57Q43\LCD_Pruebas.X\timers.c
+[e E17115 . `uc
+T0CKIPPS_NON_INVERTED 0
+T0CKIPPS_INVERTED 1
+FOSC_4 2
+HFINTOSC 3
+LFINTOSC 4
+MFINTOSC 5
+SOSC 6
+CLC1_OUT 7
+]
+[e E17125 . `uc
+TIMER_8BIT_MODE 0
+TIMER_16BIT_MODE 1
+]
+[e E17129 . `uc
+SYNCRONIZED 0
+NOT_SYNCRONIZED 1
+]
+[e E17133 . `uc
+CKPS_1_1 0
+CKPS_1_2 1
+CKPS_1_4 2
+CKPS_1_8 3
+CKPS_1_16 4
+CKPS_1_32 5
+CKPS_1_64 6
+CKPS_1_128 7
+CKPS_1_256 8
+CKPS_1_512 9
+CKPS_1_1024 10
+CKPS_1_2048 11
+CKPS_1_4096 12
+CKPS_1_8192 13
+CKPS_1_16384 14
+CKPS_1_32768 15
 ]
 "7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -81,10 +155,14 @@ PORT_F 70
 [v _set_pin_open_drain set_pin_open_drain `(v  1 e 1 0 ]
 "325
 [v _configure_pin configure_pin `(v  1 e 1 0 ]
-"361
-[v _set_pin_high set_pin_high `(v  1 e 1 0 ]
 "388
 [v _set_pin_low set_pin_low `(v  1 e 1 0 ]
+"442
+[v _get_pin_value get_pin_value `(a  1 e 1 0 ]
+"4 D:\PIC_18F57Q43\LCD_Pruebas.X\interrupt.c
+[v _INTERRUPT_Init INTERRUPT_Init `(v  1 e 1 0 ]
+"41
+[v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
 "64 D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
 [v _LCD_pulse_clock LCD_pulse_clock `(v  1 e 1 0 ]
 "76
@@ -107,14 +185,135 @@ PORT_F 70
 [v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
 "422
 [v _LCD_Write_Variable LCD_Write_Variable `(v  1 e 1 0 ]
-"42 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+"46 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"97
+"73
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
-"114
+"90
+[v _LCD_Initial_Screen LCD_Initial_Screen `(v  1 e 1 0 ]
+"106
 [v _LCD_Update_Screen LCD_Update_Screen `(v  1 e 1 0 ]
+"3 D:\PIC_18F57Q43\LCD_Pruebas.X\timers.c
+[v _TIMER0_Init TIMER0_Init `(v  1 e 1 0 ]
+"12
+[v _TIMER0_Write TIMER0_Write `(v  1 e 1 0 ]
+"7 D:\PIC_18F57Q43\LCD_Pruebas.X/interrupt.h
+[v _button_flag button_flag `VE[2]uc  1 e 2 0 ]
+"8
+[v _x x `VE[2]uc  1 e 2 0 ]
+"9
+[v _button_press_counter button_press_counter `VE[2]uc  1 e 2 0 ]
 "5210 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f57q43.h
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+[s S668 . 1 `uc 1 PIN 1 0 :3:0 
+`uc 1 PORT 1 0 :2:3 
+]
+"11133
+[s S671 . 1 `uc 1 INT1PPS0 1 0 :1:0 
+`uc 1 INT1PPS1 1 0 :1:1 
+`uc 1 INT1PPS2 1 0 :1:2 
+`uc 1 INT1PPS3 1 0 :1:3 
+`uc 1 INT1PPS4 1 0 :1:4 
+]
+[s S677 . 1 `uc 1 INT1PPS 1 0 :5:0 
+]
+[u S679 . 1 `S668 1 . 1 0 `S671 1 . 1 0 `S677 1 . 1 0 ]
+[v _INT1PPSbits INT1PPSbits `VES679  1 e 1 @575 ]
+"23298
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23436
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+[s S970 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23724
+[s S976 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S982 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[s S988 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S993 . 1 `S970 1 . 1 0 `S976 1 . 1 0 `S982 1 . 1 0 `S988 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES993  1 e 1 @794 ]
+[s S912 . 1 `uc 1 CKPS 1 0 :4:0 
+`uc 1 ASYNC 1 0 :1:4 
+`uc 1 CS 1 0 :3:5 
+]
+"23851
+[s S916 . 1 `uc 1 CKPS0 1 0 :1:0 
+`uc 1 CKPS1 1 0 :1:1 
+`uc 1 CKPS2 1 0 :1:2 
+`uc 1 CKPS3 1 0 :1:3 
+`uc 1 T0ASYNC 1 0 :1:4 
+`uc 1 CS0 1 0 :1:5 
+`uc 1 CS1 1 0 :1:6 
+`uc 1 CS2 1 0 :1:7 
+]
+[s S925 . 1 `uc 1 T0CKPS 1 0 :4:0 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS 1 0 :3:5 
+]
+[s S929 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+`uc 1 T0CKPS1 1 0 :1:1 
+`uc 1 T0CKPS2 1 0 :1:2 
+`uc 1 T0CKPS3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS0 1 0 :1:5 
+`uc 1 T0CS1 1 0 :1:6 
+`uc 1 T0CS2 1 0 :1:7 
+]
+[u S938 . 1 `S912 1 . 1 0 `S916 1 . 1 0 `S925 1 . 1 0 `S929 1 . 1 0 ]
+[v _T0CON1bits T0CON1bits `VES938  1 e 1 @795 ]
+[s S647 . 1 `uc 1 INT0IP 1 0 :1:0 
+`uc 1 ZCDIP 1 0 :1:1 
+`uc 1 ADIP 1 0 :1:2 
+`uc 1 ACTIP 1 0 :1:3 
+`uc 1 C1IP 1 0 :1:4 
+`uc 1 SMT1IP 1 0 :1:5 
+`uc 1 SMT1PRAIP 1 0 :1:6 
+`uc 1 SMT1PWAIP 1 0 :1:7 
+]
+"31932
+[u S656 . 1 `S647 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES656  1 e 1 @867 ]
+[s S584 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+`uc 1 SPI1TXIP 1 0 :1:1 
+`uc 1 SPI1IP 1 0 :1:2 
+`uc 1 TMR2IP 1 0 :1:3 
+`uc 1 TMR1IP 1 0 :1:4 
+`uc 1 TMR1GIP 1 0 :1:5 
+`uc 1 CCP1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"32039
+[u S593 . 1 `S584 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES593  1 e 1 @869 ]
+[s S737 . 1 `uc 1 INT1IP 1 0 :1:0 
+`uc 1 CLC2IP 1 0 :1:1 
+`uc 1 CWG1IP 1 0 :1:2 
+`uc 1 NCO1IP 1 0 :1:3 
+`uc 1 DMA2SCNTIP 1 0 :1:4 
+`uc 1 DMA2DCNTIP 1 0 :1:5 
+`uc 1 DMA2ORIP 1 0 :1:6 
+`uc 1 DMA2AIP 1 0 :1:7 
+]
+"32209
+[u S746 . 1 `S737 1 . 1 0 ]
+[v _IPR6bits IPR6bits `VES746  1 e 1 @872 ]
 "40015
 [v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
 "40077
@@ -175,13 +374,103 @@ PORT_F 70
 [v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
 "42296
 [v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"45258
+[v _IVTBASEL IVTBASEL `VEuc  1 e 1 @1117 ]
+"45320
+[v _IVTBASEH IVTBASEH `VEuc  1 e 1 @1118 ]
+"45382
+[v _IVTBASEU IVTBASEU `VEuc  1 e 1 @1119 ]
+[s S626 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 ZCDIE 1 0 :1:1 
+`uc 1 ADIE 1 0 :1:2 
+`uc 1 ACTIE 1 0 :1:3 
+`uc 1 C1IE 1 0 :1:4 
+`uc 1 SMT1IE 1 0 :1:5 
+`uc 1 SMT1PRAIE 1 0 :1:6 
+`uc 1 SMT1PWAIE 1 0 :1:7 
+]
+"47182
+[u S635 . 1 `S626 1 . 1 0 ]
+"47182
+"47182
+[v _PIE1bits PIE1bits `VES635  1 e 1 @1183 ]
+[s S563 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"47289
+[u S572 . 1 `S563 1 . 1 0 ]
+"47289
+"47289
+[v _PIE3bits PIE3bits `VES572  1 e 1 @1185 ]
+[s S716 . 1 `uc 1 INT1IE 1 0 :1:0 
+`uc 1 CLC2IE 1 0 :1:1 
+`uc 1 CWG1IE 1 0 :1:2 
+`uc 1 NCO1IE 1 0 :1:3 
+`uc 1 DMA2SCNTIE 1 0 :1:4 
+`uc 1 DMA2DCNTIE 1 0 :1:5 
+`uc 1 DMA2ORIE 1 0 :1:6 
+`uc 1 DMA2AIE 1 0 :1:7 
+]
+"47459
+[u S725 . 1 `S716 1 . 1 0 ]
+"47459
+"47459
+[v _PIE6bits PIE6bits `VES725  1 e 1 @1188 ]
+[s S605 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"48056
+[u S614 . 1 `S605 1 . 1 0 ]
+"48056
+"48056
+[v _PIR1bits PIR1bits `VES614  1 e 1 @1199 ]
+[s S542 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"48163
+[u S551 . 1 `S542 1 . 1 0 ]
+"48163
+"48163
+[v _PIR3bits PIR3bits `VES551  1 e 1 @1201 ]
+[s S695 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48333
+[u S704 . 1 `S695 1 . 1 0 ]
+"48333
+"48333
+[v _PIR6bits PIR6bits `VES704  1 e 1 @1204 ]
 "48861
 [v _LATA LATA `VEuc  1 e 1 @1214 ]
 "48923
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
 "48985
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S296 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S352 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -191,17 +480,17 @@ PORT_F 70
 `uc 1 LATC7 1 0 :1:7 
 ]
 "49002
-[u S305 . 1 `S296 1 . 1 0 ]
+[u S361 . 1 `S352 1 . 1 0 ]
 "49002
 "49002
-[v _LATCbits LATCbits `VES305  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES361  1 e 1 @1216 ]
 "49047
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
 "49109
 [v _LATE LATE `VEuc  1 e 1 @1218 ]
 "49141
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
-[s S206 . 1 `uc 1 LATF0 1 0 :1:0 
+[s S257 . 1 `uc 1 LATF0 1 0 :1:0 
 `uc 1 LATF1 1 0 :1:1 
 `uc 1 LATF2 1 0 :1:2 
 `uc 1 LATF3 1 0 :1:3 
@@ -211,17 +500,17 @@ PORT_F 70
 `uc 1 LATF7 1 0 :1:7 
 ]
 "49158
-[u S215 . 1 `S206 1 . 1 0 ]
+[u S266 . 1 `S257 1 . 1 0 ]
 "49158
 "49158
-[v _LATFbits LATFbits `VES215  1 e 1 @1219 ]
+[v _LATFbits LATFbits `VES266  1 e 1 @1219 ]
 "49203
 [v _TRISA TRISA `VEuc  1 e 1 @1222 ]
 "49265
 [v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "49327
 [v _TRISC TRISC `VEuc  1 e 1 @1224 ]
-[s S331 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S387 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -231,17 +520,17 @@ PORT_F 70
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "49344
-[u S340 . 1 `S331 1 . 1 0 ]
+[u S396 . 1 `S387 1 . 1 0 ]
 "49344
 "49344
-[v _TRISCbits TRISCbits `VES340  1 e 1 @1224 ]
+[v _TRISCbits TRISCbits `VES396  1 e 1 @1224 ]
 "49389
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
 "49451
 [v _TRISE TRISE `VEuc  1 e 1 @1226 ]
 "49483
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-[s S352 . 1 `uc 1 TRISF0 1 0 :1:0 
+[s S408 . 1 `uc 1 TRISF0 1 0 :1:0 
 `uc 1 TRISF1 1 0 :1:1 
 `uc 1 TRISF2 1 0 :1:2 
 `uc 1 TRISF3 1 0 :1:3 
@@ -251,15 +540,15 @@ PORT_F 70
 `uc 1 TRISF7 1 0 :1:7 
 ]
 "49500
-[u S361 . 1 `S352 1 . 1 0 ]
+[u S417 . 1 `S408 1 . 1 0 ]
 "49500
 "49500
-[v _TRISFbits TRISFbits `VES361  1 e 1 @1227 ]
+[v _TRISFbits TRISFbits `VES417  1 e 1 @1227 ]
 "49545
 [v _PORTA PORTA `VEuc  1 e 1 @1230 ]
 "49607
 [v _PORTB PORTB `VEuc  1 e 1 @1231 ]
-[s S185 . 1 `uc 1 RB0 1 0 :1:0 
+[s S213 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -269,10 +558,10 @@ PORT_F 70
 `uc 1 RB7 1 0 :1:7 
 ]
 "49624
-[u S194 . 1 `S185 1 . 1 0 ]
+[u S222 . 1 `S213 1 . 1 0 ]
 "49624
 "49624
-[v _PORTBbits PORTBbits `VES194  1 e 1 @1231 ]
+[v _PORTBbits PORTBbits `VES222  1 e 1 @1231 ]
 "49669
 [v _PORTC PORTC `VEuc  1 e 1 @1232 ]
 "49731
@@ -281,72 +570,141 @@ PORT_F 70
 [v _PORTE PORTE `VEuc  1 e 1 @1234 ]
 "49831
 [v _PORTF PORTF `VEuc  1 e 1 @1235 ]
+[s S516 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49913
+[s S524 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49913
+[u S527 . 1 `S516 1 . 1 0 `S524 1 . 1 0 ]
+"49913
+"49913
+[v _INTCON0bits INTCON0bits `VES527  1 e 1 @1238 ]
 "56 D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
 [v _LCD_display_control LCD_display_control `uc  1 s 1 LCD_display_control ]
 "57
 [v _LCD_entry_mode LCD_entry_mode `uc  1 s 1 LCD_entry_mode ]
-"18 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+"22 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
 [v _low_state low_state `[8]uc  1 e 8 0 ]
-"30
+"34
 [v _high_state high_state `[8]uc  1 e 8 0 ]
-"42
+"46
 [v _main main `(i  1 e 2 0 ]
 {
-"61
-[v main@output output `[2]uc  1 a 2 23 ]
-"60
-[v main@input input `[2]uc  1 a 2 20 ]
-"63
-[v main@current_state current_state `uc  1 a 1 25 ]
-"62
-[v main@previous_state previous_state `uc  1 a 1 22 ]
-"95
+"57
+[v main@output output `[2]uc  1 a 2 26 ]
+"56
+[v main@input input `[2]uc  1 a 2 24 ]
+"71
 } 0
-"361 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
-[v _set_pin_high set_pin_high `(v  1 e 1 0 ]
+"442 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
+[v _get_pin_value get_pin_value `(a  1 e 1 0 ]
 {
-[v set_pin_high@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_high@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_high@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_high@port_name port_name `E17445  1 a 1 3 ]
-"386
+[v get_pin_value@port_name port_name `E17440  1 a 1 wreg ]
+[v get_pin_value@port_name port_name `E17440  1 a 1 wreg ]
+[v get_pin_value@pin_number pin_number `uc  1 p 1 4 ]
+[v get_pin_value@port_name port_name `E17440  1 a 1 7 ]
+"461
+} 0
+"12 D:\PIC_18F57Q43\LCD_Pruebas.X\timers.c
+[v _TIMER0_Write TIMER0_Write `(v  1 e 1 0 ]
+{
+[v TIMER0_Write@TMR0H_value TMR0H_value `uc  1 a 1 wreg ]
+[v TIMER0_Write@TMR0H_value TMR0H_value `uc  1 a 1 wreg ]
+[v TIMER0_Write@TMR0L_value TMR0L_value `uc  1 p 1 4 ]
+"14
+[v TIMER0_Write@TMR0H_value TMR0H_value `uc  1 a 1 5 ]
+"17
+} 0
+"3
+[v _TIMER0_Init TIMER0_Init `(v  1 e 1 0 ]
+{
+[v TIMER0_Init@timer_clock_source timer_clock_source `E17115  1 a 1 wreg ]
+[v TIMER0_Init@timer_clock_source timer_clock_source `E17115  1 a 1 wreg ]
+[v TIMER0_Init@timer_mode timer_mode `E17125  1 p 1 4 ]
+[v TIMER0_Init@timer_async timer_async `E17129  1 p 1 5 ]
+[v TIMER0_Init@timer_prescaler timer_prescaler `E17133  1 p 1 6 ]
+"5
+[v TIMER0_Init@timer_clock_source timer_clock_source `E17115  1 a 1 8 ]
+"10
+} 0
+"106 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+[v _LCD_Update_Screen LCD_Update_Screen `(v  1 e 1 0 ]
+{
+"121
+[v LCD_Update_Screen@i_351 i `uc  1 a 1 16 ]
+"111
+[v LCD_Update_Screen@i i `uc  1 a 1 15 ]
+"106
+[v LCD_Update_Screen@input input `*.39uc  1 p 2 9 ]
+[v LCD_Update_Screen@input_size input_size `uc  1 p 1 11 ]
+[v LCD_Update_Screen@output output `*.39uc  1 p 2 12 ]
+[v LCD_Update_Screen@output_size output_size `uc  1 p 1 14 ]
+"127
+} 0
+"90
+[v _LCD_Initial_Screen LCD_Initial_Screen `(v  1 e 1 0 ]
+{
+"104
 } 0
 "392 D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
 [v _LCD_Write_String LCD_Write_String `(v  1 e 1 0 ]
 {
 "395
-[v LCD_Write_String@i i `uc  1 a 1 5 ]
+[v LCD_Write_String@i i `uc  1 a 1 9 ]
 "392
-[v LCD_Write_String@string string `*.31uc  1 p 1 3 ]
+[v LCD_Write_String@string string `*.31uc  1 p 1 7 ]
 "398
 } 0
-"114 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
-[v _LCD_Update_Screen LCD_Update_Screen `(v  1 e 1 0 ]
-{
-"129
-[v LCD_Update_Screen@i_295 i `uc  1 a 1 12 ]
-"119
-[v LCD_Update_Screen@i i `uc  1 a 1 11 ]
-"114
-[v LCD_Update_Screen@input input `*.39uc  1 p 2 5 ]
-[v LCD_Update_Screen@input_size input_size `uc  1 p 1 7 ]
-[v LCD_Update_Screen@output output `*.39uc  1 p 2 8 ]
-[v LCD_Update_Screen@output_size output_size `uc  1 p 1 10 ]
-"135
-} 0
-"404 D:\PIC_18F57Q43\LCD_Pruebas.X\lcd.c
+"404
 [v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
 {
 [v LCD_Write_Char@character character `uc  1 a 1 wreg ]
 [v LCD_Write_Char@character character `uc  1 a 1 wreg ]
 "407
-[v LCD_Write_Char@character character `uc  1 a 1 3 ]
+[v LCD_Write_Char@character character `uc  1 a 1 7 ]
 "408
 } 0
 "204
 [v _LCD_Cursor_Increment LCD_Cursor_Increment `(v  1 e 1 0 ]
 {
 "208
+} 0
+"371
+[v _LCD_Add_Character LCD_Add_Character `(v  1 e 1 0 ]
+{
+"379
+[v LCD_Add_Character@i i `uc  1 a 1 12 ]
+"371
+[v LCD_Add_Character@pattern pattern `*.39uc  1 p 2 9 ]
+[v LCD_Add_Character@address address `uc  1 p 1 11 ]
+"385
+} 0
+"104
+[v _LCD_write_data LCD_write_data `(v  1 e 1 0 ]
+{
+[v LCD_write_data@data data `uc  1 a 1 wreg ]
+[v LCD_write_data@data data `uc  1 a 1 wreg ]
+"106
+[v LCD_write_data@data data `uc  1 a 1 6 ]
+"125
+} 0
+"189
+[v _LCD_Cursor_Set LCD_Cursor_Set `(v  1 e 1 0 ]
+{
+[v LCD_Cursor_Set@row row `uc  1 a 1 wreg ]
+[v LCD_Cursor_Set@row row `uc  1 a 1 wreg ]
+[v LCD_Cursor_Set@column column `uc  1 p 1 7 ]
+"192
+[v LCD_Cursor_Set@row row `uc  1 a 1 8 ]
+"199
 } 0
 "136
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
@@ -358,42 +716,13 @@ PORT_F 70
 {
 "288
 } 0
-"371
-[v _LCD_Add_Character LCD_Add_Character `(v  1 e 1 0 ]
-{
-"379
-[v LCD_Add_Character@i i `uc  1 a 1 8 ]
-"371
-[v LCD_Add_Character@pattern pattern `*.39uc  1 p 2 5 ]
-[v LCD_Add_Character@address address `uc  1 p 1 7 ]
-"385
-} 0
-"104
-[v _LCD_write_data LCD_write_data `(v  1 e 1 0 ]
-{
-[v LCD_write_data@data data `uc  1 a 1 wreg ]
-[v LCD_write_data@data data `uc  1 a 1 wreg ]
-"106
-[v LCD_write_data@data data `uc  1 a 1 2 ]
-"125
-} 0
-"189
-[v _LCD_Cursor_Set LCD_Cursor_Set `(v  1 e 1 0 ]
-{
-[v LCD_Cursor_Set@row row `uc  1 a 1 wreg ]
-[v LCD_Cursor_Set@row row `uc  1 a 1 wreg ]
-[v LCD_Cursor_Set@column column `uc  1 p 1 3 ]
-"192
-[v LCD_Cursor_Set@row row `uc  1 a 1 4 ]
-"199
-} 0
 "76
 [v _LCD_write_command LCD_write_command `(v  1 e 1 0 ]
 {
 [v LCD_write_command@command command `uc  1 a 1 wreg ]
 [v LCD_write_command@command command `uc  1 a 1 wreg ]
 "78
-[v LCD_write_command@command command `uc  1 a 1 2 ]
+[v LCD_write_command@command command `uc  1 a 1 6 ]
 "97
 } 0
 "64
@@ -401,148 +730,160 @@ PORT_F 70
 {
 "69
 } 0
-"97 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
+"4 D:\PIC_18F57Q43\LCD_Pruebas.X\interrupt.c
+[v _INTERRUPT_Init INTERRUPT_Init `(v  1 e 1 0 ]
+{
+"39
+} 0
+"73 D:\PIC_18F57Q43\LCD_Pruebas.X\main.c
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 {
-"112
+"88
 } 0
 "388 D:\PIC_18F57Q43\LCD_Pruebas.X\gpio.c
 [v _set_pin_low set_pin_low `(v  1 e 1 0 ]
 {
-[v set_pin_low@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_low@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_low@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_low@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_low@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_low@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_low@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_low@port_name port_name `E17440  1 a 1 7 ]
 "413
 } 0
 "325
 [v _configure_pin configure_pin `(v  1 e 1 0 ]
 {
-[v configure_pin@port_name port_name `E17445  1 a 1 wreg ]
-[v configure_pin@port_name port_name `E17445  1 a 1 wreg ]
-[v configure_pin@pin_number pin_number `uc  1 p 1 4 ]
-[v configure_pin@is_input is_input `a  1 p 1 5 ]
+[v configure_pin@port_name port_name `E17440  1 a 1 wreg ]
+[v configure_pin@port_name port_name `E17440  1 a 1 wreg ]
+[v configure_pin@pin_number pin_number `uc  1 p 1 8 ]
+[v configure_pin@is_input is_input `a  1 p 1 9 ]
 "326
-[v configure_pin@is_digital is_digital `a  1 p 1 6 ]
-[v configure_pin@enable_pullup enable_pullup `a  1 p 1 7 ]
-[v configure_pin@use_ttl use_ttl `a  1 p 1 8 ]
-[v configure_pin@slew_rate_limited slew_rate_limited `a  1 p 1 9 ]
+[v configure_pin@is_digital is_digital `a  1 p 1 10 ]
+[v configure_pin@enable_pullup enable_pullup `a  1 p 1 11 ]
+[v configure_pin@use_ttl use_ttl `a  1 p 1 12 ]
+[v configure_pin@slew_rate_limited slew_rate_limited `a  1 p 1 13 ]
 "327
-[v configure_pin@use_push_pull use_push_pull `a  1 p 1 10 ]
+[v configure_pin@use_push_pull use_push_pull `a  1 p 1 14 ]
 "329
-[v configure_pin@port_name port_name `E17445  1 a 1 11 ]
+[v configure_pin@port_name port_name `E17440  1 a 1 15 ]
 "359
 } 0
 "191
 [v _set_pin_ttl set_pin_ttl `(v  1 e 1 0 ]
 {
-[v set_pin_ttl@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_ttl@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_ttl@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_ttl@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_ttl@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_ttl@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_ttl@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_ttl@port_name port_name `E17440  1 a 1 7 ]
 "216
 } 0
 "164
 [v _set_pin_st set_pin_st `(v  1 e 1 0 ]
 {
-[v set_pin_st@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_st@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_st@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_st@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_st@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_st@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_st@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_st@port_name port_name `E17440  1 a 1 7 ]
 "189
 } 0
 "244
 [v _set_pin_sr_maximum set_pin_sr_maximum `(v  1 e 1 0 ]
 {
-[v set_pin_sr_maximum@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_sr_maximum@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_sr_maximum@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_sr_maximum@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_sr_maximum@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_sr_maximum@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_sr_maximum@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_sr_maximum@port_name port_name `E17440  1 a 1 7 ]
 "269
 } 0
 "217
 [v _set_pin_sr_limited set_pin_sr_limited `(v  1 e 1 0 ]
 {
-[v set_pin_sr_limited@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_sr_limited@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_sr_limited@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_sr_limited@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_sr_limited@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_sr_limited@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_sr_limited@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_sr_limited@port_name port_name `E17440  1 a 1 7 ]
 "242
 } 0
 "271
 [v _set_pin_push_pull set_pin_push_pull `(v  1 e 1 0 ]
 {
-[v set_pin_push_pull@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_push_pull@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_push_pull@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_push_pull@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_push_pull@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_push_pull@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_push_pull@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_push_pull@port_name port_name `E17440  1 a 1 7 ]
 "296
 } 0
 "110
 [v _set_pin_pullup set_pin_pullup `(v  1 e 1 0 ]
 {
-[v set_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_pullup@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_pullup@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_pullup@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_pullup@port_name port_name `E17440  1 a 1 7 ]
 "135
 } 0
 "31
 [v _set_pin_output set_pin_output `(v  1 e 1 0 ]
 {
-[v set_pin_output@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_output@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_output@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_output@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_output@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_output@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_output@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_output@port_name port_name `E17440  1 a 1 7 ]
 "56
 } 0
 "298
 [v _set_pin_open_drain set_pin_open_drain `(v  1 e 1 0 ]
 {
-[v set_pin_open_drain@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_open_drain@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_open_drain@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_open_drain@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_open_drain@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_open_drain@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_open_drain@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_open_drain@port_name port_name `E17440  1 a 1 7 ]
 "323
 } 0
 "3
 [v _set_pin_input set_pin_input `(v  1 e 1 0 ]
 {
-[v set_pin_input@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_input@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_input@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_input@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_input@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_input@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_input@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_input@port_name port_name `E17440  1 a 1 7 ]
 "29
 } 0
 "57
 [v _set_pin_digital_mode set_pin_digital_mode `(v  1 e 1 0 ]
 {
-[v set_pin_digital_mode@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_digital_mode@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_digital_mode@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_digital_mode@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_digital_mode@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_digital_mode@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_digital_mode@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_digital_mode@port_name port_name `E17440  1 a 1 7 ]
 "82
 } 0
 "83
 [v _set_pin_analog_mode set_pin_analog_mode `(v  1 e 1 0 ]
 {
-[v set_pin_analog_mode@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_analog_mode@port_name port_name `E17445  1 a 1 wreg ]
-[v set_pin_analog_mode@pin_number pin_number `uc  1 p 1 0 ]
-[v set_pin_analog_mode@port_name port_name `E17445  1 a 1 3 ]
+[v set_pin_analog_mode@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_analog_mode@port_name port_name `E17440  1 a 1 wreg ]
+[v set_pin_analog_mode@pin_number pin_number `uc  1 p 1 4 ]
+[v set_pin_analog_mode@port_name port_name `E17440  1 a 1 7 ]
 "108
 } 0
 "137
 [v _reset_pin_pullup reset_pin_pullup `(v  1 e 1 0 ]
 {
-[v reset_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
-[v reset_pin_pullup@port_name port_name `E17445  1 a 1 wreg ]
-[v reset_pin_pullup@pin_number pin_number `uc  1 p 1 0 ]
-[v reset_pin_pullup@port_name port_name `E17445  1 a 1 3 ]
+[v reset_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
+[v reset_pin_pullup@port_name port_name `E17440  1 a 1 wreg ]
+[v reset_pin_pullup@pin_number pin_number `uc  1 p 1 4 ]
+[v reset_pin_pullup@port_name port_name `E17440  1 a 1 7 ]
 "162
 } 0
 "57 D:\PIC_18F57Q43\LCD_Pruebas.X\config.c
 [v _Clock_Init Clock_Init `(v  1 e 1 0 ]
 {
 "60
+} 0
+"41 D:\PIC_18F57Q43\LCD_Pruebas.X\interrupt.c
+[v _INT_ISR INT_ISR `IIH(v  1 e 1 0 ]
+{
+"50
+[v INT_ISR@i i `i  1 a 2 2 ]
+"135
 } 0

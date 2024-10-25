@@ -2,4 +2,6 @@ build/default/production/main.p1:  \
 main.c  \
 config.h  \
 gpio.h  \
+timers.h  \
+interrupt.h  \
 lcd.h 

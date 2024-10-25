@@ -28,12 +28,12 @@
 /*Definir las macros para la escritura de los estados de los LED's*/
 #define LED_INTERNAL_ON()         (LATFbits.LATF3 = 0)
 #define LED_INTERNAL_OFF()        (LATFbits.LATF3 = 1)
-#define LED_EXTERNAL_1_ON()       (LATDbits.LATD0 = 1)
-#define LED_EXTERNAL_1_OFF()      (LATDbits.LATD0 = 0)
+#define LED_EXTERNAL_1_ON()       (LATFbits.LATF2 = 1)
+#define LED_EXTERNAL_1_OFF()      (LATFbits.LATF2 = 0)
 #define LED_EXTERNAL_2_ON()       (LATDbits.LATD1 = 0)
 #define LED_EXTERNAL_2_OFF()      (LATDbits.LATD1 = 1)
 #define LED_INTERNAL_TOGGLE()     (LATFbits.LATF3 ^= 1)
-#define LED_EXTERNAL_1_TOGGLE()   (LATDbits.LATD0 ^= 1)
+#define LED_EXTERNAL_1_TOGGLE()   (LATFbits.LATF2 ^= 1)
 #define LED_EXTERNAL_2_TOGGLE()   (LATDbits.LATD1 ^= 1)
 
 /*Definir las macros para la lectura de los estados de los botones*/

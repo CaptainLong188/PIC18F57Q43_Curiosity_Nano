@@ -6,11 +6,15 @@
 
 #include "config.h"
 #include "gpio.h"
+#include "timers.h"
+#include "interrupt.h"
 #include "lcd.h"
 
 #pragma warning disable 520
+#pragma warning disable 2020
 
 void GPIO_Init(void);
+void LCD_Initial_Screen(void);
 void LCD_Update_Screen(uint8_t[], uint8_t, uint8_t[], uint8_t);
 
 // use decrement and write_char
@@ -44,50 +48,23 @@ int main(int argc, char** argv) {
     Clock_Init();
     GPIO_Init();
     LCD_Init();
-    LCD_Add_Character(low_state, 0);
-    LCD_Add_Character(high_state, 1); 
-    LCD_Cursor_Set(1, 1);
-    LCD_Write_String("Entradas: ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-    LCD_Cursor_Set(2, 1);
-    LCD_Write_String("Salidas:  ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-    
+    LCD_Initial_Screen();
+    TIMER0_Init(FOSC_4, TIMER_16BIT_MODE, SYNCRONIZED, CKPS_1_1);
+    TIMER0_Write(0xC1, 0x7F); // Timer de 1 ms
+    INTERRUPT_Init();
+
     uint8_t input[2] = {0, 0};
     uint8_t output[2] = {0, 0};
-    uint8_t previous_state_btn_1 = 0;
-    uint8_t current_state_btn_1 = 0;
     
     while(1)
     {
-        current_state_btn_1 = READ_BUTTON_INTERNAL();
+        input[0] = READ_BUTTON_INTERNAL();  
+        input[1] = READ_BUTTON_EXTERNAL_1();
+        output[0] = ~get_pin_value(PORT_F, 3);
+        output[1] = get_pin_value(PORT_F, 2);
         
-        if(current_state_btn_1 != previous_state_btn_1)
-        {
-            if(current_state_btn_1 == 1)
-            {
-                LED_INTERNAL_ON();
-                set_pin_high(PORT_F, 2);
-                input[0] = 1;
-                output[0] = 1;
-                output[1] = 1;
-            }
-            else
-            {
-                LED_INTERNAL_OFF();
-                set_pin_low(PORT_F, 2);
-                input[0] = 0;
-                output[0] = 0;
-                output[1] = 0;
-            }
-            LCD_Update_Screen(input, 2, output, 2);  
-        }
-        
-        previous_state_btn_1 = current_state_btn_1;
+        LCD_Update_Screen(input, 2, output, 2);
+        __delay_ms(100);
     }
     
     return (EXIT_SUCCESS);
@@ -107,7 +84,23 @@ void GPIO_Init()
     set_pin_low(PORT_F, 2);
     
     /*Configuración del boton externo (Q0.2)*/
-    configure_pin(PORT_B, 4, INPUT, DIGITAL, PULLUP, TTL, SR_LIMITED, PUSHPULL); 
+    configure_pin(PORT_B, 0, INPUT, DIGITAL, PULLUP, TTL, SR_LIMITED, PUSHPULL); 
+}
+
+void LCD_Initial_Screen()
+{
+    LCD_Add_Character(low_state, 0);
+    LCD_Add_Character(high_state, 1); 
+    LCD_Cursor_Set(1, 1);
+    LCD_Write_String("Entradas: ");
+    LCD_Write_Char(0);
+    LCD_Cursor_Increment();
+    LCD_Write_Char(0);
+    LCD_Cursor_Set(2, 1);
+    LCD_Write_String("Salidas:  ");
+    LCD_Write_Char(0);
+    LCD_Cursor_Increment();
+    LCD_Write_Char(0);
 }
 
 void LCD_Update_Screen(uint8_t input[], uint8_t input_size, uint8_t output[], uint8_t output_size)

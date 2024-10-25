@@ -29471,6 +29471,74 @@ void toggle_pin(PortName_t port_name, uint8_t pin_number);
 _Bool get_pin_value(PortName_t port_name, uint8_t pin_number);
 # 8 "main.c" 2
 
+# 1 "./timers.h" 1
+# 12 "./timers.h"
+typedef enum
+{
+    T0CKIPPS_NON_INVERTED,
+            T0CKIPPS_INVERTED,
+            FOSC_4,
+            HFINTOSC,
+            LFINTOSC,
+            MFINTOSC,
+            SOSC,
+            CLC1_OUT
+}timerClockSource_t;
+
+typedef enum
+{
+    TIMER_8BIT_MODE,
+            TIMER_16BIT_MODE
+}timerMode_t;
+
+typedef enum
+{
+    SYNCRONIZED,
+            NOT_SYNCRONIZED
+}timerAsync_t;
+
+typedef enum
+{
+    CKPS_1_1,
+    CKPS_1_2,
+    CKPS_1_4,
+    CKPS_1_8,
+    CKPS_1_16,
+    CKPS_1_32,
+    CKPS_1_64,
+    CKPS_1_128,
+    CKPS_1_256,
+    CKPS_1_512,
+    CKPS_1_1024,
+    CKPS_1_2048,
+    CKPS_1_4096,
+    CKPS_1_8192,
+    CKPS_1_16384,
+    CKPS_1_32768
+} timerPrescaler_t;
+
+
+
+
+
+void TIMER0_Init(timerClockSource_t, timerMode_t, timerAsync_t, timerPrescaler_t);
+void TIMER0_Write(uint8_t, uint8_t);
+# 9 "main.c" 2
+
+# 1 "./interrupt.h" 1
+
+
+
+
+
+
+volatile uint8_t button_flag[2] = {};
+volatile uint8_t x[2] = {};
+volatile uint8_t button_press_counter[2] = {};
+
+void INTERRUPT_Init(void);
+# 10 "main.c" 2
+
 # 1 "./lcd.h" 1
 # 79 "./lcd.h"
     void LCD_Init(void);
@@ -29492,12 +29560,14 @@ _Bool get_pin_value(PortName_t port_name, uint8_t pin_number);
     void LCD_Write_Char(char);
     void LCD_Write_Variable(int32_t, uint8_t);
     void LCD_Write_Float(float, uint8_t, uint8_t);
-# 9 "main.c" 2
+# 11 "main.c" 2
 
 
 #pragma warning disable 520
+#pragma warning disable 2020
 
 void GPIO_Init(void);
+void LCD_Initial_Screen(void);
 void LCD_Update_Screen(uint8_t[], uint8_t, uint8_t[], uint8_t);
 
 
@@ -29531,50 +29601,23 @@ int main(int argc, char** argv) {
     Clock_Init();
     GPIO_Init();
     LCD_Init();
-    LCD_Add_Character(low_state, 0);
-    LCD_Add_Character(high_state, 1);
-    LCD_Cursor_Set(1, 1);
-    LCD_Write_String("Entradas: ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-    LCD_Cursor_Set(2, 1);
-    LCD_Write_String("Salidas:  ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
+    LCD_Initial_Screen();
+    TIMER0_Init(FOSC_4, TIMER_16BIT_MODE, SYNCRONIZED, CKPS_1_1);
+    TIMER0_Write(0xC1, 0x7F);
+    INTERRUPT_Init();
 
     uint8_t input[2] = {0, 0};
     uint8_t output[2] = {0, 0};
-    uint8_t previous_state_btn_1 = 0;
-    uint8_t current_state_btn_1 = 0;
 
     while(1)
     {
-        current_state_btn_1 = (PORTBbits.RB4 == 0);
+        input[0] = (PORTBbits.RB4 == 0);
+        input[1] = (PORTBbits.RB0 == 0);
+        output[0] = ~get_pin_value(PORT_F, 3);
+        output[1] = get_pin_value(PORT_F, 2);
 
-        if(current_state_btn_1 != previous_state_btn_1)
-        {
-            if(current_state_btn_1 == 1)
-            {
-                (LATFbits.LATF3 = 0);
-                set_pin_high(PORT_F, 2);
-                input[0] = 1;
-                output[0] = 1;
-                output[1] = 1;
-            }
-            else
-            {
-                (LATFbits.LATF3 = 1);
-                set_pin_low(PORT_F, 2);
-                input[0] = 0;
-                output[0] = 0;
-                output[1] = 0;
-            }
-            LCD_Update_Screen(input, 2, output, 2);
-        }
-
-        previous_state_btn_1 = current_state_btn_1;
+        LCD_Update_Screen(input, 2, output, 2);
+        _delay((unsigned long)((100)*(64000000UL/4000.0)));
     }
 
     return (0);
@@ -29594,7 +29637,23 @@ void GPIO_Init()
     set_pin_low(PORT_F, 2);
 
 
-    configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
+    configure_pin(PORT_B, 0, 1, 1, 1, 1, 1, 1);
+}
+
+void LCD_Initial_Screen()
+{
+    LCD_Add_Character(low_state, 0);
+    LCD_Add_Character(high_state, 1);
+    LCD_Cursor_Set(1, 1);
+    LCD_Write_String("Entradas: ");
+    LCD_Write_Char(0);
+    LCD_Cursor_Increment();
+    LCD_Write_Char(0);
+    LCD_Cursor_Set(2, 1);
+    LCD_Write_String("Salidas:  ");
+    LCD_Write_Char(0);
+    LCD_Cursor_Increment();
+    LCD_Write_Char(0);
 }
 
 void LCD_Update_Screen(uint8_t input[], uint8_t input_size, uint8_t output[], uint8_t output_size)

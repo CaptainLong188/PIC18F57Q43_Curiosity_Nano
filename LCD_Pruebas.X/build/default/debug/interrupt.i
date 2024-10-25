@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "interrupt.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,11 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "interrupt.c" 2
+# 1 "./interrupt.h" 1
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -29257,7 +29261,21 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 1 "main.c" 2
+# 4 "./interrupt.h" 2
+
+
+
+volatile uint8_t button_flag[2] = {};
+volatile uint8_t x[2] = {};
+volatile uint8_t button_press_counter[2] = {};
+
+void INTERRUPT_Init(void);
+# 1 "interrupt.c" 2
+
+# 1 "./gpio.h" 1
+
+
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
@@ -29411,25 +29429,11 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 2 "main.c" 2
+# 5 "./gpio.h" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
-# 3 "main.c" 2
-
-
-
-
-# 1 "./config.h" 1
-
-
-
-
-
-
-void Clock_Init(void);
-# 7 "main.c" 2
-
-# 1 "./gpio.h" 1
+# 7 "./gpio.h" 2
 # 45 "./gpio.h"
 typedef struct
 {
@@ -29469,212 +29473,138 @@ void set_pin_high(PortName_t port_name, uint8_t pin_number);
 void set_pin_low(PortName_t port_name, uint8_t pin_number);
 void toggle_pin(PortName_t port_name, uint8_t pin_number);
 _Bool get_pin_value(PortName_t port_name, uint8_t pin_number);
-# 8 "main.c" 2
+# 2 "interrupt.c" 2
 
-# 1 "./timers.h" 1
-# 12 "./timers.h"
-typedef enum
+
+void INTERRUPT_Init(void)
 {
-    T0CKIPPS_NON_INVERTED,
-            T0CKIPPS_INVERTED,
-            FOSC_4,
-            HFINTOSC,
-            LFINTOSC,
-            MFINTOSC,
-            SOSC,
-            CLC1_OUT
-}timerClockSource_t;
 
-typedef enum
+    INTCON0bits.IPEN = 1;
+    INTCON0bits.GIEH = 1;
+    INTCON0bits.GIEL = 1;
+
+
+
+    PIR3bits.TMR0IF = 1;
+    PIE3bits.TMR0IE = 1;
+    IPR3bits.TMR0IP = 0;
+
+
+    INTCON0bits.INT0EDG = 0;
+    PIR1bits.INT0IF = 0;
+    PIE1bits.INT0IE = 1;
+    IPR1bits.INT0IP = 1;
+
+
+
+    INT1PPSbits.PORT = 0b001;
+    INT1PPSbits.PIN = 0b100;
+    INTCON0bits.INT1EDG = 0;
+    PIR6bits.INT1IF = 0;
+    PIE6bits.INT1IE = 1;
+    IPR6bits.INT1IP = 1;
+
+
+
+    (INTCON0bits.GIE = 0);
+    IVTBASEU = 0x00;
+    IVTBASEH = 0x30;
+    IVTBASEL = 0x08;
+    (INTCON0bits.GIE = 1);
+}
+
+void __attribute__((picinterrupt(("irq(31, 8), base(0x3008)")))) INT_ISR(void)
 {
-    TIMER_8BIT_MODE,
-            TIMER_16BIT_MODE
-}timerMode_t;
 
-typedef enum
-{
-    SYNCRONIZED,
-            NOT_SYNCRONIZED
-}timerAsync_t;
-
-typedef enum
-{
-    CKPS_1_1,
-    CKPS_1_2,
-    CKPS_1_4,
-    CKPS_1_8,
-    CKPS_1_16,
-    CKPS_1_32,
-    CKPS_1_64,
-    CKPS_1_128,
-    CKPS_1_256,
-    CKPS_1_512,
-    CKPS_1_1024,
-    CKPS_1_2048,
-    CKPS_1_4096,
-    CKPS_1_8192,
-    CKPS_1_16384,
-    CKPS_1_32768
-} timerPrescaler_t;
-
-
-
-
-
-void TIMER0_Init(timerClockSource_t, timerMode_t, timerAsync_t, timerPrescaler_t);
-void TIMER0_Write(uint8_t, uint8_t);
-# 9 "main.c" 2
-
-# 1 "./interrupt.h" 1
-
-
-
-
-
-
-volatile uint8_t button_flag[2] = {};
-volatile uint8_t x[2] = {};
-volatile uint8_t button_press_counter[2] = {};
-
-void INTERRUPT_Init(void);
-# 10 "main.c" 2
-
-# 1 "./lcd.h" 1
-# 79 "./lcd.h"
-    void LCD_Init(void);
-    void LCD_Cursor_Set(uint8_t, uint8_t);
-    void LCD_Cursor_Increment(void);
-    void LCD_Cursor_Decrement(void);
-    void LCD_Configure_Display(uint8_t);
-    void LCD_Configure_Cursor_Display(uint8_t);
-    void LCD_Configure_Cursor_Blink(uint8_t);
-    void LCD_Clear(void);
-    void LCD_Shift_Reset(void);
-    void LCD_Shift_Left(void);
-    void LCD_Shift_Right(void);
-    void LCD_Configure_Entry_ID(uint8_t);
-    void LCD_Configure_Entry_Shift(uint8_t);
-    void LCD_Add_Character(char*, uint8_t);
-
-    void LCD_Write_String(char*);
-    void LCD_Write_Char(char);
-    void LCD_Write_Variable(int32_t, uint8_t);
-    void LCD_Write_Float(float, uint8_t, uint8_t);
-# 11 "main.c" 2
-
-
-#pragma warning disable 520
-#pragma warning disable 2020
-
-void GPIO_Init(void);
-void LCD_Initial_Screen(void);
-void LCD_Update_Screen(uint8_t[], uint8_t, uint8_t[], uint8_t);
-
-
-
-char low_state[] =
-{
-  0b11111,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b10001,
-  0b11111
-};
-
-char high_state[] =
-{
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b11111
-};
-
-int main(int argc, char** argv) {
-
-    Clock_Init();
-    GPIO_Init();
-    LCD_Init();
-    LCD_Initial_Screen();
-    TIMER0_Init(FOSC_4, TIMER_16BIT_MODE, SYNCRONIZED, CKPS_1_1);
-    TIMER0_Write(0xC1, 0x7F);
-    INTERRUPT_Init();
-
-    uint8_t input[2] = {0, 0};
-    uint8_t output[2] = {0, 0};
-
-    while(1)
+    if(PIR3bits.TMR0IF == 1)
     {
-        input[0] = (PORTBbits.RB4 == 0);
-        input[1] = (PORTBbits.RB0 == 0);
-        output[0] = ~get_pin_value(PORT_F, 3);
-        output[1] = get_pin_value(PORT_F, 2);
+        TMR0H = 0xC1;
+        TMR0L = 0x7F;
+        PIR3bits.TMR0IF = 0;
 
-        LCD_Update_Screen(input, 2, output, 2);
-        _delay((unsigned long)((100)*(64000000UL/4000.0)));
-    }
+        for(int i = 0; i < 2; ++i)
+        {
+            if(button_flag[i] == 1)
+            {
+                if(x[i] < 50)
+                {
+                    x[i]++;
 
-    return (0);
-}
+                    switch(i)
+                    {
+                        case(0):
 
-void GPIO_Init()
-{
+                            if((PORTBbits.RB0 == 0))
+                            {
+                                button_press_counter[0]++;
+                            }
+                            break;
 
-    configure_pin(PORT_F, 3, 0, 1, 0, 1, 1, 1);
-    (LATFbits.LATF3 = 1);
+                        case(1):
 
+                            if((PORTBbits.RB4 == 0))
+                            {
+                                button_press_counter[1]++;
+                            }
+                            break;
 
-    configure_pin(PORT_B, 4, 1, 1, 1, 1, 1, 1);
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    switch(i)
+                    {
+                        case(0):
 
+                            if(button_press_counter[0] > 30)
+                            {
+                                (LATFbits.LATF3 ^= 1);
+                            }
 
-    configure_pin(PORT_F, 2, 0, 1, 0, 1, 1, 1);
-    set_pin_low(PORT_F, 2);
+                            button_press_counter[0] = 0;
+                            break;
 
+                        case(1):
 
-    configure_pin(PORT_B, 0, 1, 1, 1, 1, 1, 1);
-}
+                            if(button_press_counter[1] > 30)
+                            {
+                                (LATFbits.LATF2 ^= 1);
+                            }
+                            button_press_counter[1] = 0;
+                            break;
 
-void LCD_Initial_Screen()
-{
-    LCD_Add_Character(low_state, 0);
-    LCD_Add_Character(high_state, 1);
-    LCD_Cursor_Set(1, 1);
-    LCD_Write_String("Entradas: ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-    LCD_Cursor_Set(2, 1);
-    LCD_Write_String("Salidas:  ");
-    LCD_Write_Char(0);
-    LCD_Cursor_Increment();
-    LCD_Write_Char(0);
-}
+                        default:
+                            break;
+                    }
 
-void LCD_Update_Screen(uint8_t input[], uint8_t input_size, uint8_t output[], uint8_t output_size)
-{
-
-    LCD_Cursor_Set(1, 11);
-
-    for(uint8_t i = 0; i < input_size; ++i)
-    {
-        if(input[i] == 0) LCD_Write_Char(0);
-        else LCD_Write_Char(1);
-        LCD_Cursor_Increment();
+                    button_flag[i] = 0;
+                    x[i] = 0;
+                }
+            }
+        }
     }
 
 
-    LCD_Cursor_Set(2, 11);
-
-    for(uint8_t i = 0; i < output_size; ++i)
+    if(PIR1bits.INT0IF == 1)
     {
-        if(output[i] == 0) LCD_Write_Char(0);
-        else LCD_Write_Char(1);
-        LCD_Cursor_Increment();
+        if(button_flag[0] == 0)
+        {
+            button_flag[0] = 1;
+        }
+
+        PIR1bits.INT0IF = 0;
+    }
+
+
+    if(PIR6bits.INT1IF == 1)
+    {
+        if(button_flag[1] == 0)
+        {
+            button_flag[1] = 1;
+        }
+
+        PIR6bits.INT1IF = 0;
     }
 }
